@@ -1,0 +1,80 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+<script type="text/javascript">
+EasyAjaxUtil.queryPage=function(i,scope){
+loadSystemUser(i,scope);
+}
+loadSystemUser=function(currentPage,scope)
+{
+if(!scope)scope="1=1";
+if(!currentPage)currentPage=1;
+SystemUserService.querySystemUser(scope,null,currentPage,15,showResult);
+}
+
+var showResult=function(pageList)
+{
+EasyAjaxUtil.pageList=pageList;
+var currentPage=pageList.currentPage;
+var count=(pageList.currentPage-1)*pageList.pageSize+1;
+var celFuns=[
+function(data){return count++;},
+function(data){return data.userName;},
+function(data){return data.trueName;},
+function(data){return data.tel},/*数据为空就返回空格不然表格显示有问题*/
+function(data){return data.loginTimes;},
+function(data){return data.lastLoginTime;},
+function(data){return "<input type='button' onClick=\"editSystemUser("+data.id+");\" value='编辑' class='button'>&nbsp;&nbsp;&nbsp;&nbsp;<input type='button' onClick=\"SystemUserService.delSystemUser({id:"+data.id+"},delSystemUser);\" value='删除' class='button'>";}
+];
+DWRUtil.removeAllRows("mainTable");
+DWRUtil.addRows("mainTable",pageList.result,celFuns);
+EasyAjaxUtil.showPageInfo();
+}
+editSystemUser=function(id)
+{
+loadStaticPage("/systemUserEdit.html",function(){SystemUserService.getSystemUser(id,function(obj){
+DWRUtil.setValues(obj);
+});});
+}
+delSystemUser=function(ret)
+{
+if(ret){alert("数据删除成功");loadSystemUser()}
+else alert("数据删除失败");
+}
+loadSystemUser();
+</script>
+<br />
+<span>
+<table width="100%" align="center" cellspacing="0">
+  <tr>
+    <td class="tablehead" style="height:24px">系统用户信息　&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tablehead2" style="height:24px">用户名:
+      <input name="textsn" type="text" class="form_text" id="sn" size="3"  />
+姓名:
+<input name="texttitle" type="text" class="form_text" id="title" size="7"  />
+<input name="search" type="button" id="search" value="查询" class="button" />
+　
+<input name="add" type="button" id="add" value="添加" onClick="loadStaticPage('/systemUserEdit.html');" class="button" /></td>
+  </tr>
+  <tr>
+    <td><table style=" margin:-2px -4px -2px -4px; width:101%" cellspacing="0" >
+	<thead>
+      <tr class="tablehead3">
+        <td width="40">序号</td>
+        <td>用户名</td>
+        <td>用户姓名</td>
+        <td>电话</td>
+      <td>登录次数</td>
+        <td>上次登录时间</td>
+        <td>操作</td>
+      </tr>   </thead> 
+	  <tbody id="mainTable"></tbody>  
+    </table></td>
+  </tr>
+  <tr>
+    <td><span id="pageInfo"></span></td>
+  </tr>
+</table>
+</span>
+</div>

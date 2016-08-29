@@ -1,0 +1,27 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+<script type="text/javascript">
+login=function()
+{
+UserService.login($("userName").value,$("password").value,"test",loginResult);
+return false;
+}
+function loginResult(u)
+{
+if(u!=null){
+top.loadMenu();
+top.user=u;
+loadMainPage("/index.ejf?easyJWebCommand=first");
+}
+}
+</script>
+
+<table width="90%" border="1" align="center">
+  <tr>
+    <td class="tablehead">系统菜单-<a href="#" onClick="top.loadMenu();">刷新</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</div>

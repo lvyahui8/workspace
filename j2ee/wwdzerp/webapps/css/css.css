@@ -1,0 +1,87 @@
+.stedit {
+	BORDER-BOTTOM: #4a3163 1px solid; BORDER-LEFT: #4a3163 1px solid; BORDER-RIGHT: #4a3163 1px solid; BORDER-TOP: #4a3163 1px solid; FONT-SIZE: 9pt
+}
+
+A:link {
+	text-decoration: none;
+	font-family: "宋体";
+	color : #000000;
+}
+A:visited {
+	text-decoration: none;
+	font-family: "宋体";
+	color : #000000;
+}
+A:active {
+	text-decoration: none;
+	font-family: "宋体";
+	color : #FF0000;
+}
+A:hover {
+	text-decoration: underline;
+	color : #FF0000;
+}
+a.down:link {
+	text-decoration: none;
+	font-family: "宋体";
+	color : #FF0000;
+}
+a.down:visited {
+	text-decoration: none;
+	font-family: "宋体";
+	color :#FF0000;
+}
+a.down:active {
+	text-decoration: none;
+	font-family: "宋体";
+	color : #000000;
+}
+a.down:hover {
+	text-decoration: underline;
+	color : #000000;
+}
+
+.smalltitle {
+	FONT-SIZE: 10pt; LINE-HEIGHT:120%; TEXT-ALIGN: justify; TEXT-INDENT: 0px; WORD-SPACING: 0px
+; text-decoration: none}
+.bigtitle {
+　  FONT-SIZE:10 pt;  LINE-HEIGHT: 120%; TEXT-ALIGN: 10px; TEXT-ALIGN: center; WORD-SPACING: 0px
+; text-decoration: none}
+.input {   font-size: 9pt; color:BD3021; BACKGROUND-COLOR: #FFEFEE; BORDER-BOTTOM:  1px solid; BORDER-LEFT:  1px solid; BORDER-RIGHT:  1px solid; BORDER-TOP:  1px solid;}
+
+BODY {
+	FONT-SIZE: 9pt
+}
+TH {
+	FONT-SIZE: 9pt
+}
+TD {
+	FONT-SIZE: 9pt
+; line-height: 125%
+}
+.form1 {  margin-top: 0px; margin-bottom: 0px}
+p {  font-family:  "宋体"; margin-top: 4px; margin-bottom: 4px; margin-left: 4px}
+.text1 {  font-size: 9pt; text-decoration: none; letter-spacing: 5pt}
+.i-24 {  text-indent: -18px}
+.news { font-size: 14px; line-height: 170%}
+.titles { font-size: 12px; line-height: 120%}
+.title{ line-height:190% }
+.cp {  line-height: 150%}
+.line_high {  line-height: 180%}
+.sd            { width:100%;filter: DropShadow(Color=#ff0000, OffX=1, OffY=1, Positive=1);cursor:hand }
+.sd1            { width:100%;filter: DropShadow(Color=#000033, OffX=1, OffY=1, Positive=1);cursor:hand }
+.title1        { color:#ffffff;width:100%;filter: DropShadow(Color=#110033, OffX=1, OffY=1, Positive=1) }
+.title2        { color:#100066;width:100%;filter: DropShadow(Color=#e5e5e5, OffX=1, OffY=1, Positive=1) }
+.butz          { color: #ffffff; background-color: #0066CC;border-color: #BBADED #000000 #000000 #BBADED; border-style: solid; border-width: 1px }
+.butb          { color: #ffffff; background-color: #474CAA;border-color: #ADB6ED #000000 #000000 #ADB6ED; border-style: solid; border-width: 1px }
+.input1        {  color: #000000; background-color: #FFFFFF;border-color: #000000; border-style: solid; border-width: 1px  }.unnamed1 {  filter: DropShadow(Color=red, OffX=1, OffY=1, Positive=1)?, OffX=?, OffY=?, Positive=?)}
+.r32 {  font-size: 12px; line-height: 18px}
+.input2 {
+	font-size: 12px;
+	background-color: #FFFFFF;
+	height: 15px;
+	width: 86px;
+	border: 1px solid #3112A7;
+	overflow: hidden;
+}
+

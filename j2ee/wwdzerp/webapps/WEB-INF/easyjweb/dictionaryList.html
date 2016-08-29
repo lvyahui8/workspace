@@ -1,0 +1,96 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+<script type="text/javascript">
+EasyAjaxUtil.queryPage=function(i,scope){
+loadDictionary(i,scope);
+}
+var loadDictionary=function(currentPage,scope)
+{
+if(!scope)scope="1=1";
+if(!currentPage)currentPage=1;
+SystemDictionaryService.queryDictionary(scope,null,currentPage,15,showResult);
+}
+var showResult=function(pageList)
+{
+EasyAjaxUtil.pageList=pageList;
+var currentPage=pageList.currentPage;
+var count=(pageList.currentPage-1)*pageList.pageSize+1;
+var celFuns=[
+function(data){return count++;},
+function(data){return data.title;},
+function(data){return data.sn;},
+function(data){return data.children.length;},
+function(data){return data.intro;},/*数据为空就返回空格不然表格显示有问题*/
+function(data){return "<input type='button' onClick=\"editDictionary('"+data.id+"');\" value='编辑'  class='button'>&nbsp;&nbsp;&nbsp;<input type=button value='管理下级' onclick=\"SystemDictionaryService.manageDictionaryValue("+data.id+");\" class='button'>&nbsp;&nbsp;&nbsp;<input type='button' onClick=\"if(confirm('是否真的要删除?')){SystemDictionaryService.delDictionary({id:"+data.id+"},delDictionary);}\" value='删除' class='button' >";}
+];
+DWRUtil.removeAllRows("mainTable");
+DWRUtil.addRows("mainTable",pageList.result,celFuns);
+EasyAjaxUtil.showPageInfo();
+}
+SystemDictionaryService.manageDictionaryValue=function(id)
+{
+loadStaticPage("dictionaryValueList.html",function(){SystemDictionaryService.getDictionary(id,function(obj){
+var count=1;
+var celFuns=[
+function(data){return count++;},
+function(data){return data.title;},
+function(data){return data.tvalue;},
+function(data){return data.sequence;},
+function(data){return "<input type='button' onClick=\"editDictionaryValue('"+data.id+"');\" value='编辑'  class='button'>&nbsp;&nbsp;&nbsp;&nbsp;<input type='button' onClick=\"if(confirm('是否真的要删除?')){SystemDictionaryService.delDictionaryDetail({id:"+data.id+"},delDictionaryValue);}\" value='删除' class='button' >";}
+];
+DWRUtil.removeAllRows("mainTable");
+DWRUtil.addRows("mainTable",obj.children,celFuns);
+SystemDictionaryService.currentDict=obj;
+$("dictionary").innerHTML="<font color=blue>"+obj.title+"</font>";
+});});
+}
+editDictionary=function(id)
+{
+loadStaticPage("dictionaryEdit.html",function(){SystemDictionaryService.getDictionary(id,function(obj){
+DWRUtil.setValues(obj);
+});});
+}
+
+delDictionary=function(ret)
+{
+if(ret){alert("数据删除成功");loadDictionary()}
+else alert("数据删除失败");
+}
+loadDictionary(1);
+</script>
+<span>
+<table width="100%" height="97%" align="center" cellspacing="0">
+  <tr>
+    <td height="30" class="tablehead">数据字典列表　
+	&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30" class="tablehead2">&nbsp;字典编号:
+      <input name="region_sn" type="text" class="form_text" id="region_sn" size="3"  />
+字典名称:
+<input name="region-title" type="text" class="form_text" id="title" size="7"  />
+<input name="search" type="button" id="search" value="查询" class="button" />
+　
+<input name="add" type="button" id="add" value="添加" onClick="loadStaticPage('/dictionaryEdit.html');" class="button" /></td>
+  </tr>
+  <tr>
+    <td valign="top" class="tablehead"><div class="tablehead3" style="height:100%;overflow:auto;"><table cellspacing="0" style=" margin:-2px -4px -2px -4px; width:100%"  >
+	<thead>
+      <tr align="center" class="tablehead3">
+        <td width="5%" height="25">序号</td>
+        <td width="12%" height="25">字典名称</td>
+        <td width="14%" height="25">字典编号</td>
+        <td width="10%" height="25">字典值</td>
+        <td height="25">简介</td>
+        <td width="28%" height="25">操作</td>
+      </tr>   </thead> 
+	  <tbody id="mainTable"></tbody>  
+    </table></div></td>
+  </tr>
+  <tr>
+    <td height="25" align="center" class="tablehead"><span id="pageInfo"></span>
+	</td>
+  </tr>
+</table>
+</span>
+</div>

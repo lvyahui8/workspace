@@ -1,0 +1,43 @@
+系统安装说明
+
+1、数据库目录中分别包含了系统所使用到的mysql及mssql建设库脚本。
+microerp-mssql.sql　为mssql表结构的建库脚本
+microerp-mssql-data.bak　为mssql数据库备份文件，可以直接还原。
+
+microerp-mysql.sql　为mysql的数据库备份文件，可以通过下面的命令来还原数据库
+mysqladmin -u root -p microerp  建库
+mysql -u root -p microerp<microerp-mysql.sql  导入表结构及数据
+
+
+2、安装完数据库后，修改系统数据库配置文件webapps\WEB-INF\classes\easyjf-dbo.xml，若使用mssql则把mysql部分注释或删除，然后把数据库用户名及密码设置成相应的值即可。
+
+3、在Tomcat的配置文件中，把本程序下的webapps目录设置成根目录。可以直接在<host>里面增加类似下面的节点来实现(这里假设程序放在e:\test\microerp里面)：
+<Context docBase="E:\test\microerp\webapps" path=""/>
+
+4、启动Tomcat，输入http://localhost:8080/即可进入系统登录界面，系统的初始用户名及密码均为test。
+
+
+5、系统源代码在src目录，可以直接使用Eclipse打开本项目。
+
+6、系统页面模板在webapps\WEB-INF\easyjweb目录
+
+　　系统演示地址：http://microerp.easyjf.com 用户名：test　密码:test
+　　相关技术交流：www.easyjf.com
+
+　　EasyJF开源
+　　2007年2月
+
+
+
+
+
+版权声明
+
+　　MicroERP系统是一个运用Ajax及J2EE技术开发的专用于水厂及相关企业小型ERP系统，除了引用的一些开源框架以外，系统全部由重庆金麦草科技开发，版权归重庆金麦草科技所有。
+　　MicroERP系统使用基于国内开源组织EasyJF的EasyJWeb及EasyDBO框架开发，为了支持国产开源事业，重庆金麦草科技有限公司特将本系统初期的部分代码捐献给EasyJF开源组织，尽供学习、交流EasyJF开源相关框架及技术使用。任何个人或组织未经重庆金麦草科技有有限公司的书面许可，不得将该代码用于商业用途，也不得修改代码中的部分内容并通过其它渠道进行发布。
+
+
+　　重庆金麦草科技有限公司
+　　2007年2月
+
+

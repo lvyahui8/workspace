@@ -1,0 +1,46 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+<script type="text/javascript">
+//EasyAjax.DEBUG=true;
+editDictionaryValue=function(id)
+{
+loadStaticPage("dictionaryValueEdit.html",function(){SystemDictionaryService.getDictionaryDetail(id,function(obj){
+DWRUtil.setValues(obj);
+});});
+}
+delDictionaryValue=function(ret)
+{
+if(ret){alert("数据删除成功");SystemDictionaryService.manageDictionaryValue(SystemDictionaryService.currentDict.id)}
+else alert("数据删除失败");
+}
+</script>
+<br />
+<span>
+<table align="center" cellspacing="0" style="width:95%">
+  <tr>
+    <td align="left" class="tablehead">字典[<span id="dictionary"></span>]的详细值　      </td>
+  </tr>
+  <tr>
+    <td align="left" class="tablehead2"><input name="search2" type="button" id="search2" value="查询" class="button" />
+      　
+      <input name="add2" type="button" id="add2" value="添加" onClick="loadStaticPage('/dictionaryValueEdit.html');" class="button" /></td>
+  </tr>
+  <tr>
+    <td class="tablehead"><table style=" margin:-2px -4px -2px -4px; width:101%" cellspacing="0" >
+	<thead>
+      <tr class="tablehead3">
+        <td width="10%"><div align="center">序号</div></td>
+        <td width="17%"><div align="center">名称</div></td>
+        <td width="11%"><div align="center">值</div></td>
+        <td width="11%"><div align="center">排序</div></td>
+        <td width="11%"><div align="center">操作</div></td>
+      </tr>   </thead> 
+	  <tbody id="mainTable"></tbody>  
+    </table></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+</span>
+</div>

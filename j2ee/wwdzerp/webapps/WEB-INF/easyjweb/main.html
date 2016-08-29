@@ -1,0 +1,368 @@
+﻿<link href="/include/css.css" rel="stylesheet" type="text/css">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>重庆壹加壹自然回归水有限公司ERP系统</title>
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<script type='text/javascript' src='/include/public.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/prototype.js'></script>
+
+<script type='text/javascript' src='/ejf/easyajax/engine.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/util.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/UserService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/ProductService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/CustomerService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/OrderService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/SystemRegionService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/SystemDictionaryService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/SystemUserService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/DeliveryService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/PaymentService.js'></script>
+<script type='text/javascript' src='/ejf/easyajax/WaterTicketService.js'></script>
+<script type='text/javascript' src='/include/orderService-client.js'></script>
+<script type='text/javascript' src='/include/microerp-client.js'></script>
+<script>
+$currentUserJson
+loadPage=EasyAjaxUtil.loadPage;
+loadStaticPage=EasyAjaxUtil.loadStaticPage;
+DWRUtil._defaultRowCreator = function(options) {
+var tr=document.createElement("tr");
+tr.onmouseover=function(){this.className='over';};
+tr.onmouseout=function(){this.className='out';};
+return tr;
+}
+function exit()
+{
+if(confirm("是否真要退出系统?"))
+{
+loadPage("index.ejf?easyJWebCommand=logout",null);
+window.close();
+}
+}
+function init()
+{
+EasyAjax.useLoadingMessage("正在加载数据，请稍候...");
+showMenu(2);
+}
+</script>
+</head>
+<body onLoad="init()"  scroll="no">
+<table width="100%" height="100%"  border="0" align="center" cellpadding="0" cellspacing="0" id="frameTable">
+  <tr>
+    <td colspan="5" align="center" valign="bottom"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="80%" align="left" valgn="bottom" background="/images/top/index02_r1_c3.jpg"><img src="/images/top/index02_r1_c1.jpg" width="613" height="58"></td>
+          <td width="20%" align="right" background="/images/top/index02_r1_c3.jpg"><img src="/images/top/index02_r1_c4.jpg" width="147" height="58" border="0" usemap="#Map"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td width="29" height="201" align="left" valign="top" background="/images/left/index02_r5_c1.jpg"><p><img src="/images/left/index02_r2_c1.jpg" width="21" height="330" align="top"></p></td>
+    <td height="100%" align="left" valign="top" id="leftMenu"><div style="height:100%;overflow:none;">
+        <script>
+function showMenu(v)
+{
+$("menu"+v).style.display="";
+for(var i=0;i<6;i++)
+{
+if(v!=i)
+$("menu"+i).style.display="none";
+}
+}
+	</script>
+        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr style="cursor:pointer " onClick="showMenu(0);">
+            <td width="11%" align="left" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c1.jpg" width="20" height="26"></td>
+            <td width="76%" align="center" valign="middle" background="/images/left/back_r1_c2.jpg" class="menu">日常业务</td>
+            <td width="13%" align="right" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c4.jpg" width="21" height="26"></td>
+          </tr>
+          <tr align="center" valign="middle"  id="menu0">
+            <td height="80%" colspan="3"><div style="height:100%;overflow:auto;">
+                <table width="99%" border="0">
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/20.jpg" width="75" height="50" onClick="OrderService.currentOrder=null;loadStaticPage('buyWater.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="OrderService.currentOrder=null;loadStaticPage('buyWater.html');"><span class="t2">购水</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/1.jpg" width="75" height="50" onClick="loadStaticPage('dailyDelive.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('dailyDelive.html');"><span class="t2">送水派单</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/4.jpg" width="75" height="50"onClick="loadStaticPage('deliveryBack.html');"style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('deliveryBack.html');"><span class="t2">回单登记</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/14.jpg" width="75" height="50" onClick="loadStaticPage('dailyPayment.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('dailyPayment.html');"><span class="t2">结账</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/21.jpg" width="75" height="50" onClick="loadStaticPage('buyMachine.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('buyMachine.html');"><span class="t2">购机</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/2.jpg" width="75" height="50" onClick="loadStaticPage('customerSearch.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerSearch.html');"><span class="t2">地址查询</span></a></td>
+                  </tr>
+                </table>
+              </div></td>
+          </tr>
+          <tr  style="cursor:pointer " onClick="showMenu(1);">
+            <td width="11%" align="left" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c1.jpg" width="20" height="26"></td>
+            <td width="76%" align="center" valign="middle" background="/images/left/back_r1_c2.jpg" class="menu">水票业务</td>
+            <td width="13%" align="right" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c4.jpg" width="21" height="26"></td>
+          </tr>
+          <tr align="center" valign="middle" id="menu1" style="display:none">
+            <td height="80%" colspan="3"><div style="height:100%;overflow:auto;">
+                <table width="99%" border="0">
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/6.jpg" width="75" height="50" onClick="OrderService.currentOrder=null;loadStaticPage('buyTicket.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="OrderService.currentOrder=null;loadStaticPage('buyTicket.html');"><span class="t2">购票</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/16.jpg" width="75" height="50" onClick="loadStaticPage('waterTicketRecliam.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('waterTicketRecliam.html');"><span class="t2">水票回收</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="../../images/left/menu/0013.jpg" width="75" height="50"onClick="loadStaticPage('waterTicketSearch.html');"style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('waterTicketSearch.html');"><span class="t2">水票查询</span></a></td>
+                  </tr>
+                </table>
+              </div></td>
+          </tr>
+          <tr style="cursor:pointer " onClick="showMenu(2);">
+            <td width="11%" align="left" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c1.jpg" width="20" height="26"></td>
+            <td width="76%" align="center" valign="middle" background="/images/left/back_r1_c2.jpg" class="menu" >客户信息</td>
+            <td width="13%" align="right" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c4.jpg" width="21" height="26"></td>
+          </tr>
+          <tr align="center" valign="middle" style="display:none"  id="menu2">
+            <td height="80%" colspan="3"><div style="height:100%;overflow:auto;">
+                <table width="99%" border="0">
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/26.jpg" width="75" height="50" onClick="loadStaticPage('customerList.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerList.html');"><span class="t2">客户管理</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/0001.JPG" width="75" height="50" onClick="loadStaticPage('customerOrder.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerOrder.html');"><span class="t2">客户订单信息</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/18.jpg" width="75" height="50"onClick="loadStaticPage('customerPayment.html');"style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerSearch.html');"><span class="t2">客户支付信息</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/0000001.jpg" width="75" height="50"onClick="loadStaticPage('customerSearch.html');"style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerSearch.html');"><span class="t2">客户查询</span></a></td>
+                  </tr>
+                </table>
+              </div></td>
+          </tr>
+          <tr style="cursor:pointer " onClick="showMenu(3);">
+            <td width="11%" align="left" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c1.jpg" width="20" height="26"></td>
+            <td width="76%" align="center" valign="middle" background="/images/left/back_r1_c2.jpg" class="menu">产品信息</td>
+            <td width="13%" align="right" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c4.jpg" width="21" height="26"></td>
+          </tr>
+          <tr align="center" valign="middle" style="display:none"  id="menu3">
+            <td height="80%" colspan="3"><div style="height:100%;overflow:auto;">
+                <table width="99%" border="0">
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/12.jpg" width="75" height="50" onClick="loadStaticPage('productList.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('productList.html');"><span class="t2">产品管理</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/0013.jpg" width="75" height="50"onClick="loadStaticPage('customerSearch.html');"style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerSearch.html');"><span class="t2">产品查询</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/23.jpg" width="75" height="50" onClick="loadStaticPage('customerSearch.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerSearch.html');"><span class="t2">产品销售情况</span></a></td>
+                  </tr>
+                </table>
+              </div></td>
+          </tr>
+          <tr style="cursor:pointer " onClick="showMenu(4);">
+            <td width="11%" align="left" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c1.jpg" width="20" height="26"></td>
+            <td width="76%" align="center" valign="middle" background="/images/left/back_r1_c2.jpg" class="menu" >实用工具</td>
+            <td width="13%" align="right" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c4.jpg" width="21" height="26"></td>
+          </tr>
+          <tr align="center" valign="middle" style="display:none"  id="menu4">
+            <td height="80%" colspan="3"><div style="height:100%;overflow:auto;">
+                <table width="99%" border="0">
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/22.jpg" width="75" height="50" onClick="$('main').innerHTML='<iframe src=loadPage.ejf?url=calendar.htm width=800 height=450px></iframe>';" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="$('main').innerHTML='<iframe src=loadPage.ejf?url=calendar.htm width=800 height=450px></iframe>';"><span class="t2">日历信息</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/13.jpg" width="75" height="50" onClick="loadStaticPage('regionList.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('regionList.html');"><span class="t2">邮编查询</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/10.jpg" width="75" height="50" onClick="loadStaticPage('customerSearch.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerSearch.html');"><span class="t2">铁路查询</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/19.jpg" width="75" height="50" onClick="loadStaticPage('customerSearch.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerSearch.html');"><span class="t2">生活常识</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/15.jpg" width="75" height="50" onClick="loadStaticPage('customerSearch.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('customerSearch.html');"><span class="t2">常用网址</span></a></td>
+                  </tr>
+                </table>
+              </div></td>
+          </tr>
+          <tr style="cursor:pointer" onClick="showMenu(5);">
+            <td width="11%" align="left" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c1.jpg" width="20" height="26"></td>
+            <td width="76%" align="center" valign="middle" background="/images/left/back_r1_c2.jpg" class="menu" >系统管理</td>
+            <td width="13%" align="right" background="/images/left/back_r1_c2.jpg"><img src="/images/left/back_r1_c4.jpg" width="21" height="26"></td>
+          </tr>
+          <tr align="center" valign="middle" style="display:none"  id="menu5">
+            <td height="80%" colspan="3"><div style="height:100%;overflow:auto;">
+                <table width="99%" border="0">
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/5.jpg" width="75" height="50" onClick="loadStaticPage('dictionaryList.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('dictionaryList.html');"><span class="t2">数据字典</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/7.jpg" width="75" height="50" onClick="loadStaticPage('regionList.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('regionList.html');"><span class="t2">地区信息</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/25.jpg" width="75" height="50"  onClick="loadStaticPage('systemUserList.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('systemUserList.html');">用户管理</a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/8.jpg" width="75" height="50" onClick="loadStaticPage('systemLogList.html');" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('systemLogList.html');"><span class="t2">日志信息</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/0002.JPG" width="75" height="50"onClick="loadStaticPage('changePassword.html');"style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="loadStaticPage('changePassword.html');"><span class="t2">修改密码</span></a></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="/images/left/menu/3.jpg" width="75" height="50" onClick="exit();" style="cursor:pointer"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#D9E8FF"><a href="#" onClick="exit();"><span class="t2">退出系统</span></a></td>
+                  </tr>
+                </table>
+              </div></td>
+          </tr>
+        </table>
+      </div></td>
+    <td width="5" align="left" valign="middle" background="/images/left/line1.jpg"><img src="/images/left/line2.jpg" width="5" height="35"  onClick="//$('leftMenu').style.visibility='hidden'"></td>
+    <td width="82%" align="center" valign="top" background="/images/main/1/images/000.jpg" class="t2" id="main"><table width="100%" height="100%"  border="0" cellpadding="0" cellspacing="0">
+        <tr align="left" valign="middle">
+          <td height="10" colspan="2" class="main1">　　<span class="welcome">尊敬的用户：欢迎您的光临！</span></td>
+        </tr>
+        <tr>
+          <td width="81%" class="main1"><table width="819" height="527" border="0" cellpadding="0" cellspacing="0" class="main000" id="__01">
+              <tr>
+                <td colspan="7"><img src="/images/main/1/images/jj1_01.jpg" width="819" height="257" alt=""></td>
+              </tr>
+              <tr align="left" valign="top">
+                <td height="96" colspan="7" class="main2"><table width="100%" height="100%"  border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="5%">&nbsp;</td>
+                      <td width="13%" align="center" valign="bottom" class="ct">&middot;购水</td>
+                      <td width="17%" align="center" valign="bottom" class="ct">&middot;地址查询</td>
+                      <td width="17%" align="center" valign="bottom" class="ct">&middot;水票回收</td>
+                      <td width="19%" align="center" valign="bottom" class="ct">&middot;客户管理</td>
+                      <td width="17%" align="center" valign="bottom" class="ct">&middot;日历信息</td>
+                      <td width="12%">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><img src="/images/main/1/images/jj1_03.jpg" width="58" height="128" alt=""></td>
+                <td><img src="/images/main/1/images/jj1_04.jpg" width="122" height="128" onMouseOver="this.src='/images/main/1/images/jj2_04.jpg'" onMouseOut="this.src='/images/main/1/images/jj1_04.jpg'" onClick="loadStaticPage('buyWater.html');"  style="cursor:pointer;"  /></td>
+                <td><img src="/images/main/1/images/jj1_05.jpg" width="134" height="128"onMouseOver="this.src='/images/main/1/images/jj2_05.jpg'" onMouseOut="this.src='/images/main/1/images/jj1_05.jpg'" onClick="loadStaticPage('customerSearch.html');"    style="cursor:pointer;" /></td>
+                <td><img src="/images/main/1/images/jj1_06.jpg" width="140" height="128"onMouseOver="this.src='/images/main/1/images/jj2_06.jpg'" onMouseOut="this.src='/images/main/1/images/jj1_06.jpg'"   onClick="loadStaticPage('waterTicketRecliam.html');" style="cursor:pointer;"  /></td>
+                <td><img src="/images/main/1/images/jj1_07.jpg" width="136" height="128"onMouseOver="this.src='/images/main/1/images/jj2_07.jpg'" onMouseOut="this.src='/images/main/1/images/jj1_07.jpg'" onClick="loadStaticPage('customerSearch.html');" style="cursor:pointer;"  /></td>
+                <td><img src="/images/main/1/images/jj1_08.jpg" width="150" height="128" onMouseOver="this.src='/images/main/1/images/jj2_08.jpg'" onMouseOut="this.src='/images/main/1/images/jj1_08.jpg'"  onClick="$('main').innerHTML='<iframe src=loadPage.ejf?url=calendar.htm width=800 height=450px></iframe>';" style="cursor:pointer;" /></td>
+                <td><img src="/images/main/1/images/jj1_09.jpg" width="79" height="128" alt=""></td>
+              </tr>
+              <tr>
+                <td colspan="7"><img src="/images/main/1/images/jj1_10.jpg" width="819" height="46" alt=""></td>
+              </tr>
+            </table></td>
+          <td width="19%" class="i">&nbsp;</td>
+        </tr>
+        <tr align="center" valign="middle">
+          <td colspan="2"> 　<span class="ct">&middot;设计制作　技术支持：</span><span class="jinmaicao">重庆金麦草科技有限公司 </span><span class="ct">&middot;Copyright(c)MEYBOSOFT.COM,2006.all right reserved.</span></td>
+        </tr>
+      </table></td>
+    <td width="24" align="right" valign="top" background="/images/right/index02_r3_c5.jpg"><img src="/images/right/index02_r2_c5.jpg" width="24" height="90%" align="top"></td>
+  </tr>
+  <tr>
+    <td height="29" colspan="5" align="center" valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="80%" align="left" background="/images/bottom/index02_r7_c3.jpg"><img src="/images/bottom/index02_r7_c1.jpg" width="613" height="29"></td>
+          <td width="20%" align="right" background="/images/bottom/index02_r7_c3.jpg"><img src="/images/bottom/index02_r7_c4.jpg" width="147" height="29"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<map name="Map">
+  <area shape="rect" coords="1,16,29,46" href="javascript:loadStaticPage('/first.html');">
+  <area shape="rect" coords="36,16,62,46" href="javascript:loadStaticPage('changePassword.html');">
+  <area shape="rect" coords="74,16,100,47" href="javascript:exit();">
+</map>
+</body>
+</html>

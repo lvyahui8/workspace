@@ -1,0 +1,69 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+<!--
+<script type='text/javascript' src='/include/prototype.js'></script>
+<script type='text/javascript' src='/include/rico.js'></script>
+<script type='text/javascript' src='/dwr/engine.js'></script>
+<script type='text/javascript' src='/dwr/util.js'></script>
+<script type='text/javascript' src='/dwr/interface/ProductService.js'></script>-->
+<script type="text/javascript">
+doSave=function()
+{
+var obj=Form.serialize($("EditForm")).parseQuery();
+DWRUtil.getValues(obj);
+obj.parent={sn:$("parent.sn").value};
+if(obj.id=="")
+SystemRegionService.addSystemRegion(obj,saveSuccess);
+else
+SystemRegionService.updateSystemRegion(obj,saveSuccess);
+}
+saveSuccess=function(ret)
+{
+if(ret)
+{
+alert("成功保存数据！");
+loadStaticPage('regionList.html');
+}
+else
+{
+alert("保存数据失败!");
+}
+}
+</script>
+<form action="" name="EditForm" id="EditForm" method="post">
+<input type="hidden" name="id" id="id">
+<br />
+<span>
+<table align="center" cellspacing="0">
+  <tr>
+    <td colspan="2" class="tablehead">添加地区信息<a href="#" onClick="loadRegion();"></a>　 </td>
+  </tr>
+  <tr>
+    <td width="40%" align="right">地区编号</td>
+    <td width="60%" align="left"><input name="sn" type="text" id="sn" class="form_text" /></td>
+  </tr>
+  <tr>
+    <td width="33%" align="right">地区名称</td>
+    <td align="left"><input name="title" type="text" id="title" class="form_text" /></td>
+  </tr>
+   <tr>
+    <td width="33%" align="right">地区父级</td>
+    <td align="left"><input name="parent.title" type="text" id="parent.title" class="form_text" /><input type="hidden" name="parent.sn" id="parent.sn"></td>
+  </tr>
+     <tr>
+    <td width="33%" align="right">地区级别</td>
+    <td align="left"><input name="lev" type="text" id="lev" class="form_text" /></td>
+  </tr>
+      <tr>
+    <td width="33%" align="right">排列顺序</td>
+    <td align="left"><input name="sequence" type="text" id="sequence" class="form_text" /></td>
+  </tr>
+  <tr>
+    <td height="28px" colspan="2" align="center" class="tablehead">
+	<input name="save" type="button" id="search2" value="保存" onClick="doSave();" class="button" />
+      　　<input name="cancel" type="reset" id="cancel" value="取消"  class="button" /></td>
+  </tr>
+</table>
+</
+</form>
+</div>

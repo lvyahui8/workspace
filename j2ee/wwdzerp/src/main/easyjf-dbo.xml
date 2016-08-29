@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<easyjf-dbo>
+<datasource name="bbs" type="org.apache.commons.dbcp.BasicDataSource">
+<!--Ms SqlServer -->
+<!-- 
+<property name="easydbo.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+<property name="easydbo.connection.password">easyjf.com</property>
+<property name="easydbo.connection.url">jdbc:jtds:sqlserver://localhost:1433;DatabaseName=microerp;SelectMethod=cursor</property>
+<property name="easydbo.connection.username">easyjf</property>
+<property name="easydbo.dialect">com.easyjf.dbo.sql.MSSqlServerQuery</property>
+ -->
+<!-- MySql-->
+<property name="easydbo.connection.driver_class">org.gjt.mm.mysql.Driver</property>
+<property name="easydbo.connection.password">mysql</property>
+<property name="easydbo.connection.url">jdbc:mysql://localhost:3306/microerp</property>
+<property name="easydbo.connection.username">root</property>
+<property name="easydbo.dialect">com.easyjf.dbo.sql.MySqlQuery</property>
+
+
+<property name="easydbo.optimize">true</property>
+<property name="easydbo.show_sql">true</property>
+<!--EasyDBO的Cache设置-->
+<property name="easydbo.cache_name">EasyDBO</property>
+<property name="easydbo.enable_cache">false</property>
+</datasource>
+<tables>
+<class>
+</class>
+</tables>
+</easyjf-dbo>

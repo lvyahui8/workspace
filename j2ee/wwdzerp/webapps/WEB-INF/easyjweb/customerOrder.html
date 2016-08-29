@@ -1,0 +1,162 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<script>
+EasyAjaxUtil.queryPage=function(i,scope){
+OrderService.searchOrders(i);//上一页下一页
+}
+OrderService.searchOrders=function(currentPage)
+{
+var scope="1=1";  //默认全部查询
+if(!currentPage)currentPage=1; //默认页码为1
+var obj=Form.serialize($("EditForm")).parseQuery(); //得到表单数据集
+DWRUtil.getValues(obj); //使表单中的中文字符能显示出来
+if(obj.orderTypes)scope+=" and types="+obj.orderTypes;
+if(obj.paymentStatus)scope+=" and paymentStatus="+obj.paymentStatus;
+if(obj.customer_id)scope+=" and customer_id="+obj.customer_id;
+if(obj.vdate1)scope+=" and vdate>='"+obj.vdate1+"'";
+if(obj.vdate2)scope+=" and vdate<='"+obj.vdate2+"'";
+if(obj.payType)scope+=" and payType="+obj.payType;
+if(obj.paymentStatus)scope+=" and paymentStatus="+obj.paymentStatus;
+if(obj.orderStatus)scope+=" and status="+obj.orderStatus;
+if(obj.money1)scope+=" and amount>="+obj.money1;
+if(obj.money2)scope+=" and amount<="+obj.money2;
+OrderService.queryOrder(scope,null,currentPage,20,function(pageList){
+
+var currentPage=pageList.currentPage;
+EasyAjaxUtil.pageList=pageList;
+DWRUtil.removeAllRows("mainTable");
+if(!pageList.result){
+alert("无满足条件的订单信息");
+return;
+}
+var count=(pageList.currentPage-1)*pageList.pageSize+1;
+var celFuns=[
+function(data){return count++;},
+function(data){return data.customer.title;},
+function(data){return data.sn;},
+function(data){return data.amount;},
+function(data){return typeS(data.types);},
+function(data){return paYType(data.payType);},
+function(data){return paymentSt(data.paymentStatus);},
+function(data){return statuS(data.status);},
+function(data){return "<input name='sta' type='button' id='sta' value='订单详情' class='button' />";}
+];
+
+DWRUtil.addRows("mainTable",pageList.result,celFuns);
+EasyAjaxUtil.showPageInfo();
+});
+}
+//没有值给出提示
+function Null(){
+	 return "<span style='color:Red'>未知</span>";
+}
+//支持状态
+function paymentSt(data){
+	switch(data){
+		case -1: return "未付";
+		case  2: return "已付";
+		case  3: return "赠送";
+		case  4: return "坏账";
+		default: return Null();
+	}
+}
+//支付方式
+function paYType(data){
+	switch(data){
+		case  '1': return "现金支付";
+		case  '2': return "转账";
+		case  '3': return "水票支付";
+		default: return Null();
+	}
+	
+}
+//订单类型
+function typeS(data){
+	switch(data){
+		case 0: return "水";break;
+		case 1: return "水票";break;
+		case 5: return "饮水机";break;
+		default: return Null();
+	}
+}
+//订单状态
+function statuS(data){
+	switch(data){
+		case 0: return "已确认";
+		case -1: return "录入中";
+		case 2: return "已发货";
+		default: return Null();
+	}
+}
+
+</script>
+<form action="" method="post"  name="EditForm" id="EditForm">
+  <span>
+  <table width="100%" height="97%" align="center" cellspacing="0">
+    <tr>
+      <td height="30" bgcolor="#FFFFFF" class="tablehead">客户定单信息查询</td>
+    </tr>
+    <tr>
+      <td valign="top"><table height="100%" cellspacing="0" style=" margin:-2px -4px -2px -4px; width:101%">
+          <tr class="tablehead3">
+            <td width="35%" height="25">客户:
+              <input name="customer.title" type="text" class="form_textmenu"  readonly="readonly"   id="consumer.title22" size="13"   onclick="CustomerService.choiceCustomer('客户',function(obj){$('customer.title').value=obj.title;$('customer_id').value=obj.id;});" />
+              <input name="customer_id" type="hidden" id="customer_id" />              
+              订单类型:
+              <input name="orderTypes-title" type="text" class="form_textmenu" readonly="readonly"  id="orderTypes-title"   onclick="SystemDictionaryService.choiceDictionary('orderType','订单类型',function(result){$('orderTypes-title').value=result.title;$('orderTypes').value=result.tvalue;});" size="6"/>
+            <input type="hidden" name="orderTypes" id="orderTypes" /></td>
+            <td width="43%">定单日期: 从
+              <input name="vdate1" type="text" id="backDate5"  size="6"  readonly="readonly" class="form_text" ondblclick="EasyAjaxUtil.getCalendar();"/>
+              <img name="btnJLDLSJ" id="btnJLDLSJ" width="14" height="16" align="absmiddle" src="/images/calendar.gif" onclick="EasyAjaxUtil.getCalendar('vdate1');" style="CURSOR:pointer" />到
+              <input name="vdate2" type="text" id="vdate2" size="6"  readonly="readonly" class="form_text" ondblclick="EasyAjaxUtil.getCalendar();"/>
+              <img name="btnJLDLSJ" id="btnJLDLSJ" width="14" height="16" align="absmiddle" src="/images/calendar.gif" onclick="EasyAjaxUtil.getCalendar('vdate2');" style="CURSOR:pointer" /></td>
+            <td>支付方式：
+              <input name="payType-title" type="text" class="form_textmenu" readonly="readonly" id="payType-title"   onclick="SystemDictionaryService.choiceDictionary('payType','支付方式',function(result){$('payType-title').value=result.title;$('payType').value=result.tvalue;});" size="5"/>
+              <input type="hidden" name="payType" id="payType" /></td>
+          </tr>
+          <tr class="tablehead3">
+            <td height="25">订单状态:
+              <input name="orderStatus-title" type="text" class="form_textmenu"  id="orderStatus-title"   onclick="SystemDictionaryService.choiceDictionary('orderStatus','订单状态',function(result){$('orderStatus-title').value=result.title;$('orderStatus').value=result.tvalue;});" size="8" readonly="readonly"/>
+              <input type="hidden" name="orderStatus" id="orderStatus" />
+              支付状态:
+              <input name="paymentStatus-title" type="text" class="form_textmenu" readonly="readonly"  id="paymentStatus-title"   onclick="SystemDictionaryService.choiceDictionary('payment','支付情况',function(result){$('paymentStatus-title').value=result.title;$('paymentStatus').value=result.tvalue;});" size="6"/>
+              <input type="hidden" name="paymentStatus" id="paymentStatus" /></td>
+            <td height="25">订单金额: 从<input name="money1" type="text" class="form_text" id="money1" onkeyup="CustomerService.autoQuickSearch(this,2)" size="1"/>到<input name="money2" type="text" class="form_text" id="money2" onkeyup="CustomerService.autoQuickSearch(this,2)" size="1"/>
+            　</td>
+            <td align="center"><span class="tablehead2">
+            <input type="button" name="Submit" value="查询" class="button" onclick="OrderService.searchOrders(1);" />
+　
+<input type="reset" name="Submit2" value="重置" class="button" />
+            </span></td>
+          </tr>
+          <tr align="center">
+            <td height="25" colspan="3" valign="top" class="tablehead">查询结果 </td>
+          </tr>
+          <tr align="center">
+            <td colspan="3" valign="top" class="tablehead2"><div class="tablehead3" style="height:100%;overflow:auto;">
+                <table width="100%" cellspacing="0" style=" margin:-2px -4px -2px -4px; width:100%"  >
+                  <thead>
+                    <tr align="center" class="tablehead3">
+                      <td width="30" height="25">序号</td>
+                      <td height="25">客户名称</td>
+                      <td>订单编号</td>
+                      <td>订单总金额</td>
+                      <td height="25">订单类型</td>
+                      <td height="25">支付方式</td>
+                      <td height="25">支付状态</td>
+                      <td>订单状态</td>
+                      <td>订单详情</td>
+                    </tr>
+                  </thead>
+                  <tbody id="mainTable">
+                  </tbody>
+                </table>
+              </div></td>
+          </tr>
+          <tr align="center">
+            <td height="25" colspan="3" valign="top" class="tablehead"><span id="pageInfo"></span></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  </span>
+</form>

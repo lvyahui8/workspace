@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<easyjf-cache>
+	<!-- storePolicy主要有LRU、LFU、FIFO三种,备注LRU缓存还有问题-->
+	<cache name="EasyDBO" storePolicy="LFU" maxElements="5000"
+		expiredInterval="1000" type="com.easyjf.cache.EasyCache" />
+</easyjf-cache>

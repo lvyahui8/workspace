@@ -1,0 +1,82 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+<script type="text/javascript">
+EasyAjaxUtil.queryPage=function(i,scope){
+loadRegion(i,scope);
+}
+loadRegion=function(currentPage,scope)
+{
+if(!scope)scope="lev=1";
+if(!currentPage)currentPage=1;
+SystemRegionService.querySystemRegion(scope,null,currentPage,20,showResult);
+}
+var showResult=function(pageList)
+{
+EasyAjaxUtil.pageList=pageList;
+var currentPage=pageList.currentPage;
+var count=(pageList.currentPage-1)*pageList.pageSize+1;
+var celFuns=[
+function(data){return count++;},
+function(data){return data.sn;},
+function(data){return data.title;},
+function(data){return data.lev;},
+function(data){return data.sequence;},
+function(data){return data.inputUser ? data.inputUser : "　";},/*数据为空就返回空格不然表格显示有问题*/
+function(data){return "<input type='button' onClick=\"editRegion('"+data.sn+"');\" value='编辑'  class='button'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='button' onClick=\"SystemRegionService.delRegion({id:"+data.id+"},delRegion);\" value='删除' class='button' >";}
+];
+DWRUtil.removeAllRows("mainTable");
+DWRUtil.addRows("mainTable",pageList.result,celFuns);
+EasyAjaxUtil.showPageInfo();
+}
+editRegion=function(id)
+{
+loadStaticPage("regionEdit.html",function(){SystemRegionService.getSystemRegion(id,function(obj){
+DWRUtil.setValues(obj);
+DWRUtil.setValue("parent.title",obj.parent.title);
+DWRUtil.setValue("parent.sn",obj.parent.sn);
+});});
+}
+del=function(ret)
+{
+if(ret){alert("数据删除成功");load()}
+else alert("数据删除失败");
+}
+loadRegion(1);
+</script>
+<span>
+<table width="100%" height="97%" align="center" cellspacing="0">
+  <tr>
+    <td height="30" class="tablehead">地区信息列表　<a href="#" onClick="loadRegion();">刷新</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30" class="tablehead2">地区编号:
+      <input name="region_sn" type="text" class="form_text" id="region_sn" size="3"  />
+地区名称:
+<input name="region-title" type="text" class="form_text" id="title" size="7"  />
+<input name="search" type="button" id="search" value="查询" class="button" />
+　
+<input name="add" type="button" id="add" value="添加" onClick="loadStaticPage('/regionEdit.html');" class="button" /></td>
+  </tr>
+  <td valign="top" class="tablehead"><div class="tablehead3" style="height:100%;overflow:auto;"><table cellspacing="0" style=" margin:-2px -4px -2px -4px; width:100%"  >
+	<thead>
+      <tr align="center" class="tablehead3">
+        <td width="5%" height="30">序号</td>
+        <td width="13%" height="30">地区编号</td>
+        <td width="14%" height="30">地区名称</td>
+        <td width="12%" height="30">地区级别</td>
+        <td width="12%" height="30">排列顺序</td>
+        <td width="16%" height="30">录入用户</td>
+        <td width="25%" height="30">操作</td>
+      </tr>   </thead> 
+	  <tbody id="mainTable"></tbody>  
+    </table></div></td>
+  </tr>
+  <tr>
+    <td height="25" align="center" class="tablehead"><span id="pageInfo"></span>
+	</td>
+  </tr>
+</table>
+</span>
+</div>
+

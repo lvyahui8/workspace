@@ -1,0 +1,55 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+<script type="text/javascript">
+SystemDictionaryService.doAddDictionaryDetail=function()
+{
+var obj=Form.serialize($("EditForm")).parseQuery();
+DWRUtil.getValues(obj);
+obj.parent=SystemDictionaryService.currentDict;
+if(obj.id=="")
+SystemDictionaryService.addDictionaryDetail(obj,saveSuccess);
+else
+SystemDictionaryService.updateDictionaryDetail(obj,saveSuccess);
+}
+var saveSuccess=function(ret)
+{
+if(ret)
+{
+alert("成功保存数据！");
+SystemDictionaryService.manageDictionaryValue(SystemDictionaryService.currentDict.id);
+}
+else
+{
+alert("保存数据失败!");
+}
+}
+</script>
+<form action="" name="EditForm" id="EditForm" method="post">
+<input type="hidden" name="id" id="id">
+<br  />
+<span>
+<table cellspacing="0" align="center">
+  <tr>
+    <td colspan="2" class="tablehead">添加字典值 </td>
+  </tr>
+  <tr>
+    <td width="30%" align="right">值名称</td>
+    <td align="left"><input name="title" type="text" id="title" class="form_text" /></td>
+  </tr>
+   <tr>
+     <td align="right">字典值</td>
+     <td align="left"><input name="tvalue" type="text" id="tvalue" class="form_text" /></td>
+   </tr>
+   <tr>
+    <td width="30%" align="right">排序顺序</td>
+    <td align="left"><input name="sequence" type="text" id="sequence"  class="form_text" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" class="tablehead" style="height:28px">
+	<input name="save" type="button" id="search2" value="保存" onClick="SystemDictionaryService.doAddDictionaryDetail();" class="button" />
+      　　<input name="cancel" type="reset" id="cancel" value="取消" class="button" /></td>
+  </tr>
+</table>
+</span>
+</form>
+</div>

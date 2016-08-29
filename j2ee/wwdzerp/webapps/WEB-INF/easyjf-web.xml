@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<easyjf-web>
+<frame-setting>
+<property name="com.easyjweb.debug">false</property>
+<init-app>
+<app-class></app-class>  
+</init-app>
+</frame-setting>
+<modules>
+<!--后台管理模块配置-->
+<module path="/randomCode" form=""  scope="request" action="com.easyjf.web.tools.RandomImgCode" defaultPage="" />
+<module path="/index" form=""  scope="request" action="com.meybosoft.microerp.action.ManageAction" defaultPage="" >
+<page name="login" url="/login.html" type="template"/>
+<page name="main" url="/main.html" type="template"/>
+<page name="menu" url="/menu.html" type="template"/>
+<page name="bottom" url="/bottom.html" type="template"/>
+<page name="first" url="/first.html" type="template"/>
+<property name="userService" ref="UserService"/>
+</module>
+<module path="/loadPage" form=""  scope="request" action="com.meybosoft.microerp.action.LoadPageAction" defaultPage="" />
+</modules>
+<forms>
+</forms>
+<beans>
+
+<bean name="UserService" class="com.meybosoft.microerp.business.impl.SystemUserServiceImpl" />
+
+<bean name="ProductService" class="com.meybosoft.microerp.business.impl.ProductServiceImpl" />
+
+<bean name="CustomerService" class="com.meybosoft.microerp.business.impl.CustomerServiceImpl" />
+
+<bean name="DealService" class="com.meybosoft.microerp.business.impl.DealServiceImpl" />
+
+<bean name="WaterTicketService" class="com.meybosoft.microerp.business.impl.WaterTicketServiceImpl" >
+<property name="customerService" ref="CustomerService"/>
+</bean>
+
+<bean name="OrderService" class="com.meybosoft.microerp.business.impl.OrderServiceImpl">
+<property name="ticketService" ref="WaterTicketService"/>
+<property name="customerService" ref="CustomerService"/>
+</bean>
+
+<bean name="PaymentService" class="com.meybosoft.microerp.business.impl.PaymentServiceImpl">
+<property name="orderService" ref="OrderService"/>
+<property name="customerService" ref="CustomerService"/>
+</bean>
+
+<bean name="SystemRegionService" class="com.meybosoft.microerp.business.impl.SystemRegionServiceImpl" />
+
+<bean name="SystemUserService" class="com.meybosoft.microerp.business.impl.SystemUserServiceImpl" />
+
+<bean name="SystemDictionaryService" class="com.meybosoft.microerp.business.impl.SystemDictionaryServiceImpl" />
+
+<bean name="DeliveryService" class="com.meybosoft.microerp.business.impl.DeliveryServiceImpl">
+<property name="orderService" ref="OrderService"/>
+</bean>
+
+</beans>
+</easyjf-web>

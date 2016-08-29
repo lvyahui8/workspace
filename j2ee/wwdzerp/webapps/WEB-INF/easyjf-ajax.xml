@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<easyjf-web>
+<!--用于设定Ajax可供ajax用的服务-->
+	<ajax>
+		<services allowName="*Service" denyName="">			
+			<service name="UserService">
+			<include method=""></include>
+			<exclude method=""></exclude>
+			</service>
+			<service name="">			
+			</service>
+		</services>
+		<!-- 用一设值可转换的Bean-->
+		<convert name="com.meybosoft.microerp.system.SystemBasicData">
+			<!-- <include property=".*"></include> -->
+			<exclude property="children"></exclude>
+		</convert>	
+		<convert name="com.meybosoft.microerp.system.SystemRegion">
+			<!-- <include property=".*"></include> -->
+			<exclude property="children"></exclude>
+			<!-- <exclude property="parent"></exclude> -->
+		</convert>	
+		<convert name="com.meybosoft.microerp.domain.OrderDetail">
+			<!-- <include property=".*"></include> -->
+			<!-- <exclude property="order"></exclude>-->
+			<!-- <exclude property="parent"></exclude> -->
+		</convert>		
+		<signatures>
+		
+		</signatures>
+	</ajax>
+</easyjf-web>

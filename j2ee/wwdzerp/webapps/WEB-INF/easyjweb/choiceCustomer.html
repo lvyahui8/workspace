@@ -1,0 +1,39 @@
+﻿<link href="/include/css.css" rel="stylesheet" type="text/css">
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY> 
+	<TR> 
+      <TD height=20 align="center" class="tablehead" style=" padding-top:3px;"> 电话:
+      <input name="customer-tel" type="text" id="customer-tel" size="10" class="form_text" onkeyup="if(this.value.length>1)CustomerService.searchCustomer($('customer-tel').value,$('customer-title').value,$('customer-sn').value,$('customer-address').value,1,15,ModalDialog.defaultQueryResult);" /></TD>
+    </TR>
+	
+	<TR>
+	  <TD height=20 align="center" class="tablehead">名称:
+      <input name="customer-title" type="text" id="customer-title" size="10" class="form_text"  onkeyup="if(this.value.length>0)CustomerService.searchCustomer($('customer-tel').value,$('customer-title').value,$('customer-sn').value,$('customer-address').value,1,15,ModalDialog.defaultQueryResult);" /></TD>
+    </TR>
+	<TR>
+	  <TD height=20 align="center" class="tablehead">编号:
+      <input name="customer-sn" type="text" id="customer-sn" size="10" class="form_text" onkeyup="if(this.value.length>2)CustomerService.searchCustomer($('customer-tel').value,$('customer-title').value,$('customer-sn').value,$('customer-address').value,1,15,ModalDialog.defaultQueryResult);"  /></TD>
+    </TR>
+	<TR> 
+      <TD height=20 align="center" class="tablehead">
+      地址:  
+      <input name="customer-address" type="text" id="customer-address" size="10" class="form_text" onkeyup="if(this.value.length>2)CustomerService.searchCustomer($('customer-tel').value,$('customer-title').value,$('customer-sn').value,$('customer-address').value,1,15,ModalDialog.defaultQueryResult);" /></TD>
+    </TR>
+	
+	 <TR>
+	   <TD height=20 align="center" class="tablehead"><input type="button" name="Submit2" value="查询" onClick="CustomerService.searchCustomer($('customer-tel').value,$('customer-title').value,$('customer-sn').value,$('customer-address').value,1,15,ModalDialog.defaultQueryResult);" class="button" /></TD>
+    </TR>
+	<!--
+    <TR> 
+      <TD vAlign=center align=center width="100%" height="100%">
+	  <select id="modalDialogSelectList" class="intro" name="modalDialogSelectList" size="10" onDblClick="ModalDialog.choice(this.value);" style="width:100%">         		 
+		  </select></TD>
+    </TR>
+	 <TR> 
+      <TD height=20 align="center" class="titletxt" style="padding-bottom:2px;"><input type="button" name="ok" value="确定" onClick="ModalDialog.choice($('modalDialogSelectList').value);" class="button" />　<input type="button" name="cancel" value="取消" onClick="ModalDialog.cancel();" class="button" />　<input type="button" name="cancel2" value="关闭" onClick="ModalDialog.close();" class="button" /></TD>
+    </TR>-->
+  </TBODY>
+</TABLE>
+<script>
+CustomerService.searchCustomer($('customer-tel').value,$('customer-title').value,$('customer-sn').value,$('customer-address').value,1,15,ModalDialog.defaultQueryResult);
+</script>

@@ -1,0 +1,100 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+//EasyAjax.DEBUG=true;
+ProductService.doSave=function()
+{
+var obj=Form.serialize($("EditForm")).parseQuery();//得到表单数据集合
+DWRUtil.getValues(obj);
+obj.vendor={id:DWRUtil.getValue("vendor.id")};  //得到供货商
+if(obj.id=="")	//如果id为空则说明这是增加的一种新产品
+ProductService.addProduct(obj,saveSuccess); //添加产品到数据库
+else
+ProductService.updateProduct(obj,saveSuccess); //更新产品
+}
+var saveSuccess=function(ret)//返回一个逻辑值
+{
+if(ret)
+{
+alert("成功保存数据！");
+loadStaticPage('productList.html');
+}
+else
+{
+alert("保存数据失败!");
+}
+}
+
+choiceVendor=function()
+{
+CustomerService.choiceCustomer("供应商",function(obj)
+{
+$("vendor.id").value=obj.id;
+$("vendor.title").value=obj.title;
+});
+}
+</script>
+<form action="" name="EditForm" id="EditForm" method="post">
+  <input type="hidden" name="id" id="id">
+  <br />
+  <span>
+  <table align="center" cellspacing="0">
+    <tr>
+      <td colspan="2" class="tablehead">产品表单<a href="#" onClick="loadProduct();"></a>　 </td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">产品编号</td>
+      <td align="left"><input name="sn" type="text" id="sn" class="form_text" />
+        <span style="color:red"> *</span></td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">产品名称</td>
+      <td align="left"><input name="title" type="text" id="title" class="form_text" />
+        <span style="color:red"> *</span></td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">供货商</td>
+      <td align="left"><input name="vendor.title" type="text" id="vendor.title" onClick="choiceVendor();" class="form_textmenu"/>
+        <input type="hidden" name="vendor.id" id="vendor.id">
+      </td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">类别</td>
+      <td align="left"><input name="types-title" type="text" id="types-title" readonly="readonly" class="form_textmenu" onClick="SystemDictionaryService.choiceDictionary('productType','产品类别',function(result){$('types-title').value=result.title;$('types').value=result.tvalue;});" />
+        <input type="hidden" name="types" id="types">
+        <span style="color:red"> *</span></td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">目录</td>
+      <td align="left"><input name="dir" type="text" id="dir" class="form_text"/>
+      </td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">计量单位</td>
+      <td align="left"><input name="unit-title" type="text" id="unit-title" class="form_textmenu"   onClick="SystemDictionaryService.choiceDictionary('measureUnit','计量单位',function(result){$('unit-title').value=result.title;$('unit').value=result.tvalue;});"/>
+        <input type="hidden" name="unit" id="unit"></td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">进货价格</td>
+      <td align="left"><input name="buyPrice" type="text" id="buyPrice" class="form_text" onkeyup="if(isNaN(value))execCommand('undo')" onafterpaste="if(isNaN(value))execCommand('undo')" />
+        <span style="color:red"> *</span></td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">销售价格</td>
+      <td align="left"><input name="salePrice" type="text" id="salePrice" class="form_text" onkeyup="if(isNaN(value))execCommand('undo')" onafterpaste="if(isNaN(value))execCommand('undo')" />
+        <span style="color:red"> *</span></td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">产品图片</td>
+      <td align="left"><input name="pic" type="text" id="pic" class="form_text" /></td>
+    </tr>
+    <tr>
+      <td width="30%" align="right">产品简介</td>
+      <td align="left"><textarea name="intro" rows="4" id="intro" style="width:90%" class="intro"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center" class="tablehead"><input name="save" type="button" id="search2" value="保存" onClick="ProductService.doSave();" class="button" />
+        <input name="cancel" type="button" id="cancel" value="取消"  class="button" /></td>
+    </tr>
+  </table>
+  </span>
+</form>

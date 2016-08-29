@@ -1,0 +1,101 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+  <script type="text/javascript">
+//EasyAjax.DEBUG=true;
+EasyAjaxUtil.queryPage=function(i,scope){
+CustomerService.listCustomer(i,20);
+}
+
+CustomerService.listCustomer=function(currentPage,pageSize)
+{
+var tel=$("customer-tel").value;
+var sn=$("customer-sn").value;
+var title=$("customer-title").value;
+var address=$("customer-address").value;
+if(!currentPage)currentPage=1;
+if(!pageSize)pageSize=20;  //设定一页显示多少条记录
+CustomerService.searchCustomer(tel,title,sn,address,currentPage,pageSize,showResult);
+}
+CustomerService.autoQuickSearch=function(v,len)
+{
+//&& (!CustomerService.beingInSearch)
+if(v.value.length>len)CustomerService.listCustomer(1);
+}
+
+var showResult=function(pageList)
+{
+EasyAjaxUtil.pageList=pageList;
+var currentPage=pageList.currentPage;    //得到页数
+var count=(pageList.currentPage-1)*pageList.pageSize+1; //得到序号
+var celFuns=[
+function(data){return count++;},
+function(data){return data.sn;},
+function(data){return data.title ? data.title : "　";},
+function(data){return data.tel ? data.tel : "　";},
+function(data){return data.address ? data.address : "　";},
+function(data){return data.debt ? data.debt : "　";},
+function(data){return data.ticketNum ? data.ticketNum : "　";},
+function(data){return data.status ? data.status : "　";},/*如果数据为空就返回空格不然单元格显示有问题*/
+function(data){return "<input type='button' onClick=\"editCustomer("+data.id+");\" value='编辑'  class='button' />&nbsp;&nbsp;&nbsp;<input type='button' onClick=\"if(confirm('数据删除后不能恢复，真的要删除吗?')){CustomerService.delCustomer({id:"+data.id+"},delCustomer);}\" value='删除' class='button' />";}
+];
+DWRUtil.removeAllRows("mainTable"); //清出原表格中的内容
+DWRUtil.addRows("mainTable",pageList.result,celFuns); //此方法用于绘制表格
+EasyAjaxUtil.showPageInfo(); //调用此方法在页面底部显示分页信息
+}
+editCustomer=function(id)
+{
+loadStaticPage("/customerEdit.html",function(){CustomerService.getCustomer(id,function(obj){
+DWRUtil.setValues(obj);
+if(obj.types)SystemDictionaryService.getDictionaryDetailByValue("customerType",obj.types,function(result){if(result)$("types-title").value=result.title;});
+});});
+}
+delCustomer=function(ret)
+{
+if(ret){alert("数据删除成功");listCustomer(EasyAjaxUtil.pageList.currentPage)}
+else alert("数据删除失败");
+}
+CustomerService.listCustomer();
+</script>
+  <span>
+  <table width="100%" height="97%"  align="center" cellspacing="0">
+    <tr>
+      <td height="30" class="tablehead">客户信息列表</td>
+    </tr>
+    <tr>
+      <td height="30" class="tablehead2">　电话号码：
+        <input name="customer-tel" type="text" class="form_text" id="textsn" size="3" onKeyUp="CustomerService.autoQuickSearch(this,2); strTelNumber(this);"/>
+        &nbsp;编号:
+        <input name="customer-sn" type="text" class="form_text" id="customer-sn" size="3" onKeyUp="CustomerService.autoQuickSearch(this,2)"  />
+        客户名称:
+        <input name="customer-title" type="text" class="form_text" id="title" size="7" onKeyUp="CustomerService.autoQuickSearch(this,1)"/>
+        地址：
+        <input name="customer-address" type="text" class="form_text" id="customer-title" size="7" onKeyUp="CustomerService.autoQuickSearch(this,2)" />
+        <input name="search" type="button" id="search" value="查询" class="button" onclick="CustomerService.listCustomer(1)";/>
+        <input name="add" type="button" id="add" value="添加" onClick="loadStaticPage('/customerEdit.html');" class="button" /></td>
+    </tr>
+    <tr>
+      <td valign="top" class="tablehead"><div class="tablehead3" style="height:100%;overflow:auto;">
+          <table cellspacing="0" style=" margin:-2px -4px -2px -4px; width:100%"  >
+            <thead>
+              <tr align="center" class="tablehead3">
+                <td height="25">序号</td>
+                <td height="25">客户编号</td>
+                <td height="25">客户名称</td>
+                <td height="25">电话</td>
+                <td height="25">地址</td>
+                <td height="25">欠款</td>
+                <td height="25">水票数</td>
+                <td height="25">状态</td>
+                <td height="25">操作</td>
+              </tr>
+            </thead>
+            <tbody id="mainTable">
+            </tbody>
+          </table>
+        </div></td>
+    </tr>
+    <tr>
+      <td height="25" align="center" class="tablehead"><span id="pageInfo"></span> </td>
+    </tr>
+  </table>
+  </span> </div>

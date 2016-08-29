@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>重庆壹加壹自然回归水有限公司ERP系统</title>
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<script>
+document.onkeydown = function()
+{
+if(event.keyCode==27)
+{
+document.getElementById("exitButton").click();
+}
+if(event.keyCode==13)//回车键
+{
+doSave();
+}
+}
+window.onload=function()
+{
+EditForm.userName.focus();
+}
+function doSave()
+{
+if(EditForm.userName.value=="" || EditForm.password.value=="")
+{alert("请输入用户名及密码");
+return;
+}
+EditForm.submit();
+}
+</script>
+</head>
+<body>
+<form action="" method="post" name="EditForm">
+<input type="hidden" name="easyJWebCommand" value="login">
+<table width="100%" height="100%"  border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle"><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table border="0" cellpadding="0" cellspacing="0" width="714">
+      <!-- fwtable fwsrc="未命名" fwbase="0.jpg" fwstyle="Dreamweaver" fwdocid = "2066711781" fwnested="0" -->
+      <tr>
+        <td><img src="/images/spacer.gif" width="162" height="1" border="0" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="122" height="1" border="0" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="69" height="1" border="0" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="15" height="1" border="0" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="64" height="1" border="0" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="101" height="1" border="0" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="181" height="1" border="0" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+      </tr>
+      <tr>
+        <td colspan="7"><img name="n0_r1_c1" src="/images/0_r1_c1.jpg" width="714" height="88" border="0" id="n0_r1_c1" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="1" height="88" border="0" alt="" /></td>
+      </tr>
+      <tr>
+        <td colspan="7"><img name="n0_r2_c1" src="/images/0_r2_c1.jpg" width="714" height="112" border="0" id="n0_r2_c1" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="1" height="112" border="0" alt="" /></td>
+      </tr>
+      <tr>
+        <td rowspan="2"><img name="n0_r3_c1" src="/images/0_r3_c1.jpg" width="162" height="59" border="0" id="n0_r3_c1" alt="" /></td>
+        <td colspan="5" align="left" valign="middle" background="/images/0_r3_c2.jpg" >　　　　　<span class="zi">用户名：</span>            <input name="userName" class="test"  id="userName" size="28"  value="$!userName"/></td>
+        <td rowspan="2"><img name="n0_r3_c7" src="/images/0_r3_c7.jpg" width="181" height="59" border="0" id="n0_r3_c7" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="1" height="30" border="0" alt="" /></td>
+      </tr>
+      <tr>
+        <td colspan="5" align="left" background="/images/0_r4_c2.jpg" > 　　　　　<span class="zi">密　码：</span></span>            <input name="password" type="password" class="test"  id="password" size="30" />
+        </span></td>
+        <td><img src="/images/spacer.gif" width="1" height="29" border="0" alt="" /></td>
+      </tr>
+      <tr>
+        <td colspan="7"><img name="n0_r5_c1" src="/images/0_r5_c1.jpg" width="714" height="11" border="0" id="n0_r5_c1" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="1" height="11" border="0" alt="" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><img name="n0_r6_c1" src="/images/0_r6_c1.jpg" width="284" height="27" border="0" id="n0_r6_c1" alt="" /></td>
+        <td><img name="n0_r6_c3" src="/images/0_r6_c3.jpg" width="69" height="27" border="0" id="n0_r6_c3" alt=""  style="cursor:pointer" onClick="doSave();" onMouseOver="this.src='/images/0_r6_c333.jpg'" onMouseOut="this.src='/images/0_r6_c3.jpg'"/></td>
+        <td><img name="n0_r6_c4" src="/images/0_r6_c4.jpg" width="15" height="27" border="0" id="n0_r6_c4" alt="" /></td>
+        <td><img name="exitButton" src="/images/0_r6_c5.jpg" width="64" height="27" border="0" id="exitButton" alt="" style="cursor:pointer" onClick="if(confirm('是否真的要退出?'))self.close();"  onMouseOver="this.src='/images/0_r6_c555.jpg'" onMouseOut="this.src='/images/0_r6_c5.jpg'"//></td>
+        <td colspan="2"><img name="n0_r6_c6" src="/images/0_r6_c6.jpg" width="282" height="27" border="0" id="n0_r6_c6" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="1" height="27" border="0" alt="" /></td>
+      </tr>
+      <tr>
+        <td colspan="7"><img name="n0_r7_c1" src="/images/0_r7_c1.jpg" width="714" height="60" border="0" id="n0_r7_c1" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="1" height="60" border="0" alt="" /></td>
+      </tr>
+      <tr>
+        <td colspan="7"><img name="n0_r8_c1" src="/images/0_r8_c1.jpg" width="714" height="56" border="0" id="n0_r8_c1" alt="" /></td>
+        <td><img src="/images/spacer.gif" width="1" height="56" border="0" alt="" /></td>
+      </tr>
+    </table>    
+    <p>&nbsp;</p></td>
+  </tr>
+</table></form>
+</body>
+</html>
+#if($msg)
+<script>
+alert("$msg");
+</script>
+#end

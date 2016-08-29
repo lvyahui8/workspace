@@ -1,0 +1,108 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<script>
+EasyAjaxUtil.queryPage=function(i,scope){
+WaterTicketService.searchWaterTicket(i);
+}
+WaterTicketService.searchWaterTicket=function(currentPage)
+{
+var scope="1=1";
+if(!currentPage)currentPage=1;
+var obj=Form.serialize($("EditForm")).parseQuery();
+DWRUtil.getValues(obj);
+if(obj.sn1&&obj.sn2)
+{
+scope+=" and sn>="+obj.sn1+" and sn<="+obj.sn2;
+}
+else if(obj.sn1)scope+=" and sn="+obj.sn1;
+else if(obj.sn2)scope+=" and sn="+obj.sn2;
+if(obj.customer_id)scope+=" and customer_id="+obj.customer_id;
+if(obj.consumer_id)scope+=" and consumer_id="+obj.consumer_id;
+if(obj.vdate1)scope+=" and vdate>='"+obj.vdate1+"'";
+if(obj.vdate2)scope+=" and vdate<'"+obj.vdate2+"'";
+if(obj.backDate1)scope+=" and backDate>='"+obj.backDate1+"'";
+if(obj.backDate2)scope+=" and backDate<'"+obj.backDate2+"'";
+WaterTicketService.queryWaterTicket(scope,null,currentPage,15,function(pageList){
+var currentPage=pageList.currentPage;
+var count=(pageList.currentPage-1)*pageList.pageSize+1;
+var celFuns=[
+function(data){return count++;},
+function(data){return data.sn;},
+function(data){return data.product.title;},
+function(data){return data.customer.title;},
+function(data){return data.vdate;},
+function(data){return data.consumer ? data.consumer.title : "　";},
+function(data){return data.backDate?data.backDate:"　";},
+function(data){return data.status==2?"<font color=red>已回收</font>":"<font color=blue>正常</font>";}
+];
+EasyAjaxUtil.pageList=pageList;
+DWRUtil.removeAllRows("mainTable");
+DWRUtil.addRows("mainTable",pageList.result,celFuns);
+EasyAjaxUtil.showPageInfo();
+});
+}
+</script>
+<form action="" method="post"  name="EditForm" id="EditForm">
+<span>
+<table height="97%" align="center" cellspacing="0">
+  <tr>
+    <td height="30" class="tablehead">水票查询</td>
+  </tr>
+  <tr>
+    <td valign="top"><table height="100%" cellspacing="0" style=" margin:-2px -4px -2px -4px; width:101%">
+      <tr align="center" class="tablehead2">
+        <td width="45%" height="30" align="left">起始编号：
+          <input name="sn1" type="text" class="form_text" id="sn1" size="12"  />
+          结束编号：          
+          <input name="sn2" type="text" class="form_text" id="sn22" size="12"  /></td>
+        <td height="30" align="left">购票客户：
+<input name="customer.title" type="text" class="form_textmenu"  id="consumer.title22" size="13"   onClick="CustomerService.choiceCustomer('客户',function(obj){$('customer.title').value=obj.title;$('customer_id').value=obj.id;});" />
+<input name="customer_id" type="hidden" id="customer_id">
+消费客户：
+<input name="consumer.title" type="text" class="form_textmenu"  id="consumer.title4" size="13"   onClick="CustomerService.choiceCustomer('客户',function(obj){$('consumer.title').value=obj.title;$('consumer_id').value=obj.id;});" />
+<input name="consumer_id" type="hidden" id="consumer_id"></td>
+      </tr>
+	   <tr align="center">
+         <td height="30" align="left" class="tablehead2">购买日期：从
+           <input name="vdate1" type="text" id="backDate5" size="8" class="form_text" onDblClick="EasyAjaxUtil.getCalendar();"/>
+           <img name="btnJLDLSJ" id="btnJLDLSJ" width="14" height="16" align="absmiddle" src="/images/calendar.gif" onClick="EasyAjaxUtil.getCalendar('vdate1');" style="CURSOR:pointer">到
+           <input name="vdate2" type="text" id="vdate2" size="8" class="form_text" onDblClick="EasyAjaxUtil.getCalendar();"/>
+           <img name="btnJLDLSJ" id="btnJLDLSJ" width="14" height="16" align="absmiddle" src="/images/calendar.gif" onClick="EasyAjaxUtil.getCalendar('vdate2');" style="CURSOR:pointer"> 　</td>
+	   <td height="30" align="left" class="tablehead2"> 回收日期：从
+         <input name="backDate1" type="text" id="backDate6" size="8" class="form_text" onDblClick="EasyAjaxUtil.getCalendar();"/>
+         <img name="btnJLDLSJ" id="btnJLDLSJ" width="14" height="16" align="absmiddle" src="/images/calendar.gif" onClick="EasyAjaxUtil.getCalendar('backDate1');" style="CURSOR:pointer">到
+         <input name="backDate2" type="text" id="backDate23" size="8" class="form_text" onDblClick="EasyAjaxUtil.getCalendar();"/>
+         <img name="btnJLDLSJ" id="btnJLDLSJ" width="14" height="16" align="absmiddle" src="/images/calendar.gif" onClick="EasyAjaxUtil.getCalendar('backDate2');" style="CURSOR:pointer"> 　
+         <input type="button" name="Submit" value="查询" class="button" onClick="WaterTicketService.searchWaterTicket(1);">　
+         <input type="reset" name="Submit2" value="重置" class="button"></td>
+	   </tr>
+      <tr class="tablehead3">
+        <td colspan="2" align="center" valign="top"><div class="tablehead3" style="height:100%;width:100%;overflow:auto;">
+          <table width="98%" cellspacing="0" style=" margin:-2px -4px -2px -4px; width:100%"  >
+            <thead>
+              <tr class="tablehead3">
+                <td width="50" height="30">序号</td>
+                <td height="30">水票编号</td>
+                <td height="30">水票名称</td>
+                <td height="30">购票客户</td>
+                <td height="30">购票时间</td>
+                <td height="30">消费客户</td>
+                <td height="30">消费时间</td>
+                <td width="60" height="30">状态</td>
+              </tr>
+            </thead>
+            <tbody id="mainTable">
+            </tbody>
+          </table>
+          </div>        </td>
+      </tr>
+      <tr>
+        <td height="5" colspan="2"></td>
+      </tr>
+      <tr align="center">
+        <td height="25" colspan="2" class="tablehead"><span id="pageInfo"></span></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</span>
+</form>

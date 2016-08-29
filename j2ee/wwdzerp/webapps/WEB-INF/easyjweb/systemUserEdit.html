@@ -1,0 +1,83 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<div>
+<!--
+<script type='text/javascript' src='/include/prototype.js'></script>
+<script type='text/javascript' src='/include/rico.js'></script>
+<script type='text/javascript' src='/dwr/engine.js'></script>
+<script type='text/javascript' src='/dwr/util.js'></script>
+<script type='text/javascript' src='/dwr/interface/ProductService.js'></script>-->
+<script type="text/javascript">
+//EasyAjax.DEBUG=true;
+SystemUserService.doSave=function()
+{
+var obj=Form.serialize($("EditForm")).parseQuery();
+DWRUtil.getValues(obj);
+if(obj.id=="")
+SystemUserService.addSystemUser(obj,saveSuccess);
+else
+SystemUserService.updateSystemUser(obj,saveSuccess);
+}
+var saveSuccess=function(ret)
+{
+if(ret)
+{
+alert("成功保存数据！");
+loadStaticPage('systemUserList.html');
+}
+else
+{
+alert("保存数据失败!");
+}
+}
+</script>
+<form action="" name="EditForm" id="EditForm" method="post">
+<input type="hidden" name="id" id="id">
+<span>
+<table align="center" cellspacing="0">
+  <tr>
+    <td colspan="2" class="tablehead">系统用户信息<a href="#" onClick="loadSystemUser();"></a>　 </td>
+  </tr>
+  <tr>
+    <td width="30%" align="right">　用户名</td>
+    <td align="left"><input name="userName" type="text" id="userName" class="test" /></td>
+  </tr>
+  <tr>
+    <td width="30%" align="right">真实改名</td>
+    <td align="left"><input name="trueName" type="text" id="trueName" class="test" /></td>
+  </tr>
+   <tr>
+    <td width="30%" align="right">电子邮件</td>
+    <td align="left"><input name="email" type="text" id="email" class="form_text" /></td>
+  </tr>
+     <tr>
+    <td width="30%" align="right">电话</td>
+    <td align="left"><input name="tel" type="text" id="tel" class="form_text" /></td>
+  </tr>
+      <tr>
+    <td width="30%" align="right">登录次数</td>
+    <td align="left"><span id="loginTimes"></span></td>
+  </tr>
+      <tr>
+    <td width="30%" align="right">上次登录时间</td>
+    <td align="left"><span id="lastLoginTime"></span></td>
+  </tr>
+      <tr>
+    <td width="30%" align="right">上次登录IP</td>
+    <td align="left"><span id="lastLoginIp"></span></td>
+  </tr>
+      <tr>
+    <td width="30%" align="right">用户状态</td>
+    <td align="left"><select name="status" id="status">
+      <option value="0">正常</option>
+      <option value="-1">锁定</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" class="tablehead"><input name="save" type="button" id="search2" value="保存" onClick="SystemUserService.doSave();" class="button" />
+      　　
+        <input name="cancel" type="button" id="cancel" value="取消"  class="button" /></td>
+  </tr>
+</table>
+</span>
+</form>
+</div>

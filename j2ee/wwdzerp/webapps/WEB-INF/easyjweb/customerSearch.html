@@ -1,0 +1,94 @@
+<link href="/include/css.css" rel="stylesheet" type="text/css">
+<script>
+EasyAjaxUtil.queryPage=function(i,scope){
+CustomerService.listCustomer(i,20);
+}
+CustomerService.listCustomer=function(currentPage,pageSize)
+{
+var tel=$("customer-tel").value;
+var sn=$("customer-sn").value;
+var title=$("customer-title").value;
+var address=$("customer-address").value;
+if(!currentPage)currentPage=1;
+if(!pageSize)pageSize=20;
+CustomerService.searchCustomer(tel,title,sn,address,currentPage,pageSize,showResult);
+}
+CustomerService.autoQuickSearch=function(v,len)
+{
+//&& (!CustomerService.beingInSearch)
+if(v.value.length>len)CustomerService.listCustomer(1);
+}
+var showResult=function(pageList)
+{
+EasyAjaxUtil.pageList=pageList;
+var currentPage=pageList.currentPage;
+var count=(pageList.currentPage-1)*pageList.pageSize+1;
+var celFuns=[
+function(data){return count++;},
+function(data){return data.sn;},
+function(data){return data.title ? data.title : "　";},
+function(data){return data.tel ? data.tel : "　";},
+function(data){return data.address ? data.address : "　";},
+function(data){return data.balance ? data.balance : "　";},
+function(data){return data.ticketNum ? data.ticketNum : "　";},
+function(data){return data.status ? data.status : "　";}
+];
+DWRUtil.removeAllRows("mainTable");
+DWRUtil.addRows("mainTable",pageList.result,celFuns);
+EasyAjaxUtil.showPageInfo();
+}
+</script>
+
+<span>
+<table width="100%" height="97%" align="center" cellspacing="0">
+  <tr>
+    <td height="30" bgcolor="#FFFFFF" class="tablehead">客户信息查询</td>
+  </tr>
+  <tr>
+    <td valign="top"><table height="100%" cellspacing="0" style=" margin:-2px -4px -2px -4px; width:101%">
+      <tr class="tablehead3">
+        <td height="25">电话号码：
+          <input name="customer-tel" type="text" class="form_text" id="customer-tel" onKeyUp="CustomerService.autoQuickSearch(this,2)"/></td>
+        <td height="25">名　　称：
+          <input name="customer-title" type="text" class="form_text" id="customer-title" onKeyUp="CustomerService.autoQuickSearch(this,1)"/></td>
+      </tr>
+      <tr class="tablehead3">
+        <td height="25">编　　号：
+          <input name="customer-sn" type="text" class="form_text" id="customer-sn" onKeyUp="CustomerService.autoQuickSearch(this,2)"/></td>
+        <td height="25">地　　址：
+          <input name="customer-address" type="text" class="form_text" id="customer-address" onKeyUp="CustomerService.autoQuickSearch(this,2)"/>
+          <span class="tablehead2">
+          <input type="button" name="Submit2" value="查询" class="button" onClick="CustomerService.listCustomer(1);" />
+          </span></td>
+      </tr>
+      <tr align="center">
+        <td height="25" colspan="2" valign="top" class="tablehead">查询结果 </td>
+      </tr>
+      <tr align="center">
+        <td colspan="2" valign="top" class="tablehead2"><div class="tablehead3" style="height:100%;overflow:auto;">
+          <table width="100%" cellspacing="0" style=" margin:-2px -4px -2px -4px; width:100%"  >
+            <thead>
+              <tr align="center" class="tablehead3">
+                <td width="40" height="25">序号</td>
+                <td height="25">客户编号</td>
+                <td height="25">客户名称</td>
+                <td height="25">电话</td>
+                <td height="25">地址</td>
+                <td height="25">余额</td>
+                <td height="25">水票数</td>
+                <td height="25">状态</td>
+              </tr>
+            </thead>
+            <tbody id="mainTable">
+            </tbody>
+          </table>
+        </div></td>
+      </tr>
+      <tr align="center">
+        <td height="25" colspan="2" valign="top" class="tablehead"><span id="pageInfo"></span></td>
+      </tr>
+      
+    </table></td>
+  </tr>
+</table>
+</span> 

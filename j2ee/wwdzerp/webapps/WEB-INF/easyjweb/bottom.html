@@ -1,0 +1,40 @@
+<div>
+<script type="text/javascript">
+login=function()
+{
+UserService.login($("userName").value,$("password").value,"test",loginResult);
+return false;
+}
+function loginResult(u)
+{
+if(u!=null){
+top.loadMenu();
+top.user=u;
+loadPage("/index.ejf?easyJWebCommand=first");
+}
+}
+</script>
+<form action="" method="post" enctype="multipart/form-data" name="form1">
+<table width="90%" border="1" align="center">
+  <tr>
+    <td colspan="3">系统登录</td>
+  </tr>
+  <tr>
+    <td align="right">用户名</td>
+    <td>
+      <input name="userName" type="text" id="userName"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right">密码</td>
+    <td><input name="password" type="password" id="password">
+    1</td>
+    <td><input type="button" name="Submit" value="登录" onClick="login();"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table> </form>
+</div>
