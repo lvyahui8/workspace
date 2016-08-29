@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<!--<audio src="http://qzone.haoduoge.com/music/42240H4D9A1103ec682f30f72f9721837e2fc.mp3" controls="controls" autoplay="autoplay"></audio>-->
+<audio src='http://qzone.haoduoge.com/music/42240H4D9A1103ec682f30f72f9721837e2fc.mp3'
+       id="music" loop="loop" preload="none" hidden="hidden"></audio>
+<!--<audio src='audio/ybxyq.mp3' id="music" loop="loop" preload="none" hidden="hidden"></audio>-->
+<a class="music-ctrl"><img src="http://files.cnblogs.com/files/lvyahui/play2.ico" alt=""/></a>
+<script>
+    (function(){
+        window.onload = function(){
+            var musicNode = document.getElementById('music'),
+                    musicCtrl = document.getElementsByClassName('music-ctrl')[0],
+                    playCtrl = musicCtrl.children[0],
+                    resUrl = 'http://files.cnblogs.com/files/lvyahui/',
+                    playImg = 'play2.ico',
+                    stopImg = 'stop2.ico',
+                    paddingImg = 'loading.ico';
+            if(typeof musicNode.paused !== 'undefined'){
+//                musicNode.src = ;
+                musicNode.volume = 0.3;
+                var lister,
+                        padding = function () {
+
+                        },
+                        play = function(){
+                            musicNode.play();
+                            if(musicNode.readyState !== 4){
+                                playCtrl.src = resUrl + paddingImg;
+                                var lister = musicNode.addEventListener('canplaythrough',function(){
+                                    playCtrl.src = resUrl + stopImg;
+                                    musicNode.removeEventListener('canplaythrough',lister);
+                                },false);
+                            }
+                            else{
+                                playCtrl.src = resUrl + stopImg;
+                            }
+                        },
+                        pause = function () {
+                            musicNode.pause();
+                            playCtrl.src = resUrl + playImg;
+                        };
+                musicCtrl.onclick = function(){
+                    if(musicNode.paused){
+                        play();
+                    }else{
+                        pause();
+                    }
+                };
+
+            }
+        };
+    })();
+</script>
+</body>
+</html>

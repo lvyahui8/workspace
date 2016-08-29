@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>湖南省文微电子技术有限公司</title>
+
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/slider.css" rel="stylesheet" type="text/css" />
+</head>
+	
+<body>
+	<div id="top">
+    	<div class="left">欢迎光临湖南省文微电子技术有限公司</div>
+        <div class="right">
+        	<img src="images/mf.png"  /><a href="#">连接1</a>
+            <img src="images/mf.png"  /><a href="#">连接2</a>
+        </div>
+    </div>
+	<div id="header">
+        <div id="logo">
+        	<img id="logo-img" src="images/logo.png"/>
+        </div>
+        <div id="nav">
+        	<ul class="menu">
+            	<li class="item"><a href="#" >栏目1</a></li>
+                <li class="item"><a href="#">栏目2</a></li>
+				<li class="item"><a href="#">栏目3</a></li>
+                <li class="item"><a href="#">栏目4</a></li>
+                <li class="item"><a href="#">栏目5</a></li>
+                <li class="item"><a href="#">栏目6</a></li>
+                <li class="item"><a href="#">栏目7</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearBoth"></div>
+    <div id="wapper">
+    	 <div id="slideshow" class="box_skitter fn-clear">
+                <ul>
+                    <li><img alt="" class="cubeRandom" src="images/slider01.jpg"></li>							
+                    <li><img alt="" class="cubeRandom" src="images/slider02.jpg">/li>							
+                    <li><img alt="" class="cubeRandom" src="images/slider03.jpg"></li>							
+                </ul>
+        </div>
+        <script type="text/javascript" language="javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" language="javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" language="javascript" src="js/jquery.skitter.min.js"></script>	
+        <script type="text/javascript">
+                   $(document).ready(function() {
+                        $('.box_skitter').skitter({
+                            mouseOverButton: 		function() { $(this).stop().animate({opacity:0.5}, 200); },
+                            mouseOutButton: 		function() { $(this).stop().animate({opacity:1}, 200); },
+                            numbers:false,
+                            animation: 'random',
+							thumb_width: '70px', thumb_height: '40px',
+							interval:1000,
+							navigation:true
+                        });
+                    });
+        </script>
+        
+    </div>
+    <div class="clearBoth"></div>
+    <div id="content">
+    	<div class="dark_level">
+        	<div class="main">
+                <div class="title">
+                    <span class="en">Wenwei Introduction</span><span class="cn">文微简介</span>
+                </div>
+                <div class="c">
+                	湖南文微电子技术有限公司成立于2005年，注册资金500万元，总资产500多万元，厂房占地面积2100平方米，是集科、工、贸于一体，专业从事网络连接数据设备箱柜产品研发、生产的高新技术企业，是湖南省少数专业配套于广电、电信、移动、联通等通信行业的设备箱柜生产厂家之一。公司下设开发部、销售及售后服务部、制造部等，在株洲设有分公司。 <br/>
+                    制造部技术及生产能力雄厚，拥有激光割、数控冲、数控折弯机等精良先进数控设备，技术研发人员占公司总人数的21%，具有丰富的钣金加工经验，能独立研发设计制造各种网络连接用数据设备箱柜。通过专业、创新、可靠的产品服务，为FTTH用户接入网提供专用的产品组合；为“最后一公里光纤配置”，提供高性价比的整体解决方案。
+                    <br/>
+                    <a href="#" ><img src="images/more.gif" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="light_level">
+        	<div class="main">
+            	<div class="title">
+                	<span class="en">new product</span><span class="cn">最新产品</span>
+                </div>
+                <div class="c">
+                	<span>LED室内外照明产品和LED全彩系列显示屏的研发、设计、生产和销售为一体的生产型企业公司,以LED球泡灯、LED筒灯、LED日光灯
+</span>              
+					<div class="clearBoth"></div>
+                   <!-- <a class="scrollbrowse scrollleft"></a>-->
+                    <div class="newprod">
+                        <ul class="prodlist product-scroll">
+                            <li ><img  src="images/product/1.jpg"/></li>
+                            <li ><img  src="images/product/2.jpg"/></li>
+                            <li ><img  src="images/product/3.jpg"/></li>
+                            <li ><img  src="images/product/4.jpg"/></li>
+                            <li ><img  src="images/product/5.jpg"/></li>
+                            <li ><img  src="images/product/6.jpg"/></li>
+                            <li ><img  src="images/product/7.jpg"/></li>
+                            <li ><img  src="images/product/8.jpg"/></li>
+                            <li ><img  src="images/product/9.jpg"/></li>
+                            <li ><img  src="images/product/10.jpg"/></li>
+                        </ul>
+                    </div>
+                    <!--<a class="scrollbrowse scrollright"></a>-->
+                     <script type="text/javascript">
+						jQuery(document).ready(function() {
+							var ul = jQuery("ul.product-scroll");
+							if(ul.length == 0){
+								ul = jQuery("#.newprod > ul:first");
+							}
+							if(ul.length == 1){
+											ul.before("<a class=\"scrollprevpage scrollbrowse scrollleft\"></a>");
+											ul.after("<a class=\"scrollnextpage scrollbrowse scrollright\"></a>");
+								ul.wrap("<div></div>");
+								var div = ul.parent("div");
+								div.addClass("scrollable")
+								ul.addClass("scrollitems");
+								ul.children("li").addClass("content1");
+							}	
+						});
+						</script>
+                        <script type="text/javascript" src="js/jquery-scrollable.js"></script>
+						<script>$(function(){$(".newprod .scrollable").scrollable({scrollDirection:'left',size:4,speed:1000,effect:'scroll'}).circular();});</script>
+
+                </div>
+            </div>
+        </div>
+        <div class="dark_level">
+        	<div class="main">
+            	<div class="title">
+                	<span class="en">case</span><span class="cn">案列展示</span>
+                </div>
+                <div class="c">
+                	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="482" width="975"><param name="quality" value="high"><param name="wmode" value="opaque"><param name="movie" value="media/case.swf"><embed height="482" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="media/case.swf" type="application/x-shockwave-flash" width="975" wmode="opaque"></object>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearBoth"></div>
+    <div id="footer">
+    	<div class="footerc">
+            <div style="width: 700px; float: left;">
+                <div style="width: 90px; float: left;">
+                    <img height="90" src="../images/logo.png" width="90"></div>
+                <div style="padding-left: 10px; width: 600px; float: left;">
+                    <div class="ft_menu">
+                        <a href="/index.html">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">连接1</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">连接1</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">连接1</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">连接1</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">连接1</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">连接1</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">连接1</a>
+                    </div>
+                    <div class="ft_bq">
+                        版权所有@湖南省文微电子技术有限公司&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备：1103019号</a>&nbsp;&nbsp;技术支持：<a href="http://hangzhou.300.cn" target="_blank">中企动力</a></div>
+                </div>
+            </div>
+            <div style="width: 280px; float: right; padding-top: 12px;">
+                <div style="text-align: right; width: 100%; font-family: microsoft yahei; float: left; color: #707070; font-size: 12px;">
+                    <img height="20" src="../images/tel.jpg" width="20"> +86-755-85293070</div>
+                <div style="text-align: right; margin-top: 12px; width: 100%; font-family: microsoft yahei; float: left; color: #a3a3a3; clear: both; font-size: 12px;">
+                    <form action="--WEBBOT-SELF--" method="post">
+                        友情链接：<select name="FriendSite" onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'_blank');}" style="color: #a3a3a3;"><option selected="selected" value="http://www.zyl-led.com">深圳市挚友照明科技有限公司</option><option value="http://www.krykj.com ">深圳市凯瑞源科技有限公司</option></select></form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+@echo off
+echo test ^>1.txt
+echo Ó¢ÐÛ^
+ÊÇ^
+ºÃ^
+ÄÐÈË
+pause

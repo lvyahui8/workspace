@@ -1,0 +1,111 @@
+/* 全局样式 */
+body {
+    font-family: "PingHei","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+}
+a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+#globalheader {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    height: 2.55556em;
+    margin: 0 auto 1em;
+    background: rgba(0,0,0,0.6);
+    font-size: 18px;
+}
+#globalheader .gh-content {
+    width: 980px;
+    margin: 0 auto;
+}
+#globalheader .gh-nav-list {
+    position: relative;
+
+    z-index: 1;
+    width: 1000px;
+    height: 2.55556em;
+    margin-left: -10px;
+    margin-right: -10px;
+    cursor: default;
+    text-align: justify;
+    /*-ms-text-justify: distribute-all-lines;*/
+    /*text-justify: distribute-all-lines;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+#globalheader .gh-nav-list .gh-tab {
+    margin: 0;
+    list-style-type: none;
+    height: 2.55556em;
+    vertical-align: top;
+    display: inline-block;
+}
+#globalheader ul, #globalheader li, #globalheader p, #globalheader h4, #globalheader h5 {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+}
+#globalheader .gh-nav-list .gh-tab {
+    margin: 0;
+    list-style-type: none;
+    height: 2.55556em;
+    vertical-align: top;
+    display: inline-block;
+}
+#globalheader ul, #globalheader li, #globalheader p, #globalheader h4, #globalheader h5 {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+}
+#globalheader .gh-tab-link {
+    color:#fff;
+    position: relative;
+    display: block;
+    opacity: 1;
+    height: 2.55556em;
+    padding: 11px 15px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 1.11111em;
+    background-size: auto 20px\0;
+    outline-offset: -0.22222em;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#globalheader .gh-tab-link:hover{
+    color:#e8e8e8;
+}
+
+.section { text-align: center; font-size: 50px; color: #fff;}
+
+.page1{
+    background-color: #1bbc9b;
+}
+.page1 p {
+    position: relative;
+    left: -120%;
+}
+
+.page2{
+    background-color: #4BBFC3;
+}
+
+.page3{
+    background-color: #7BAABE;
+}
+
+.page4{
+    background-color: #f90;
+}
+.page5{
+    background-color: #ef8200;
+}
+
+#globalfooter{
+
+}

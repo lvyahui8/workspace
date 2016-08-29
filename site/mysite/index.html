@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="css/cssreset-min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/jquery.fullPage.css"/>
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+</head>
+<body>
+    <header id="globalheader">
+        <div id="gh-content" class="gh-content">
+            <nav>
+                <ul class="gh-nav-list">
+                    <li class="gh-tab"><a class="gh-tab-link" href="/">首页</a></li>
+                    <li class="gh-tab"><a class="gh-tab-link" href="#">文章</a></li>
+                    <li class="gh-tab"><a class="gh-tab-link" href="#">作品</a></li>
+                    <li class="gh-tab"><a class="gh-tab-link" href="#">资源</a></li>
+                    <li class="gh-tab"><a class="gh-tab-link" href="#">照片</a></li>
+                    <li class="gh-tab"><a class="gh-tab-link" href="#">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="fullPage">
+        <div class="section page1">
+            <p>网站紧张在开发中</p>
+        </div>
+
+        <div class="section page2">
+            <div class="cont">
+                <ul>
+                    <li class="te1"></li>
+                    <li class="te2"></li>
+                    <!--<li class="te3"></li>-->
+                    <!--<li class="te5"></li>-->
+                    <!--<li class="te6"></li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="section page3"></div>
+        <div class="section page4"></div>
+        <div class="section page5"></div>
+    </div>
+    <script>
+        $("#fullPage").fullpage({
+            anchors: ['page1', 'page2', 'page3', 'page4','page5'],
+            navigation:true,
+            scrollingSpeed:500,
+            afterLoad: function(anchorLink, index){
+                if(index == 1){
+                    $('.page1').find('p').delay(500).animate({
+                        left: '0'
+                    }, 1500, 'easeOutExpo');
+                }
+                if(index == 3){
+                    $('.page3').find('p').delay(500).animate({
+                        bottom: '0'
+                    }, 1500, 'easeOutExpo');
+                }
+                if(index == 4){
+                    $('.page4').find('p').fadeIn(2000);
+                }
+            },
+            onLeave: function(index, direction){
+                if(index == '1'){
+                    $('.page1').find('p').delay(500).animate({
+                        left: '-120%'
+                    }, 1500, 'easeOutExpo');
+                }
+                if(index == '3'){
+                    $('.page3').find('p').delay(500).animate({
+                        bottom: '-120%'
+                    }, 1500, 'easeOutExpo');
+                }
+                if(index == '4'){
+                    $('.page4').find('p').fadeOut(2000);
+                }
+            }
+        });
+        $('.page1').find('p').delay(500).animate({
+            left: '0'
+        }, 1500, 'easeOutExpo');
+    </script>
+
+</body>
+</html>

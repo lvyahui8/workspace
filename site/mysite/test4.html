@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function setName(obj){
+        obj.name = "yahui";
+        obj = {};
+        obj.name = "lisimi";
+    }
+
+    var person = {};
+    setName(person);
+    console.log(person.name);   //yahui
+
+
+    var n = null;
+    console.log(typeof n);      // Object
+
+
+    var colors = [];
+    var pattern = new RegExp();
+
+    console.log(person instanceof Object);
+    console.log(colors instanceof Array);
+    console.log(pattern instanceof RegExp);
+
+    /*
+       每个执行环境都有一个与之关联的变量对象，环境中定义的所有变量和函数都保存在这个对象中
+     */
+
+    function buildUrl(){
+        var qs = "?r=users";
+        /*
+        对于with，会将指定的对象添加到作用域链当中（将指定的对象包含进了作用域的变量对象中）。
+        对于catch，会创建一个新的变量对象
+         */
+        with(location) {
+            var url = href + qs;
+        }
+        try{
+
+        }catch(e){
+        }
+        console.log(e.type);//这里应该不能访问到
+        return url;//因为这个url是buildUrl函数执行环境的一部分，所以能在with代码块之外被访问到
+    }
+
+   // console.log(url);这里访问不到url，因为url在with语句里定义，距离函数环境最近
+
+    /*
+        javaScript没有块级作用域
+     */
+    if(true){
+        var color = "blur";
+    }
+    console.log(color);
+
+
+</script>
+</body>
+</html>

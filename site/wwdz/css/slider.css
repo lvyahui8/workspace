@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+#slideshow {
+	zoom: 1;
+	left: 50%;
+	width: 1440px;
+	height: 504px;
+	overflow: hidden;
+	margin-left: -720px;
+	position: absolute;
+}
+
+.prev_button {
+	position: absolute;
+	top: 50%;
+	left: 35px;
+	width: 57px;
+	height: 62px;
+	margin-top: -31px;
+	overflow: hidden;
+	background: url(../images/prev.png) no-repeat left top!important;
+	z-index: 999;
+	text-indent: -9999em;
+}
+
+.next_button {
+	position: absolute;
+	top: 50%;
+	right: 35px;
+	width: 57px;
+	height: 62px;
+	margin-top: -31px;
+	overflow: hidden;
+	z-index: 999;
+	text-indent: -9999em;
+	background: url(../images/next.png) no-repeat left top!important;
+}
+
+.container_skitter {
+	overflow: hidden;
+	position: relative;
+}
+
+.image {
+	overflow: hidden;
+	position: relative;
+}
+
+.box_clone {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	overflow: hidden;
+	display: none;
+	z-index: 20;
+}
+
+.box_clone img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 20;
+}

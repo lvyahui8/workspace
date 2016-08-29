@@ -1,0 +1,5 @@
+@echo off
+color 4f
+:: 7 °×É« f ÁÁ°×É«
+color []
+pause
