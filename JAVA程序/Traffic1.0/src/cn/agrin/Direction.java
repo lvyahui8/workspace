@@ -1,0 +1,13 @@
+package cn.agrin;
+
+public enum Direction {
+//	S2N,S2W,E2W,E2S,
+//	N2S,N2E,W2E,W2N,
+//	S2E,E2N,N2W,W2S;
+	STOP,
+	S2N,S2W,S2E,
+	E2W,E2S,E2N,
+	N2S,N2E,N2W,
+	W2E,W2N,W2S;
+	//STOP,S2N,S2W,S2E,E2W,E2S,E2N,N2S,N2E,N2W,W2E,W2N,W2S,
+}

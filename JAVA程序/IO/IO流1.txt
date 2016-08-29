@@ -1,0 +1,145 @@
+输入流和输出流是相对于内存设备而言
+将外围设备的数据读到内存中：输入
+将内存中的数据写到外围设备：输出
+
+字节流是可以处理所有数据类型的
+
+字符流与字节流:
+字符流是字节流与编码表的结合。
+字节流读取文字数据后，不直接操作而是先查指定的编码表。
+
+
+------------------------------------------
+
+字节流的两个顶层父类
+1、InputStream 2、OutputStream
+	字节流的装饰类
+	1、BufferedInputStream 2、BufferedOutputStream
+字符流的两个顶层父类
+1、Reader  2、Writer
+	字符流的装饰类
+	1、BufferedReader 2、BufferedWriter
+	
+这些体系中的子类都以父类作为后缀
+而且子类名的前缀就是该类的功能
+
+-------------字符流
+	#：如果要操作文字数据，首先考虑字符流
+	
+	写文件
+	找到了FileWriter
+	
+	读文件
+	找到了FileReader
+	
+	#:字符流缓冲区
+	BufferedWriter
+		: newLine();	特有方法
+	BufferedReader
+		: readLine();   特有方法
+		
+		
+	装饰设计模式：
+		对一组对象的功能进行增强，就可以使用该模式进行问题的解决。
+
+
+---------------字节流
+	#:如果要处理其他文件（媒体文件等），就用字节流
+	其实他跟字符流的方法很类似，只是处理的数据单元，和数据格式不一样
+	
+	
+	
+============================================================================
+
+转换流
+InputSteramReader: 字节流到字符流的桥梁。解码
+OutputStreamWriter: 字符流到字节流的桥梁。编码
+
+============================================================================
+
+
+明确在开发时使用什么类，需要明确四点
+
+1、明确源和目的（汇）
+	如果操作的是源：InputStream  Reader
+	如果操作的是汇：OutputStream Writer
+
+2、明确数据时否是纯文本数据
+	源：是：Reader
+	          否：InputStream
+	汇：是：Writer
+		否：OutputStrem
+
+3、明确具体设备
+	源设备：
+		硬盘：Flie
+		键盘：System.in
+		内存：数组
+		网络：Socket流
+	汇设备：
+		硬盘：File
+		控制台：System.out
+		内存：数组
+		网络：Socket流
+
+4、是否需要其他额外功能
+	1、需要高效：缓冲区
+
+	
+	
+需求1：复制一个文本文件
+	1、有源有汇
+	2、纯文本  -- Reader Writer
+	3、源和汇都是硬盘 -- FileReader  FileWriter
+		FileReader fr = new FileReader(源);
+		FileWriter fw = new FileWriter(汇);
+	4、需要高效 -- BufferedReader  BufferedWriter
+		BufferedReader bur = new BufferedReader(fr);
+		BufferedWriter buw = new BufferedWriter(fw);
+需求2：读取键盘录入信息
+	1、有源有汇
+	2、纯文本  -- Reader Writer
+	3、	源是键盘		System.in
+		汇是硬盘		FileWriter
+		InputStream in = System.in;
+		FileWriter fw = new FileWriter(汇);
+		这样做可以完成，但不方便。将字节数据转成字符串，再由字符流操作
+	4、	需要转换 -- 
+		将字节流转换成字符流 。 因为明确源是Reader ，这样操作便捷
+		InputStreamReader isr = new InputStreamReader(System.in);
+		FileWriter fw = new FileWriter(汇);
+		需要高效
+		BufferedReader bur = new BufferedReader(isr);
+		BufferedWriter buw = new BufferedWriter(fw);
+
+需求3：将一个文本数据显示到控制台
+	1、有源有汇
+	2、纯文本  -- Reader Writer
+	3、	源是硬盘		FileReader
+		汇是控制台	System.out		
+			FileReader fr = new FileReader(源);
+			OutputStream ops = System.out;
+		这样做可以完成，但不方便。将字节数据转成字符串，再由字符流操作
+	4、	需要转换 -- 
+		将字节流转换成字符流 。 因为明确源是Reader ，这样操作便捷
+		FileReader fr = new FileReader(源);
+		OuputStreamWriter osw = new OuputStreamWriter(System.out);
+		需要高效
+		BufferedReader bur = new BufferedReader(fr);
+		BufferedWriter buw = new BufferedWriter(osw);
+		
+需求4：读控制台的内容显示到控制台上
+	1、有源有汇
+	2、纯文本  -- Reader Writer
+	3、	源是硬盘		System.in
+		汇是控制台	System.out		
+			InputStream ins = System.in;
+			OutputStream ops = System.out;
+		这样做可以完成，但不方便。将字节数据转成字符串，再由字符流操作
+	4、	需要转换 -- 因为都是字节流，但是操作的都是文本数据，特别在读写中文时，所以需要转换
+		将字节流转换成字符流 。 因为明确源是Reader ，这样操作便捷
+		InputStreamReader insr = new InputStreamReader(System.in);
+		OutputStreamWriter osw = new OutputStreamWriter(System.out);
+		需要高效
+		BufferedReader bur = new BufferedReader(insr);
+		BufferedWriter buw = new BufferedWriter(osw);
