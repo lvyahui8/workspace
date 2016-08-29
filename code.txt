@@ -1,0 +1,29 @@
+android手机查询所有联系人信息的sql
+select mimetype_id,data1 from data where raw_contact_id in (
+       select _id from raw_contacts
+)
+
+
+android添加读写短信内容的权限
+在mainfest节点下添加如下内容
+<uses-permission android:name="android.permission.WRITE_SMS"/>
+<uses-permission android:name="android.permission.READ_SMS"/>
+
+android 添加provider，需要在清单文件的application节点下配置
+<provider 
+            android:name="com.yahui.db.provider.PersonProvider"
+            android:authorities="com.yahui.db.personprovider" tools:ignore="ExportedContentProvider"></provider>
+
+
+AJAX创建XMLHttpRequest对象
+<script language="JavaScript">
+	var xmlHttp;				//AJAX核心对象名称
+	function createXMLHttp(){
+		if(window.XMLHttpRequest){	//firefox内核
+			xmlHttp = new XMLHttpRequest();
+		}
+		else{				//IE内核浏览器
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	}
+</script>
