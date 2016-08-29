@@ -1,0 +1,15 @@
+<script type="text/javascript">
+	function validate(f){
+		if(!(/\w+/.test(f.info.value))){
+			alert("输入的内容不能为空");
+			f.info.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+
+<from method="POST" action="input.jsp" onSubmit="return validate(this)">
+	<input type="text" name="info">
+	<input type="submit" value="显示"/>
+</from>

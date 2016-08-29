@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Coll_Api</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+  </component>
+</module>Collection		集合体系的顶层
+
+集合的由来：
+	对象用于封装特有数据，对象多了需要存储，如果对象的个数不确定
+	就使用集合容器进行存储
+集合特点：
+	1、用于存储对象的容器
+	2、集合的长度是可变的
+	3、集合不可以存储基本数据类型
+
+集合的方法
+Collection接口 的方法
+
+1、添加
+	boolean add(Object obj);
+	boolean addAll(Collection coll);
+	
+2、删除
+	boolean remove(Object obj);
+	boolean remove(Collection coll);
+	void clear();	//删除全部
+
+3、判断
+	boolean contains(Object obj);
+	boolean containsAll(Collection coll);
+	boolean isEmpty();
+	
+4、获取
+	int size();
+	Iterator iterator();		//	迭代器。取出集合中的元素，返回值是迭代器对象
+	该对象必须依赖于具体容器，因为每一个容器的数据结构不同
+	所以该迭代器对象是在容器中进行内部实现的
+	对于使用者而言，具体的实现不重要，只要通过容器获取到迭代器的对象即可
+	也就是iterator方法
+	Iterator接口就是所有Collection容器进行元素取出的公共接口
+5、其他
+	boolean retainAll(Collection coll);	//取交集，和removeAll的区别
+	
+Collection
+	|-List
+	|-Set
+	
+List
+//-------------------List-------------------------
+特有方法：有一个共同的特点就是都可以操作角标
+使用equals方法比较
+1、添加
+	void add(index,element);
+	void add(index,collection);
+	
+2、删除
+	Object remove(index);
+	
+3、修改
+	Object set(index,element);
+
+4、获取
+	Object get(index);
+	int indexOf(object);
+	int lastIndexof(object);
+	List subList(from,to);//包含头不包含尾
+list集合是可以完成对元素的增删改查
+
+List
+	|-ArrayList	//	内部是数组数据结构，是不同步的。替代了Vector。
+	|-LinkList	//	内部是链表数据结构
+	|-Vector	//	内部是数组数据结构，同步，线程安全，1.0就出现了，1.2之前的唯一集合
+
+	
+	
+	
+Set
+//---------------------Set----------------------------
+特点：无序，不重复
+
+方法与Collection方法一致
+Set
+	|-HashSet按哈希方法存取，不同步，使用hashCode方法和equals方法比较
+	|-TreeSet元素排了序，不同步，使用compareTo方法比较
+
+
+
+
+--------------------------------------------------------------------------
+
+//	集合的一些技巧
+使用哪个？
+
+需要唯一吗
+	需要：Set
+		需要顺序吗
+			需要：TreeSet
+			不需要：HashSet
+		需要迭代与存储顺序一致
+			需要：LinkedList
+	不需要：List
+		需要频繁增删吗
+			需要：LinkedList
+			不需要：ArrayList
+
+如何记录每一个容器的结构和所属体系呢?
+
+看名字
+后缀名表示所属体系
+前缀名表示数据结构
+hash表示哈希表，哈希方法，要保证自定义对象在集合中的唯一性，需要重写hashCode和equals方法
+tree一般表示二叉树，如果要排序，就要实现接口Comparable或者Comparator
+而且常用的都是不同步的。
+Set
+	|--HashSet
+	|--TreeSet
+
+List
+	|--ArrayList
+	|--LinkedList
+
+
+Map
+//-------------------Map-------------------------------
+
+Map:一次添加一对元素。Collection一次添加一个元素
+	Map也称双列集合。Colection称为单列集合
+	Map中存的就是键值对
+	Map集合必须保证键值的一致性
+
+1、添加
+		oldValue put(key,newValue);
+2、删除
+		void clear();	//清空map集合
+		value remove(key);根据指定的key删除键值对
+3、判断
+		boolean containsKey(key);
+		boolean containsValue(value);
+4、获取
+		value get(key);通过键获取值，如果没有该键返回null
+		int size();	获取键值对个数

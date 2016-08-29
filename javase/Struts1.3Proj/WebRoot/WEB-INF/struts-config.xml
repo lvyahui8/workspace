@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans >
+    <form-bean name="helloForm" type="com.lvyahui.struts.form.HelloForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <!-- input表示错误信息显示页面 path表示提交路径 -->
+  <action-mappings >
+    <action
+      attribute="helloForm"
+      input="/hellostruts.jsp"
+      name="helloForm"
+      path="/hello"
+      scope="request"
+      type="com.lvyahui.struts.action.HelloAction"
+      cancellable="true" >
+      <forward name="show" path="/hellostruts.jsp"></forward>
+	</action>
+  </action-mappings>
+
+  <message-resources parameter="com.lvyahui.struts.ApplicationResources" />
+</struts-config>
+

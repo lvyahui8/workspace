@@ -1,0 +1,6 @@
+
+依赖倒转原则 		DependenceRewind
+迪米特法则		Dmitry
+接口隔离原则		InterfaceIsolation
+里氏代换原则		RichterReplaced
+单一职责原则		SingleResponsibility

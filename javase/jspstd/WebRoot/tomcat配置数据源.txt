@@ -1,0 +1,11 @@
+<Resource name="jdbc/jspstd"			表示数据源的名称，也是要查找的名称
+	auth="Container"			表示由容器负责资源的连接
+	type="javax.sql.DataSource"		表示对象，数据源上每一个绑定的都是DataSource
+	maxActive="100"				表示最大的连接数
+	maxIdle="30"				表示最小的连接数
+	maxWait="10000"				表示最大等待时间
+	username="root"				数据库用户名
+	password=""				数据库密码
+	driverClassName="com.mysql.jdbc.Driver"	数据库驱动类名
+	url="jdbc:mysql://localhost:3306/mvcweb"数据库地址
+/>

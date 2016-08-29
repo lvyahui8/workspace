@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ajax_select.html</title>
+    <script type="text/javascript">
+    	var xmlHttp;				//AJAX核心对象名称
+		function createXMLHttp(){
+			if(window.XMLHttpRequest){	//firefox内核
+				xmlHttp = new XMLHttpRequest();
+			}
+			else{				//IE内核浏览器
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		}
+		function getCity(){
+			createXMLHttp();
+			xmlHttp.open("POST", "allarea.xml");
+			xmlHttp.onreadystatechange = getCityCallBack;
+			xmlHttp.send(null);
+		} 
+		
+		function getCityCallBack(){
+			if(xmlHttp.readyState == 4){
+				if(200==xmlHttp.status){
+					var allarea = xmlHttp.responseXML.getElementsByTagName("allarea")[0].childNodes;
+					var select = document.getElementById("city");
+					select.length = 1;//每次选择一个
+					select.options[0].selected = true;//第一个为选中的状态
+					for(var i=0;i<allarea.length;i++){
+						var area = allarea[i];
+						alert(area);
+						var option = document.createElement("option");
+						var id = area.getElementsByTagName("id")[0].firstChild.nodeValue;
+						var title = area.getElementsByTagName("title")[0].firstChild.nodeValue;
+						option.setAttribute("value",id);
+						option.appendChild(document.createTextNode(title));
+						select.appendChild(option);
+					}
+				}
+			}
+		}
+    </script>
+  </head>
+  
+  <body onload="getCity()">
+	<form action="" method="post">
+		请选择喜欢的城市：
+		<select id="city" >
+			<option value="0">-请选择城市-</option>
+		</select>
+	</form>    
+  </body>
+</html>

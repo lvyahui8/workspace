@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	为了兼容低版本tomcat的配置方式（遵循DTD文档规范，对顺序有严格要求），建议使用如下配置顺序
+	<filter>
+	<filter-mapping>
+	<listener>
+	<servlet>
+	<servlet-mapping>
+ -->
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+<!-- 
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+  	<servlet-class>com.yahui.servlet.demo.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>input</servlet-name>
+  	<servlet-class>com.yahui.servlet.demo.InputServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>life</servlet-name>
+  	<servlet-class>com.yahui.servlet.demo.LifeCycleServlet</servlet-class>
+ -->
+ 	<!-- 服务器启动时自动加载 -->
+<!--
+ 	<load-on-startup>1</load-on-startup>
+  </servlet>
+ -->
+ <!--
+  <servlet>
+  	<servlet-name>initParam</servlet-name>
+  	<servlet-class>com.yahui.servlet.demo.InitParamServlet</servlet-class>
+  	<init-param>
+  		<param-name>ref</param-name>
+  		<param-value>www.lvyahui.com</param-value>
+  	</init-param>
+  </servlet>
+  <servlet>
+  	<servlet-name>sessiondemo</servlet-name>
+  	<servlet-class>com.yahui.servlet.demo.HttpSessionDemoServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>servletcontext</servlet-name>
+  	<servlet-class>com.yahui.servlet.demo.ServletContextDemoServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>client</servlet-name>
+  	<servlet-class>com.yahui.servlet.forward.ClientRedirectDemo</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>server</servlet-name>
+  	<servlet-class>com.yahui.servlet.forward.ServerRedirectDemo</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>loginservlet</servlet-name>
+  	<servlet-class>com.yahui.servlet.mvc.servlet.LoginServlet</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/helloServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/hello.asp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/hello.lyh</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/lyh/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>input</servlet-name>
+  	<url-pattern>/servlet/inputServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  	<servlet-name>life</servlet-name>
+  	<url-pattern>/life</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>initParam</servlet-name>
+  	<url-pattern>/initParam</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>sessiondemo</servlet-name>
+  	<url-pattern>/sessiondemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>servletcontext</servlet-name>
+  	<url-pattern>/servletcontext</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>client</servlet-name>
+  	<url-pattern>/client</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+  	<servlet-name>server</servlet-name>
+  	<url-pattern>/server</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>loginservlet</servlet-name>
+  	<url-pattern>/mvclogin/loginservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  	<servlet-name>default</servlet-name>
+    <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+  	<init-param>
+  		<param-name>listings</param-name>
+  		<param-value>true</param-value>
+  	</init-param>
+  </servlet>
+  
+  
+  <filter>
+  	<filter-name>simple</filter-name>
+  	<filter-class>com.yahui.mvc.filter.SimpleFilter</filter-class>
+  	<init-param>
+  		<param-name>ref</param-name>
+  		<param-value>hello yahui filter</param-value>
+  	</init-param>
+  </filter>
+-->
+  <filter>
+  	<filter-name>charset</filter-name>
+  	<filter-class>com.yahui.mvc.filter.EncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>charset</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+<!-- 
+  <filter>
+  	<filter-name>login</filter-name>
+  	<filter-class>com.yahui.mvc.filter.LoginFilter</filter-class>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>simple</filter-name>
+-->
+	<!--  关键之处 ，表示对根目录下所有文件进行过滤 -->
+<!-- 
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+   -->
+  <filter-mapping>
+
+ 
+  	<filter-name>charset</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+<!-- 
+  <filter-mapping>
+  	<filter-name>login</filter-name>
+  	<url-pattern>/loginfilter/*</url-pattern>
+  </filter-mapping>
+  
+  <listener>
+  	<listener-class>com.yahui.mvc.listener.ServletContextListenerDemo</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>com.yahui.mvc.listener.ServletContextAttributeListenerDemo</listener-class>
+  </listener>
+-->
+ <listener>
+ 	<listener-class>com.yahui.mvc.listener.OnLineUserList</listener-class>
+ </listener>
+ 
+ <session-config>
+ 	<session-timeout>1</session-timeout>
+ </session-config>
+ 
+	<servlet>
+		<servlet-name>ELServlet</servlet-name>
+		<servlet-class>com.yahui.el.servlet.ELServlet</servlet-class>
+	</servlet> 
+	
+	<servlet-mapping>
+		<servlet-name>ELServlet</servlet-name>
+		<url-pattern>/el/elservlet</url-pattern>
+	</servlet-mapping>
+ 
+</web-app>
