@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<!--引用css样式表-->
+<?xml-stylesheet type="text/css" href="xml&amp;css.css" ?><!--这里面的&是特殊字符-->
+<bookstore>
+	<book>
+		<bookname>Xml教程</bookname>
+		<author>张老师</author>
+		<price>10</price>
+	</book>
+</bookstore>

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "sayHello",
+        "params": { 
+            "name": "Peter"
+        },
+        "returns" : "Hello Peter"
+    },
+    {
+        "name" : "runShellCommand",
+        "params": {
+            "command": "ls"
+        },
+        "returns" : "ls result"
+    }
+]

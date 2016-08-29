@@ -1,0 +1,33 @@
+属性定义
+
+语法格式
+<!ATTLIST 元素名称
+	属性名1 属性类型 设置说明
+	属性名2 属性类型 设置说明
+	。。。
+>
+
+举例
+<!ATTLIST 商品
+	类别 CDATA #REQUIRED
+	颜色 CDATA #IMPLIED
+>
+
+<!ATTLIST 页面作者
+  姓名 CDATA #IMPLIED
+  年龄 CDATA #IMPLIED
+  联系信息 Q. CDATA #REQUIRED
+  网站职务 CDATA #FIXED  "页面作者"
+  个人爱好 CDATA "上网"
+>
+
+设置说明
+#REQUIRED<!--表示必须被定义-->
+#IMPLIED<!--表示可有可无-->
+#FIXED<!--表示属性取值固定为某值，表示常量-->
+直接使用默认值
+
+属性类型
+CDATA 表示属性为普通字符串，特殊字符需要用转义序列表示
+ENUMERATED 表示枚举类型。表示只能是几个特殊值中的一个。使用时不会有这个关键字，而是直接定义几个特殊值
+ID 表示关键字，确定唯一的元素，所以这个值每个元素必须唯一

@@ -1,0 +1,29 @@
+.实体的根木作用是为一段文本内容创建一个别名，
+  以后在XML文档中就可以多次引用这个别名，XML
+  解析器程序将把XML文档中出现的别名引用转变成
+  其所对应的文木内容。
+.在DTD定义中，一条<!ENTITY…>语句用于定义一
+  个实体。
+·实体可分为两种类型:引用实体和参数实梅体
+
+
+引用实体
+<!ENTITY 实体名称 "实体内容">
+<!ENTITY 实体名称 SYSTEM "外部xml文档的url">
+
+引用方式
+&实体名称;
+
+举例
+<!DOCTYPE copyright [<!ENTITY copyright SYSTEM "http://www.it315.org/copyright.xml">]>
+&copyright;
+
+
+参数实体
+<!ENTITY % 实体名称 "实体内容">
+
+引用方式
+%实体名称;
+<!ENTITY % TAG_NAME "姓名 | EMATL | 电话 | 地址">
+<!ENTITY 个人信息 (%TAG_NAME; | 生日)>
+<!ENTITY 客户信息 (%TAG_NAME; | 公司名)>

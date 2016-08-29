@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<base>
+	<url>
+		www.grin.com
+	</url>
+	<url>www.grin.com</url>
+	<!--
+	上面两段内容是不同的，xml将空格和换行作为原始内容处理，交由下游程序去处理。所以尽量不要换行或空格
+	-->
+</base>

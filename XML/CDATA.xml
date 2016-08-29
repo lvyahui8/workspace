@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<base>
+	<!--
+	xml中会有一些看起来像元素的文本<this>,而我们只要原意文本，怎么做到么，比如下面的程序有一个小于<，那就是使用CDATA区
+	CDATA区中有无空格换行也是有区别的，CDATA区中还不能出现字符串"]]>",该如何解决
+	-->
+	<script type="text/javascript">
+	<![CDATA[
+		for(var i = 0;i<3;i++){
+			alert("错误");
+		}
+	]]>
+	</script>
+</base>

@@ -1,0 +1,12 @@
+bookname{
+	display:block;
+	color:red;
+}
+author{
+	display:block;
+	font-style:italic;
+}
+price{
+	display:block;
+	color:olive;
+}

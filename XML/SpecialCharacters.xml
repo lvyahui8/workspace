@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="1.0" ?>
+<base>
+	<!--
+		xml中有以下特殊字符
+		特殊字符		替代字符(注意分号)
+			&				&amp;
+			<				&lt;
+			>				&gt;
+			"				&quot;
+			'				&apos;
+	-->
+</base>

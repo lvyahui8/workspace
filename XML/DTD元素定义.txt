@@ -1,0 +1,25 @@
+DAT规则
+
+元素定义
+<!ELEMENT 元素名称 使用规则>
+例如
+<!ELEMENT 书架 (书名，作者，售价)>
+<!ELEMEND 书名 (#PCDTA)><!--PCDTA是parsed character data的缩写-->
+使用规则有以下
+(#PCDTA)
+(元素，元素)
+(EMPTY)<!--空 如<!ELEMEND hr EMPTY>对应xml代码就是<hr /> -->
+ANY
+
+元素语句的定义顺序是无关紧要的，DTD中不能有两个完全相同的元素
+<! ELEMENT MYTYPE (TITLE AUTOR EMALL)>表示包含3中元素，顺序任意
+<! ELEMENT MYTYPE (TITLE,AUTOR,EMALL)>表示包含3个元素，顺序一定
+<! ELEMENT MYTYPE (TITLE|AUTOR|EMALL)>表示只能包含3者之中的一个
+
+在元素中定义使用规则可以定义子元素的出现次数
+(书+)、必须出现一次或者多次
+(书?)、表示只能出现一次或不出现
+(书*)、表示任意，可有可无，可多可少
+(书)表示必须出现，只能出现一次
+
+一个圆括号()中还可以再包含圆括号()

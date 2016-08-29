@@ -1,0 +1,7 @@
+<script>
+document.addEventListener('load', function(e) {
+	console.log(e.target);
+}, true);
+</script>
+
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>

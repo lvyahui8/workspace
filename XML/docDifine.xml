@@ -1,0 +1,4 @@
+<!--文档声明-->
+<?xml version="1.0" ?>
+<?xml version="1.0" encoding="GB2312" ?><!--默认编码为UTF-8 Or UTF-16-->
+<?xml version="1.0" encoding="GB2312" standalone="yes" ?><!--standalone必须定义在encoding之后,用以说明文档是否独立-->
