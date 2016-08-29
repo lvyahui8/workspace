@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		<style type="text/css">
+			div{
+				border:#F80 1px solid;
+				width:200px;
+				padding:20px;/*内边距*/
+				margin:10px;/*外边距*/
+			}
+			#div_1{
+				background-color:#00ccff;
+			}
+			#div_2{
+				background-color:#cc00ff;
+			}
+			#div_3{
+				background-color:#ff00cc;
+			}
+			#div_4{
+				background-color:#00ffcc;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//创建并添加节点，
+			//需求：在div_1节点中添加一个文本节点
+			function crtAdd_0(){
+				//创建文本节点
+				var oTextNode = document.createTextNode("这是一个新的文本");
+				//获取div_4节点
+				var oDivNode = document.getElementById("div_4");				
+				//将文本添加到div_4节点中
+				oDivNode.appendChild(oTextNode);
+			}
+			
+			//需求：在div中创建并添加一个按钮节点。
+			function crtAdd_1(){
+				//创建以个按钮节点
+				var oButNode = document.createElement("input");
+				oButNode.type = "button";
+				oButNode.value = "newButton";
+				
+				//获取div_4节点
+				var oDivNode = document.getElementById("div_4");				
+				//将文本添加到div_4节点中
+				oDivNode.appendChild(oButNode);
+			}
+		
+			//通过另外一种方式添加节点
+			function crtAdd_2(){
+				/*
+				 * 使用容器型标签的一个属性：innerHTML
+				 * 这个属性可以设置html文本
+				 */
+				
+				var oDivNode = document.getElementById("div_4");
+				
+//				oDivNode.innerHTML = "HA";
+				oDivNode.innerHTML = "<input type='button' value='haha'/>";
+			}
+			
+			
+			
+			
+			//删除节点=======================
+			
+			function delNode(){
+				//获取div_1节点
+				var oDivNode = document.getElementById("div_1");
+				
+				//使用div节点的removeNode方法删除
+//				oDivNode.removeNode(false);//IE可以使用  false 删本身，true 删自己和子族
+				//一般是用removeChild方法
+				var oDivParent = oDivNode.parentNode;
+				
+				oDivParent.removeChild(oDivNode);
+			}
+			
+			//替换节点
+			//需求：用div_1节点替换div_3节点
+			function updateNode(){
+				/*
+				 * 使用replaceNode进行替换
+				 */
+				
+				var oDivNode_1 = document.getElementById("div_1");
+				var oDivNode_3 = document.getElementById("div_3");
+//				oDivNode_1.replaceNode(oDivNode_3);//仅IE支持
+				//建议使用replaceChild方法
+//				oDivNode_1.parentNode.replaceChild(oDivNode_3,oDivNode_1);//可行的
+				//希望用div_3替换div_1。并保留div_3，就是克隆
+				var oDivNode = oDivNode_3.cloneNode(true);//IE默认false,不带子节点，谷歌默认true带子节点
+				oDivNode_1.parentNode.replaceChild(oDivNode,oDivNode_1);//可行的
+			}
+			
+		</script>
+		<input type="button" value="创建并添加节点" onclick="crtAdd_2()"/>
+		<input type="button" value="删除节点" onclick="delNode()"/>
+		<input type="button" value="修改节点" onclick="updateNode()"/>
+		<hr/>
+		<div id="div_1">
+			div区域演示文字
+		</div>
+		<div id="div_2">
+			I do it! But not use!
+		</div>
+		<div id="div_3">
+			节点的增删改查
+		</div>
+		<div id="div_4">
+			
+		</div>
+	</body>
+</html>

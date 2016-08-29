@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Untitled Document</title>
+    </head>
+    <body>
+        <!--
+        DOM中最常见的操作就是获取节点
+        1、getElementById(); id是唯一的，返回的是一个节点
+		2、getElementsByName();  name是可以重复的，获取的是很多节点
+        3、getElementsByTagName();
+	
+		常见节点有三种：
+		1。标签型节点
+		2。属性节点
+		3。文本节点
+		
+		标签节点是没有值的，属性和文本节点是有值的
+        -->
+        <script type="text/javascript">
+            function getNodeDemo(){
+
+              	var res = window.document.getElementById("mydiv");
+				//遍历对象的属性值
+//            	for(i in res){
+//					alert(i);
+//				}
+//				alert(res.nodeType+","+res.nodeName+","+res.nodeValue);
+//				var text = res.innerHTML;
+//				alert(text);
+				res.innerHTML = "我要改了它";
+				
+			}
+			
+			function getNodeDemo2(){
+				var nodes = window.document.getElementsByName("user");
+//				alert(nodes.length);
+//				alert(nodes[0].type);
+//				nodes[0].value = "62436273";
+				var userNode = document.getElementsByName("user")[0];
+				userNode.value = "ashdjks"	;		
+			}
+			//获取既没有name属性有没有id属性的标签节点
+			function getNodeDemo3(){
+				var nodes =  window.document.getElementsByTagName("a");
+//				alert(nodes[0].href);
+				for(var i= 0;i<nodes.length;i++){
+//					alert(nodes[i].innerHTML);
+//					alert(nodes[i].href);
+					nodes[i].target = "_blank";
+				}
+			}
+			
+			function getNodeDemo4(){
+				//获取超链接所属的div节点
+				var divNode = document.getElementById("newslink");
+				var nodes = divNode.getElementsByTagName("a");//凡是容器型标签一定有这个方法
+				for(var i=0;i<nodes.length;i++){
+					nodes[i].target="_blank";
+//					alert(nodes[i].innerHTML);
+				}
+			}
+			
+        </script>
+        <input type="button" value="演示获取节点" onclick="getNodeDemo()">
+		<div id="mydiv">这是我的div区域</div>
+		<input type="text" name="user" />
+		<!--这3个链接在本窗口打开-->
+		<a href="http://www.agrin.cn" >AgrinDJ1</a>
+		<a href="http://www.agrin.cn" >AgrinDJ2</a>
+		<a href="http://www.agrin.cn" >AgrinDJ1</a>
+		<div id="newslink"><!--这3个链接通过新窗口打开-->
+			<a href="http://www.agrin.cn" >新闻1</a>
+			<a href="http://www.agrin.cn" >新闻2</a>
+			<a href="http://www.agrin.cn" >新闻3</a>
+		</div>
+    </body>
+</html>

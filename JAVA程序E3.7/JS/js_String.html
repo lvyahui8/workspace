@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="myjs.js"></script>
+		<script type="text/javascript">
+
+			/*
+			 * 演示String对象
+			 * 表现形式
+			 * var str = new String("abc');
+			 * var str = "abc";
+			 */
+			var str = "abcdefgh";
+			println("len="+str.length);
+			println(str.bold());
+			println(str.fontcolor("red"));
+			println(str.link("http://www.agrin.cn"));
+			println(str.substr(1,3));//提取起始到指定长度的字符串
+			println(str.substring(1,3));
+			
+			/*
+			 * 给String增加自定义的方法
+			 * 1、比如，取出字符串两端的空格
+			 */
+			
+			
+//			function trim(str){
+//				for(var head=0;head<str.length && str.charAt(head) == ' ';head++){
+//				}
+//				for(var tail=str.length-1; tail>head && str.charAt(tail) == ' ';tail-- ){
+//				}
+//				return str.substring(head,tail+1);
+//			}
+			function trim(){
+				for(var head=0;head<this.length && this.charAt(head) == ' ';head++){
+				}
+				for(var tail=this.length-1; tail>head && this.charAt(tail) == ' ';tail-- ){
+				}
+				return this.substring(head,tail+1);
+			}
+			var  s = "     ab c s    ";
+//			println(("-"+trim(s)+"-").toUpperCase());
+			//可以将这个trim方法加入到String对象里。成为对象自身的方法
+			String.prototype.trim = trim;
+			println(("-"+s.trim()+"-").toUpperCase());
+			
+		</script>
+	</body>
+</html>

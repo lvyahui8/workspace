@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		
+		<link rel="stylesheet" type="text/css" href="table.css">
+		<style type="text/css">
+			/*@import url(table.css);这也是导入样式表的一种方式，但在这里有错误提示*/
+		</style>
+		
+	</head>
+	<body>
+		<!--
+		
+		
+		-->
+		<script type="text/javascript">
+			function createTable_1(){
+				/*
+				 * createElement
+				 */
+				//创建表格节点
+				var oTabNode = document.createElement("table");
+				
+				//创建Tbody节点
+				var oTbdNode = document.createElement("tbody");
+				
+				//创建tr节点
+				var oTrNode = document.createElement("tr");
+				
+				//创建单元格节点
+				var oTdNode = document.createElement("td");
+				
+				oTdNode.innerHTML = "这是单元格";
+				//让这些节点关联起来，建立层次关系
+				oTrNode.appendChild(oTdNode);
+				oTbdNode.appendChild(oTrNode);
+				oTabNode.appendChild(oTbdNode);
+				
+				document.getElementsByTagName("div")[0].appendChild(oTabNode);
+				
+				
+			}
+			function createTable_2(){
+				/*
+				 * 方法二：使用表格节点对象的方法来完成
+				 * 表格由行组成，表格节点对象中的insertRow方法创建并添加
+				 */
+				
+				var oTabNode = document.createElement("table");
+				
+				var oTrNode = oTabNode.insertRow();
+				
+				var oTdNode = oTrNode.insertCell();
+				
+				oTdNode.innerHTML = "第二种方法";
+				document.getElementsByTagName("div")[0].appendChild(oTabNode);
+				
+			}
+			function createTable(){
+				/*
+				 * 创建多行多列的单元格
+				 *
+				 */
+//				var cols = 6;//6列
+//				var rows = 3;//3行
+//				var cols = document.getElementsByName("rowsnum")[0].value;//6列
+//				var rows = document.getElementsByName("colsnum")[0].value;//3行
+				var rows = parseInt(document.getElementsByName("rowsnum")[0].value,10);//6列
+				var cols = parseInt(document.getElementsByName("colsnum")[0].value,10);//3行
+				
+				var oTabNode = document.createElement("table");
+				oTabNode.setAttribute("id","tabid");//给表格起名字
+//				oTabNode.id = "tabid";
+				for(var i = 0;i<rows;i++){
+					var oTrNode = oTabNode.insertRow(i);
+					for(var j=0;j<cols;j++){
+						var oTdNode = oTrNode.insertCell(j);
+						oTdNode.innerHTML = (i+1)+"--"+(j+1)+"";
+					}
+				}
+				document.getElementsByTagName("div")[0].appendChild(oTabNode);
+				document.getElementsByName("createButton")[0].disabled = true;//按钮置灰
+			}
+			
+			function deleteRow(){
+				var oTabNode = document.getElementById("tabid");
+				var row = parseInt(document.getElementsByName("delrow")[0].value,10);//3行
+				
+				if(oTabNode != null && oTabNode.rows.length >= row){
+					oTabNode.deleteRow(row-1);
+				}
+				else{
+					alert("未创建表格或无此行");
+				}
+			}
+			
+			function deleteCell(){
+				//table没有列的属性
+				//所以要通过删除所有行的指定单元格来实现
+				var oTabNode = document.getElementById("tabid");
+				var col = parseInt(document.getElementsByName("delcol")[0].value,10);//3行
+				
+				
+				if(oTabNode != null && col < oTabNode.rows[0].cells.length){
+                    for (var i = 0; i < oTabNode.rows.length; i++) {
+                        oTabNode.rows[i].deleteCell(col - 1);
+                    }
+				}
+				else{
+					alert("未创建表格或无此列");
+				}
+			}
+		</script>
+		行：<input type="text" name="rowsnum" /> 列：<input type="text" name="colsnum" />
+		<input type="button" value="createTable" name="createButton" onclick="createTable();"/>
+		行：<input type="text" name="delrow" /> <input type="button" value="deleteRow" name="deleteRow" onclick="deleteRow();"/>
+		列：<input type="text" name="delcol" /> <input type="button" value="deleteCell" name="deleteCell" onclick="deleteCell();"/>
+
+		<hr/>
+		
+		<div>
+			
+		</div>
+	</body>
+</html>

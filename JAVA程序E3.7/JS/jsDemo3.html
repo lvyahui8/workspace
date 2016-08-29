@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <title>Untitled Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+             * js中变量的作用域问题
+             */
+            function print(s){
+                document.write(s);
+            }
+            
+            for (var i = 0; i < 3; i++) { //i是全局变量，在真个html文件中有效
+                print("i=" + i);
+            }
+            print("i===" + i);
+            
+            function fun(){
+                var x = 3;//局部变量。在函数里面定义的就是局部变量
+            }
+            
+            var j = 3;
+            
+            function show(j){//形参也是局部变量
+                j = 5;
+            }
+            
+            show(j);
+            print(j);//3
+            
+        </script>
+        <script type="text/javascript">
+            print("i#" + i);
+        </script>
+    </body>
+</html>

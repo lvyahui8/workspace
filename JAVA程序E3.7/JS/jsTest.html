@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	<style type="text/css">
+		table{
+			border:#0f0 double 2px;
+		}
+		table td{
+			border:#0c0 dashed 1px;		
+		}
+	</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 九九乘法表
+			 */
+			document.write("<table>");
+			for(var i = 1;i<=9;i++){
+				document.write("<tr>");
+				for(var j = 1;j<=i;j++){
+//					document.write(j+"*"+i+"="+i*j+"&nbsp;&nbsp;");
+					document.write("<td>"+j+"*"+i+"="+i*j+"</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		</script>
+	</body>
+</html>

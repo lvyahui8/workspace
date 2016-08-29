@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="myjs.js"></script>
+		<script type="text/javascript">
+			/*
+			 * js自定义对象
+			 * 如果想要定义对象，应该先对对象进行描述。
+			 * 但js是基于对象的，不是面向对象的，不具备描述事物的能力
+			 * 
+			 * 我们还想按照面向对象的思维编写js。
+			 * 就要先描述，在js中，可以用函数来模拟面向对象
+			 */
+			
+//			function Person(){//相当于构造函数
+////				alert("Construction");
+//			}
+//			
+//			var p = new Person();
+//			
+//			//动态给对象添加属性，方法 。直接使用p.属性名即可
+//			p.name = "agrin.cn";
+//			p.age = 23;
+//			p.show = function(){
+//				alert("show:"+this.name+":"+this.age);
+//			}
+//			p.show();
+
+
+//			function Person(name, age){
+//				//this不能省略
+//				this.name = name;
+//				this.age = age;
+//				
+//				this.setName = function(name){
+//					this.name = name;
+//				}
+//				this.setAge = function(age){
+//					this.age = age;
+//				}
+//				this.getName = function(){
+//					return this.name;
+//				}
+//				this.getAge = function(){
+//					return this.age;
+//				}
+//			}
+//			var p = new Person("Agrin.n",34);
+//			p.setName("agrin.cn");
+//			alert(p.getName()+":"+p.getAge());
+
+//
+//			var p = {
+//				//定义一些成员
+//				"name":"arin",
+//				"age":"23",
+//				"getName":function(){
+//					return this.name;
+//				}
+//				,	//逗号不能省
+//				"getAge":function(){
+//					return this.age;
+//				}
+//			}
+//			//对象调用属性成员有两种方式
+//			//1、对象名.属性成员 	2、对象名[属性成员]
+//			println(p.getName()+":"+p.getAge());
+//			for (name in p) {
+//				println(p[name]);
+//			}
+//			
+//			var map = {
+//				3:"ni",6:"io",5:"we"
+//			}
+//			var v = map[3];
+//			alert(v);
+//			
+//			name = "lisi";
+//			age = 34;
+			
+			var myobj = {
+				myname:"nishi",myage:23
+			}
+//			alert(myobj.myage+":"+myobj["myname"]);
+			var myobj = {
+				"myname":"nishi","myage":23
+			}
+			
+			var myMap = {
+				names:["n","ds","re"],nums:[3,3,4]
+			}
+//			alert(myMap.names[1]);
+
+			var myProp = {
+				names:[{name:"nihai"},{age:"nihao"}]//成员数组里存放的是键值对对象
+			}
+		</script>
+	</body>
+</html>

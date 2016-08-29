@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<link href="textstyle.css" id="id_1"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		<style type="text/css">
+			/*
+			 * 超链接访问前访问后样式都是一样的
+			 */
+			a:link,a:visited{/*未访问，访问*/
+				color:#FF4500;
+			}
+			a:hover{/*光标停留*/
+				color:#6B8E23;
+			}
+			#newstext{
+				width:400px;
+				height:200px;
+				border:#D2B48C 2px solid;
+				padding:12px;
+			}
+			/*类选择器的优先级要小于标签选择器*/
+			.norm{
+				color:#284579;
+				font-size:16px;
+				background-color:#000040;
+			}
+			
+			.max{
+				color:#ff0080;
+				font-size:22px;
+				background-color:#AA0040;
+			}
+			
+			.min{
+				color:#808000;
+				font-size:10px;
+				background-color:#ffffff;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<!--
+		新闻字体 的 大中小样式
+		
+		1、首先要有新闻内容  #text 节点，b并用标签封装
+		2、定义一些样式
+		3、确定事件源和时间，以及处理方式中被处理的节点
+			事件源：a标签，时间：onclick
+			被处理的节点：div-newstext
+			
+			先取消超链接的默认点击效果，可以改写href为javascript:void(0)，以此来取消超链接
+		
+		标签属性：HTML代码
+		属性：DOM代码
+		样式标签属性：CSS代码
+		样式属性：JS代码
+		-->
+		<script text="text/javascript">
+			//改变字体
+			function changeFont(size,clr){
+				var oNewsText = document.getElementById("newstext");
+				//获取oNewsText的style属性对象
+				oNewsText.style.fontSize = size+"px";
+				oNewsText.style.color = clr;
+			}
+			
+			/*
+			 * 如果根据用户点击所需要的效果很多，通过窗体很多参数很麻烦
+			 */
+			//第二种方式：封装到选择器中，只要给指定的标签加载不同的选择器就行了
+			function changeStyle(selectName){
+				var oNewsText = document.getElementById("newstext");
+				
+				oNewsText.className = selectName;
+			}
+		</script>
+		<h1>
+		新闻标题
+		</h1>
+
+		<hr/>
+		<a href="javascript:void(0)" onclick="changeStyle('max')">大字体</a>
+		<a href="javascript:void(0)" onclick="changeStyle('norm')">中字体</a>
+		<a href="javascript:void(0)" onclick="changeStyle('min')">小字体</a>
+		<div id="newstext">
+		        寒冬腊月独自一人把酒醉，为你留下一滴泪 
+		        炎炎烈日静坐观海我陶醉，为你留下二滴泪 
+		        看见他人身边红颜妩媚，为你留下三滴泪 
+		        见你日夜难眠辗转反侧，为你留下四滴泪  
+		        你笑我多情，不懂爱情，为你流下五滴泪 
+		        你离我而去淡然一笑，为你留下六滴泪 
+		        见你冰冷面孔对我无言，为你留下七滴泪
+		</div>
+	</body>
+	
+</html>

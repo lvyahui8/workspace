@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <title>Untitled Document</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="myjs.js">
+        </script>
+        <script type="text/javascript">
+            var date = new Date();
+            /*
+             * js中的特殊语句   with
+             */
+            //			var year = date.getFullYear();
+            //			var month = date.getMonth();
+            //			var day = date.getDay();
+            //			println(year+":"+month+":"+day);
+            
+            with (date) {//主要是为了简化书写
+                var year = getFullYear();
+                var month = getMonth();
+                var day = getDay();
+                println(year + ":" + month + ":" + day);
+            }
+        </script>
+    </body>
+</html>

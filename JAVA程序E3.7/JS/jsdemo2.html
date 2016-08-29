@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 语句
+			 * 1、顺序结构
+			 * 2、判断语句
+			 * 3、选择结构
+			 * 4、循环结构
+			 * 5、其他语句
+			 */
+			document.write("<font color='blue' >");//直接将数据或代码写到网页中
+			for(var i=0;i<3;i++){
+				for(var j=0;j<4;j++){
+					document.write("i=="+i+"<br />");
+					break;
+				}
+			}
+			document.write("<hr />");
+			w:for(var i=0;i<3;i++){
+				for(var j=0;j<4;j++){
+					document.write("i=="+i+"<br />");
+					break w;
+				}
+			}
+			document.write("<hr />");
+			u:for(var i=0;i<3;i++){
+				for(var j=0;j<4;j++){
+					document.write("i=="+i+"<br />");
+					continue u;
+				}
+			}
+		</script>
+	</body>
+</html>

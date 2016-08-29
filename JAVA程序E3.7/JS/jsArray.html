@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * javascript数组演示
+			 * 定义方式，两种：var arr = []; var arr = [,,,,...];
+			 * 
+			 * 数组特点：长度可变，元素类型任意
+			 */
+			
+			var arr = [3,5,6];
+//			alert(typeof(arr));
+			arr[4] = 23;
+			arr[2] = "abc";
+			arr[1] = true;
+			//	遍历数组
+			for(var i = 0;i<arr.length;i++){
+				document.write("arr["+i+"]"+"="+arr[i]+"<br/>");
+			}
+		</script>
+	</body>
+</html>

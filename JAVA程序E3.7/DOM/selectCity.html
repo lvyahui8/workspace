@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function selectCity(){
+				var collCities = [['选择城市'],['零陵区','冷水滩','祁阳'],['没去过上海','没去过上海','没去过上海'],['没去过新加坡','没去过新加坡','没去过新加坡']];
+				
+				//或者可以这样，键值对，建议使用这种
+				//var arr = {"hunan":['零陵区','冷水滩','祁阳']};
+				
+				//获取两个下拉菜单对象
+				var oSelNode = document.getElementById("selid");
+				var oSubSelNode = document.getElementById("subselid");
+				
+				var index = oSelNode.selectedIndex;
+				
+				var arrCities = collCities[index];
+//				for(var i=0;i<oSubSelNode.options.length;){
+//					oSubSelNode.remove(i);
+//				}
+				//或者下面清除
+				oSubSelNode.length = 0;
+				for(var i=0;i<arrCities.length;i++){
+					var oOptNode = document.createElement("option");
+					oOptNode.innerHTML = arrCities[i];
+					oSubSelNode.appendChild(oOptNode);
+				}
+			}
+		</script>
+		<select id="selid" onchange="selectCity()">
+			<option>选择省市</option>
+			<option value="hunan">湖南</option>
+			<option>上海</option>
+			<option>新加坡</option>
+		</select>
+		<select id="subselid">
+			<option>选择城市</option>
+		</select>
+	</body>
+</html>

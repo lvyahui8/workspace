@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		
+		<style type="text/css">
+			dl dd{
+				margin : 0px;/*无缩进*/
+			}
+			dl{
+				height:16px;
+				/*
+				overflow:hidden;
+				*/
+			}
+			
+			/*
+			预定义样式，类选择器，方便js中动态加载到标签上
+			*/
+			.open{
+				overflow:visible;
+			}
+			
+			.close{
+				overflow:hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+		1、标签封装数据，html
+		2、定义css样式，css
+		3、明确事件源，事件，和要处理的节点，dom
+		4，明确操作方式，就是事件的处理内容，js
+		-->
+		<script type="text/javascript">
+			var bFlag = true;
+			//列表展开闭合效果
+			function list(){
+				var oTitle = document.getElementById("menu1");
+				if (bFlag) {
+					oTitle.style.overflow = "visible";
+					bFlag = false;
+				}
+				else{
+					oTitle.style.overflow = "hidden";
+					bFlag = true;
+				}
+			}
+			
+			function list_2(){
+				var oTitle = document.getElementById("menu1");
+				
+				if(oTitle.className == "close"){
+					oTitle.className = "open";
+				}
+				else{
+					oTitle.className = "close";
+				}
+			}
+			
+			//点谁就打开谁，接手this参数
+			function list_3(node){
+				var oDlNode = node.parentNode;
+				if(oDlNode.className == "close"){
+					oDlNode.className = "open"
+				}
+				else{
+					oDlNode.className = "close"
+				}
+			}
+			/*
+			 * 在多个列表下，一次只需要展开一个列表其他列表都关闭
+			 * 
+			 * 1、获取所有节点
+			 * 2、遍历所有这些节点，支队当前节点进行open/close操作，对其他节点进行close/open操作
+			 * 
+			 */
+			function list_4(node){
+				var oDlNode = node.parentNode;
+				
+				var collDlNodes = document.getElementsByTagName("dl");
+				for(var i = 0; i<collDlNodes.length;i++){
+					if(collDlNodes[i] == oDlNode){
+						if(oDlNode.className == "close"){
+							oDlNode.className = "open"
+						}
+						else{
+							oDlNode.className = "close"
+						}
+					}
+					else{
+						collDlNodes[i].className = "close";
+					}
+				}
+			}
+			
+		</script>
+		<dl id="menu1" class="close">
+			<dt onclick="list_4(this)">显示条目1</dt>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+		</dl>
+		<dl id="menu2" class="close">
+			<dt onclick="list_4(this)">显示条目2</dt>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+		</dl>
+		<dl id="menu3" class="close">
+			<dt onclick="list_4(this)">显示条目3</dt>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+			<dd>展开列表内容</dd>
+		</dl>
+	</body>
+</html>

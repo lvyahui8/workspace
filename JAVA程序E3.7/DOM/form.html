@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+			function checkUser(){
+				var oUserNode = document.getElementsByName("user")[0];
+//				alert(oUserNode.value);
+				var reg = new RegExp("^[a-z]{4}$","i");
+				//reg = ^[a-z]{4}$;这样也可以
+//				alert("hh");
+				var info;
+				if(reg.test(oUserNode.value)){
+					info = "正确".fontcolor("green");
+				}
+				else{
+					info = "错误".fontcolor("red");
+				}
+				var oSpanNode = document.getElementById("userspan");
+				oSpanNode.innerHTML = info;
+			}
+			
+			function checkForm(){
+				return true;//返回为真才提交，返回false中止提交
+			}
+			
+			function mySubmit(){
+				var oFormNode = document.getElementById("userinfo");
+				oFormNode.submit();
+			}
+			
+		</script>
+		<form onsubmit="return checkForm()" id="userinfo"><!--提交事件-->
+			<b>用户名称:</b><input type="text" name="user" onblur="checkUser()"/><span id="userspan"></span><br/><!-- onblur失去焦点-->
+			<b>输入密码:</b><input type="text" name="paswd"/><span id="paswdspan"></span><br/>
+			<input type="submit" value="提交数据"/>
+		</form>
+		<hr/>
+		<input type="button" value="我的提交" onclick="mySubmit()"/>
+	</body>
+</html>

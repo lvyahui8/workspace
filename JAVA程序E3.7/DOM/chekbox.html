@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<!--
+		全选商品列表
+		-->
+		<script type="text/javascript">
+			function getSum(){
+				var sum = 0;
+				var collItemNodes = document.getElementsByName("item");
+				
+				for(var i=0;i<collItemNodes.length;i++){
+					if(collItemNodes[i].checked){
+						sum+=parseInt(collItemNodes[i].value);
+					}
+				}
+				var sSum = sum + "元";
+				document.getElementById("sumid").innerHTML = sSum;
+			}
+			
+			function checkAll(node){
+				var collItemNodes = document.getElementsByName("item");
+					
+				for(var i=0;i<collItemNodes.length;i++){
+					collItemNodes[i].checked = node.checked;
+				}
+			}
+			
+			</script>
+		<input type="checkbox" name="allitem" onclick="checkAll(this)"/>全选<br/>
+		<input type="checkbox" name="item" value="1000"/> 笔记本电脑：1000元<br/>
+		<input type="checkbox" name="item" value="1000"/> 笔记本电脑：1000元<br/>
+		<input type="checkbox" name="item" value="1000"/> 笔记本电脑：1000元<br/>
+		<input type="checkbox" name="item" value="1000"/> 笔记本电脑：1000元<br/>
+		<input type="checkbox" name="item" value="1000"/> 笔记本电脑：1000元<br/>
+		<input type="checkbox" name="item" value="1000"/> 笔记本电脑：1000元<br/>
+		<input type="checkbox" name="allitem" onclick="checkAll(this)"/>全选<br/>
+		<input type="button" value="总金额是" onclick="getSum()" /><span  id="sumid"></span>
+	</body>
+</html>

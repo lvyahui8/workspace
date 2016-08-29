@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		<style type="text/css">
+			table ul{
+				margin:0px;/*列表缩进为0*/
+				list-style:none;/*取消无序列表的样式*/
+				background-color:#0080c0;
+				display:none;/*不展开列表*/
+				border:#FFFF00 1px dotted;
+				padding:1px;
+			}			
+			
+			table{
+				border:#8000ff 1px solid;
+				width:120px;
+			}
+			
+			table td{
+				background-color:#ff80ff;
+				border:#8080ff 1px dashed;
+			}
+			
+			/*
+			 * 单元格中的超链接样式
+			 * 
+			 * */
+			
+			table td a:link,table td a:visited{
+				color:#3e3eff;
+				text-decoration : none;
+			}
+			
+			table td a:hover{
+				color:#ff0000;
+			}
+			
+			/*预定义样式*/
+			.open{
+				display:block;
+			}
+			.close{
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			完成一个好友菜单
+		-->
+		<script type="text/javascript">
+			function list(node){
+				//先获取其父节点
+				var oTdNode = node.parentNode;
+				//通过父节点拿到ul节点
+				var oUlNode = oTdNode.getElementsByTagName("ul")[0];//只取第一个
+				
+				//获取表格中所有的ul
+				var oTabNode = document.getElementById("goodlist");
+				var collUlNodes =  oTabNode.getElementsByTagName("ul");
+				
+				for(var i=0;i<collUlNodes.length;i++){
+//					alert(collUlNodes[i].nodeName);
+					if(collUlNodes[i] == oUlNode){
+							if("open" == oUlNode.className){
+								oUlNode.className = "close";
+//								alert(oUlNode.nodeName+"Close OK");
+							}
+							else{
+//								alert(oUlNode.nodeName+"Open OK");
+								oUlNode.className = "open";
+							}
+					}
+					else{
+						collUlNodes[i].className = "close";
+					}
+				}	
+			}
+		</script>
+		<table id="goodlist">
+			<tr>
+				<td>
+					<a href="javascript:void(0)" onclick="list(this)">好友菜单</a>
+					<ul>
+						<li>好友MM_1</li>
+						<li>好友MM_2</li>
+						<li>好友MM_3</li>
+						<li>好友MM_4</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="javascript:void(0)" onclick="list(this)">朋友菜单</a>
+					<ul>
+						<li>朋友MM_1</li>
+						<li>朋友MM_2</li>
+						<li>朋友MM_3</li>
+						<li>朋友MM_4</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="javascript:void(0)" onclick="list(this)">家人菜单</a>
+					<ul>
+						<li>家人MM_1</li>
+						<li>家人MM_2</li>
+						<li>家人MM_3</li>
+						<li>家人MM_4</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * js函数的其他表现形式
+			 * 动态函数：使用的是js中内置的一个对象Function
+			 * 匿名函数：
+			 */
+			
+//			var add = new Function("x,y","var sum;sum=x+y;return sum;");//不能有多余的空格
+			
+//			var sum = add(4,3);
+			var sum = new Function("x,y","var sum;sum=x+y;return sum;")(4,3);//匿名函数对象
+			document.write(sum);
+			alert(sum);
+			
+			var add = function(a,b){//匿名函数
+				return a+b;
+			}
+			alert(add(3,4));
+			
+		</script>
+	</body>
+</html>

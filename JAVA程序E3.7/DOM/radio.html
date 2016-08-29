@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		<style type="text/css">
+			#contentid{
+				display:none;
+			}
+			#ul_num{
+				list-style:none;
+				margin:0px;
+				padding:2px;
+			}
+			.close{
+				display:none;
+			}
+			
+			.open{
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+		
+		单选按钮演示
+		.调查问卷
+		.性格测试
+		
+		-->
+		<script type="text/javascript">
+			function showContent(node){
+				var oDivNode = document.getElementById("contentid");
+				with(oDivNode.style){
+					if("yes" == node.value){
+						display = "block";
+					}
+					else{
+						display = "none";
+					}
+				}
+			}
+		</script>
+		<div>
+		你要参加问卷调查吗?
+		<input type="radio" name="wenjuan" value="yes" onclick="showContent(this)"/>是
+		<input type="radio" name="wenjuan" value="no"  checked="checked" onclick="showContent(this)"/>否
+		</div>
+		<div id="contentid">
+		问卷调查内容：<br/>
+		您的姓名：<input type="text"/><br/>
+		你的邮箱：<input type="text"/>
+		</div>
+		
+		<hr/>
+		
+		<script type="text/javascript">
+			function showResult(){
+				//判断是否有答案被选中
+				var oNum1Nodes = document.getElementsByName("no1");
+				var flag = false;
+				var val = 0;
+				for(var i=0 ;i<oNum1Nodes.length;i++){
+					if(oNum1Nodes[i].checked){
+						flag = true;
+						val = oNum1Nodes[i].value;
+						break;
+					}
+				}
+				
+				if(!flag){
+					document.getElementById("errInfo").className = "open";
+					return;
+				}
+				
+				if(val>=1 && val<=3){
+					document.getElementById("result_1").className = "open";
+					document.getElementById("result_2").className = "close";
+				}
+				else{
+					document.getElementById("result_1").className = "close";
+					document.getElementById("result_2").className = "open";
+				}
+			}
+		</script>
+		<h2>欢迎参加性格测试：</h2>
+		<div>	
+			<h3></h3>第<span>一</span>题：</h3>
+			<span>你喜欢的水果是什么？</span>
+			<ul id="ul_num">
+				<li><input type="radio" name="no1" value="1" />葡萄</li>
+				<li><input type="radio" name="no1" value="2" />西瓜</li>
+				<li><input type="radio" name="no1" value="3" />苹果</li>
+				<li><input type="radio" name="no1" value="4" />芒果</li>
+				<li><input type="radio" name="no1" value="5" />樱桃</li>
+			</ul>
+		</div>
+		
+		<div>
+			<input type="button" value="查看测试结果:" onclick="showResult()"/><br/>
+			<div id="errInfo" class="close"><font color="red">没有答案被选中</font></div>
+			<div id="result_1" class="close">1-3:.......</div>
+			<div id="result_2" class="close">4-:........</div>
+		</div>
+	</body>
+</html>

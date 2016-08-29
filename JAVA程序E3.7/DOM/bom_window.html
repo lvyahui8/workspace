@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<!-- 
+		为了演示方便，定义一个事件源，通过事件源的触发，获取想要的结果
+		-->
+		<!-- 定义一个事件处理方式 -->
+		<script type="text/javascript">
+			function windowObjDemo(){
+				//显示浏览器的信息
+				
+				
+//				alert(window.navigator.appName);
+				var name = window.navigator.appName;
+				var version = window.navigator.appVersion;
+				alert(name+"\n"+version);
+			}
+			//localtion
+			function windowObjDemo2(){
+//				var pro = window.location.protocol;
+//				alert(pro);
+				//给location的属性设置值
+				window.location.href = "http://www.agrin.cn";
+			}
+		</script>
+		<!-- 定义一个事件源 -->
+		<input type="button" value="演示window中的对象" onclick="windowObjDemo2()"/>
+		
+	</body>
+</html>

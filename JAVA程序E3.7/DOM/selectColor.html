@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		<style type="text/css">
+			.clr{
+				border:#ff8040 1px solid;
+				height:20px;
+				width:200px;
+				float:left;
+				margin-right:20px;
+			}
+			
+			#text{
+				clear:left;
+				margin-top:20px;
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function changeColor(node){
+				var textColor = node.style.backgroundColor;
+				document.getElementById("text").style.color = textColor;
+			}
+		</script>
+		
+		
+		<div class="clr" id="clr_1" style="background-color:red" onclick="changeColor(this)">需要显示的文字效果</div>
+		<div class="clr" id="clr_2" style="background-color:green" onclick="changeColor(this)">需要显示的文字效果</div>
+		<div class="clr" id="clr_3" style="background-color:blue" onclick="changeColor(this)">需要显示的文字效果</div>
+		<div id="text">
+			哈哈哈哈哈哈<br/>
+			哈哈哈哈哈哈<br/>
+			哈哈哈哈哈哈<br/>
+			哈哈哈哈哈哈<br/>
+		</div>
+		<hr/>
+		<script type="text/javascript">
+			function changeColor2(){
+				var oSelectNode = document.getElementsByName("selectColor")[0];
+				//获取所有option
+				var collOptionNodes = oSelectNode.options;
+				
+				var index = oSelectNode.selectedIndex;
+				
+				document.getElementById("text").style.color = collOptionNodes[index].value;				
+			}
+		</script>
+		<select name="selectColor" onchange="changeColor2()" class="select">
+			<option value="black">选择颜色</option>
+			<option style="background-color:red" value="red">红色</option>
+			<option style="background-color:green" value="green">绿色</option>
+			<option style="background-color:blue" value="blue">蓝色</option>
+		</select>
+		
+	</body>
+	
+</html>
