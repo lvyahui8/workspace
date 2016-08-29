@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Neon Admin Panel" />
+	<meta name="author" content="" />
+
+	<title>Neon | Extra</title>
+
+	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/neon-core.css">
+	<link rel="stylesheet" href="assets/css/neon-theme.css">
+	<link rel="stylesheet" href="assets/css/neon-forms.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script>$.noConflict();</script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<style type="text/css">
+
+	</style>
+
+</head>
+<body class="page-body" data-url="http://neon.dev">
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+	<!-- 左侧边栏 -->
+	<div class="sidebar-menu">
+
+		<div class="sidebar-menu-inner">
+			
+			<header class="logo-env">
+
+				<!-- logo -->
+				<div class="logo">
+					<a href="index.html">
+						<img src="assets/images/logo@2x.png" width="120" alt="" />
+					</a>
+				</div>
+
+				<!-- logo collapse icon -->
+				<div class="sidebar-collapse">
+					<a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+								
+				<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+				<div class="sidebar-mobile-menu visible-xs">
+					<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+			</header>
+			
+									
+			<ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li class="active root-level has-sub opened">
+					<a href="index.html">
+						<i class="entypo-gauge"></i>
+						<span class="title">实操训练营</span>
+					</a>
+					<ul>
+						<li>
+							<a href="012-point-select.html">
+								<span class="title">基础理论夯实</span>
+							</a>
+						</li>
+						<li >
+							<a href="slsxpt-A1-2.html">
+								<span class="title">中级技能</span>
+							</a>
+							<ul>
+								<li>
+									<a href="skin-black.html">
+										<span class="title">反应区</span>
+									</a>
+									<ul>
+										<li>
+											<a href="skin-yellow.html">
+												<span class="title">内容反应</span>
+											</a>
+										</li>
+										<li>
+											<a href="skin-yellow.html">
+												<span class="title">情感反应</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="skin-white.html">
+										<span class="title">技术区</span>
+									</a>
+									<ul>
+										<li>
+											<a href="skin-yellow.html">
+												<span class="title">具体化技术</span>
+											</a>
+										</li>
+										<li>
+											<a href="skin-yellow.html">
+												<span class="title">重复技术</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="skin-purple.html">
+										<span class="title">测试区</span>
+									</a>
+									<ul>
+										<li>
+											<a href="skin-yellow.html">
+												<span class="title">房树人测验</span>
+											</a>
+										</li>
+										<li>
+											<a href="skin-yellow.html">
+												<span class="title">沙盘测验</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li >
+							<a href="slsxpt-A1-3.html">
+								<span class="title">实操技能强化</span>
+							</a>
+							<ul>
+								<li>
+									<a href="html">
+										<span class="title">自主练习文本库</span>
+									</a>
+								</li>
+								<li>
+									<a href="html">
+										<span class="title">分析倾听音频库</span>
+									</a>
+								</li>
+								<li>
+									<a href="html">
+										<span class="title">实操仿真视频库</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+
+					</ul>
+				</li>
+
+
+				<li class="active root-level has-sub opened">
+					<a href="#">
+						<i class="entypo-chart-bar"></i>
+						<span class="title">继续成长区</span>
+					</a>
+					<ul>
+						<li>
+							<a href="#">
+								<span class="title">最新动态</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="title">分享讨论区</span>
+							</a>
+						</li>
+			        </ul>
+			    </li>
+		</div>
+	</div>
+	
+	<!-- 右侧知识点清单 -->
+
+
+	<div class="main-content">
+		<!-- 头部 -->
+		<div>
+			<!--page title-->
+			<div class=""><h1><center>心理咨询基本技能在线学习平台</center></h1></div>
+			<!-- 进度条 -->
+			<div>
+				<div style="float:right"><a href="">个人中心</a></div>
+				
+				<div class="progress progress-striped active" style="float:right; width:90%">
+					学习进度
+					<div class="progress-bar progress-bar-success" style="width: 30%">
+						<span class="sr-only">30% Complete (success)</span>
+					</div>
+					<div class="progress-bar progress-bar-warning" style="width: 20%">
+						<span class="sr-only">15% Complete (warning)</span>
+					</div>
+					<div class="progress-bar progress-bar-danger" style="width: 40%">
+						<span class="sr-only">40% Complete (danger)</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<br><br><br><br>
+		<div class="">
+	
+			<div class="">
+		
+				<div class="row" id="portfolio-items">
+			
+					<div class="item col-sm-3 col-xs-6 filter-design" style="padding-left: 30px">
+					
+						<div class="portfolio-item">
+							<a href="012-point-one.html" class="image">
+								<img src="assets/images/portfolio-thumb-1.png" class="img-rounded" />
+								<span class="hover-zoom"></span>
+							</a>
+						
+							<h4>
+								<a href="012-point-one.html" class="like">
+									<i class="entypo-heart"></i>
+								</a>
+							
+								<a href="012-point-one.html" class="name">知识点1</a>
+							</h4>
+						
+							<div class="categories">
+							<a href="012-point-one.html">Web Design / Development</a>
+							</div>
+						</div>
+					
+					</div>
+					
+					<div class="item col-sm-3 col-xs-6 filter-design" style="padding-left: 30px">
+					
+						<div class="portfolio-item">
+							<a href="portfolio-single.html" class="image">
+								<img src="assets/images/portfolio-thumb-1.png" class="img-rounded" />
+								<span class="hover-zoom"></span>
+							</a>
+						
+							<h4>
+								<a href="portfolio-single.html" class="like liked">
+									<i class="entypo-heart"></i>
+								</a>
+							
+								<a href="portfolio-single.html" class="name">知识点1</a>
+							</h4>
+							
+							<div class="categories">
+								<a href="portfolio-single.html">Photography</a>
+							</div>
+						</div>
+					
+					</div>
+					
+					<div class="item col-sm-3 col-xs-6 filter-branding" style="padding-left: 30px">
+						
+						<div class="portfolio-item">
+							<a href="portfolio-single.html" class="image">
+								<img src="assets/images/portfolio-thumb-1.png" class="img-rounded" />
+								<span class="hover-zoom"></span>
+							</a>
+							
+							<h4>
+								<a href="portfolio-single.html" class="like">
+									<i class="entypo-heart"></i>
+								</a>
+								
+								<a href="portfolio-single.html" class="name">知识点3</a>
+							</h4>
+							
+							<div class="categories">
+								<a href="portfolio-single.html">UI Design</a>
+							</div>
+						</div>
+					
+					</div>
+					
+					<div class="item col-sm-3 col-xs-6 filter-branding" style="padding-left: 30px">
+					
+						<div class="portfolio-item">
+							<a href="portfolio-single.html" class="image">
+								<img src="assets/images/portfolio-thumb-1.png" class="img-rounded" />
+								<span class="hover-zoom"></span>
+							</a>
+							
+							<h4>
+								<a href="portfolio-single.html" class="like liked">
+									<i class="entypo-heart"></i>
+								</a>
+								
+								<a href="portfolio-single.html" class="name">知识点4</a>
+							</h4>
+							
+							<div class="categories">
+								<a href="portfolio-single.html">Branding</a>
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="item col-sm-3 col-xs-6 filter-print" style="padding-left: 30px">
+						
+						<div class="portfolio-item">
+							<a href="portfolio-single.html" class="image">
+								<img src="assets/images/portfolio-thumb-1.png" class="img-rounded" />
+								<span class="hover-zoom"></span>
+							</a>
+							
+							<h4>
+								<a href="portfolio-single.html" class="like">
+									<i class="entypo-heart"></i>
+								</a>
+								
+								<a href="portfolio-single.html" class="name">知识点5</a>
+							</h4>
+							
+							<div class="categories">
+								<a href="portfolio-single.html">Printing</a>
+							</div>
+						</div>
+					
+					</div>
+					
+					<div class="item col-sm-3 col-xs-6 filter-campaign filter-design" style="padding-left: 30px">
+						
+						<div class="portfolio-item">
+							<a href="portfolio-single.html" class="image">
+								<img src="assets/images/portfolio-thumb-1.png" class="img-rounded" />
+								<span class="hover-zoom"></span>
+							</a>
+							
+							<h4>
+								<a href="portfolio-single.html" class="like">
+									<i class="entypo-heart"></i>
+								</a>
+								
+								<a href="portfolio-single.html" class="name">知识点6</a>
+							</h4>
+							
+							<div class="categories">
+								<a href="portfolio-single.html">Package Design</a>
+							</div>
+						</div>
+					
+					</div>
+
+					<div class="item col-sm-3 col-xs-6 filter-print" style="padding-left: 30px">
+						
+						<div class="portfolio-item">
+							<a href="portfolio-single.html" class="image">
+								<img src="assets/images/portfolio-thumb-1.png" class="img-rounded" />
+								<span class="hover-zoom"></span>
+							</a>
+							
+							<h4>
+								<a href="portfolio-single.html" class="like">
+									<i class="entypo-heart"></i>
+								</a>
+								
+								<a href="portfolio-single.html" class="name">知识点7</a>
+							</h4>
+							
+							<div class="categories">
+								<a href="portfolio-single.html">Printing</a>
+							</div>
+						</div>
+					
+					</div>
+
+					<div class="item col-sm-3 col-xs-6 filter-print" style="padding-left: 30px">
+						
+						<div class="portfolio-item">
+							<a href="portfolio-single.html" class="image">
+								<img src="assets/images/portfolio-thumb-1.png" class="img-rounded" />
+								<span class="hover-zoom"></span>
+							</a>
+							
+							<h4>
+								<a href="portfolio-single.html" class="like">
+									<i class="entypo-heart"></i>
+								</a>
+								
+								<a href="portfolio-single.html" class="name">知识点8</a>
+							</h4>
+							
+							<div class="categories">
+								<a href="portfolio-single.html">Printing</a>
+							</div>
+						</div>
+					
+					</div>
+			
+				</div>
+		
+				<div class="row">
+		
+				<div class="col-md-12">
+			
+					<div class="text-center">
+				
+						<ul class="pagination">
+							<li class="active">
+								<a href="">Last</a>
+							</li>
+							<li class="active">
+								<a href="012-point-one.html">1</a>
+							</li>
+							<li>
+								<a href="012-point-two.html">2</a>
+							</li>
+							<li>
+								<a href="012-point-there.html">3</a>
+							</li>
+							<li>
+								<a href="012-point-four.html">4</a>
+							</li>
+							<li>
+								<a href="012-point-five.html">5</a>
+							</li>
+							<li>
+								<a href="#">Next</a>
+							</li>
+						</ul>
+						
+					</div>
+					
+				</div>
+			
+				</div>
+		
+			</div>
+
+		</div>		
+		
+		<!-- Footer -->
+		<footer class="main">
+			
+			&copy; 2015 <strong>心理学学习平台</strong> Admin Theme by <a href="http://laborator.co" target="_blank">monkey</a>
+
+		</footer>
+	</div>
+
+		
+	<div id="chat" class="fixed" data-current-user="Art Ramadani" data-order-by-status="1" data-max-chat-history="25">
+	
+		<div class="chat-inner">
+	
+	
+			<h2 class="chat-header">
+				<a href="#" class="chat-close"><i class="entypo-cancel"></i></a>
+	
+				<i class="entypo-users"></i>
+				Chat
+				<span class="badge badge-success is-hidden">0</span>
+			</h2>
+	
+	
+			<div class="chat-group" id="group-1">
+				<strong>Favorites</strong>
+	
+				<a href="#" id="sample-user-123" data-conversation-history="#sample_history"><span class="user-status is-online"></span> <em>Catherine J. Watkins</em></a>
+				<a href="#"><span class="user-status is-online"></span> <em>Nicholas R. Walker</em></a>
+				<a href="#"><span class="user-status is-busy"></span> <em>Susan J. Best</em></a>
+				<a href="#"><span class="user-status is-offline"></span> <em>Brandon S. Young</em></a>
+				<a href="#"><span class="user-status is-idle"></span> <em>Fernando G. Olson</em></a>
+			</div>
+	
+	
+			<div class="chat-group" id="group-2">
+				<strong>Work</strong>
+	
+				<a href="#"><span class="user-status is-offline"></span> <em>Robert J. Garcia</em></a>
+				<a href="#" data-conversation-history="#sample_history_2"><span class="user-status is-offline"></span> <em>Daniel A. Pena</em></a>
+				<a href="#"><span class="user-status is-busy"></span> <em>Rodrigo E. Lozano</em></a>
+			</div>
+	
+	
+			<div class="chat-group" id="group-3">
+				<strong>Social</strong>
+	
+				<a href="#"><span class="user-status is-busy"></span> <em>Velma G. Pearson</em></a>
+				<a href="#"><span class="user-status is-offline"></span> <em>Margaret R. Dedmon</em></a>
+				<a href="#"><span class="user-status is-online"></span> <em>Kathleen M. Canales</em></a>
+				<a href="#"><span class="user-status is-offline"></span> <em>Tracy J. Rodriguez</em></a>
+			</div>
+	
+		</div>
+	
+		<!-- conversation template -->
+		<div class="chat-conversation">
+	
+			<div class="conversation-header">
+				<a href="#" class="conversation-close"><i class="entypo-cancel"></i></a>
+	
+				<span class="user-status"></span>
+				<span class="display-name"></span>
+				<small></small>
+			</div>
+	
+			<ul class="conversation-body">
+			</ul>
+	
+			<div class="chat-textarea">
+				<textarea class="form-control autogrow" placeholder="Type your message"></textarea>
+			</div>
+	
+		</div>
+	
+	</div>
+	
+	
+	<!-- Chat Histories -->
+	<ul class="chat-history" id="sample_history">
+		<li>
+			<span class="user">Art Ramadani</span>
+			<p>Are you here?</p>
+			<span class="time">09:00</span>
+		</li>
+	
+		<li class="opponent">
+			<span class="user">Catherine J. Watkins</span>
+			<p>This message is pre-queued.</p>
+			<span class="time">09:25</span>
+		</li>
+	
+		<li class="opponent">
+			<span class="user">Catherine J. Watkins</span>
+			<p>Whohoo!</p>
+			<span class="time">09:26</span>
+		</li>
+	
+		<li class="opponent unread">
+			<span class="user">Catherine J. Watkins</span>
+			<p>Do you like it?</p>
+			<span class="time">09:27</span>
+		</li>
+	</ul>
+	
+	
+	
+	
+	<!-- Chat Histories -->
+	<ul class="chat-history" id="sample_history_2">
+		<li class="opponent unread">
+			<span class="user">Daniel A. Pena</span>
+			<p>I am going out.</p>
+			<span class="time">08:21</span>
+		</li>
+	
+		<li class="opponent unread">
+			<span class="user">Daniel A. Pena</span>
+			<p>Call me when you see this message.</p>
+			<span class="time">08:27</span>
+		</li>
+	</ul>
+
+	
+</div>
+
+
+
+
+
+	<!-- Imported styles on this page -->
+	<link rel="stylesheet" href="assets/css/font-icons/font-awesome/css/font-awesome.min.css">
+
+	<!-- Bottom scripts (common) -->
+	<script src="assets/js/gsap/main-gsap.js"></script>
+	<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/joinable.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/neon-api.js"></script>
+
+
+	<!-- Imported scripts on this page -->
+	<script src="assets/js/tocify/jquery.tocify.min.js"></script>
+	<script src="assets/js/neon-chat.js"></script>
+
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/neon-custom.js"></script>
+
+
+	<!-- Demo Settings -->
+	<script src="assets/js/neon-demo.js"></script>
+
+</body>
+</html>

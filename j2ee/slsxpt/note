@@ -1,0 +1,23 @@
+单选题，多选题的JSON表示
+[
+	{"right":true,"content":"hello"},
+	{"right":false,"content":"jshdkjfh"},
+	{"right":false,"content":"sdjfklsdj"},
+	{"right":true,"content":"dskljlksdfjl"}
+]
+
+{
+    "right":[0],
+    "items":[
+        "答案1"
+        "答案2"
+        "可加快速度"
+		""
+    ]
+}
+
+{
+	"right":[
+		true,false
+	]
+}
