@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${packageName}.${activityClass}" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    tools:ignore="UselessLeaf,UselessParent" >
+	    <Button 
+	        android:padding="10dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/query"
+	        android:onClick="onQueryBtnClick"
+	        />
+	</LinearLayout>
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    tools:ignore="UselessLeaf,UselessParent" >
+	    <Button 
+	        android:padding="10dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/insert"
+	        android:onClick="onInsertBtnClick"
+	        />
+
+	    <EditText
+	        android:id="@+id/name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3"
+	        android:hint="@string/inputname"
+	        android:inputType="text"
+	        android:maxLines="1"
+	         />
+	</LinearLayout>
+	<EditText 
+	    android:id="@+id/phonenumber"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:lines="4"
+	    android:inputType="number|phone"
+	    android:hint="@string/inputnumber"
+	  >
+	    <requestFocus />
+	</EditText>
+</LinearLayout>
+ 

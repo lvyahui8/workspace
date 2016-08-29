@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LaunchMode</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="standard">打开标准模式的Activity</string>
+    <string name="singletopactivity">打开SingleTop模式的Activity</string>
+    <string name="singletaskactivity">打开SingleTask模式的Activity</string>
+    <string name="oepnmainactivity">打开MainActivity</string>
+
+</resources>

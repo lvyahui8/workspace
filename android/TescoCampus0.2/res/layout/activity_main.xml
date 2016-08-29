@@ -1,0 +1,71 @@
+
+<!--     <cn.hnctcm.tescocampus.view.MyScrollView
+        android:id="@+id/home_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="UselessParent" > -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <!--  The  lazy dog jumps-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ViewFlipper
+            android:id="@+id/home_flipper"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/home_flippy_height" >
+
+            <ImageView
+                android:id="@+id/flappy01"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@null"
+                android:scaleType="matrix"
+                android:src="@drawable/flappy01" />
+
+            <ImageView
+                android:id="@+id/flappy02"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@null"
+                android:scaleType="matrix"
+                android:src="@drawable/flappy02" />
+
+            <ImageView
+                android:id="@+id/flappy03"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@null"
+                android:scaleType="matrix"
+                android:src="@drawable/flappy03" />
+        </ViewFlipper>
+
+        <ListView
+            android:id="@+id/home_list"
+            style="@style/ActivityBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/home_flipper"
+            tools:ignore="NestedScrolling,ScrollViewSize" >
+        </ListView>
+    </RelativeLayout>
+
+   <!--  </cn.hnctcm.tescocampus.view.MyScrollView> -->
+    <LinearLayout
+        android:id="@+id/footbar_layout_ly" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        
+   		<include android:id="@+id/home_menu_bar_layout"
+	       layout="@layout/home_menu_bar"/>
+    </LinearLayout>
+   
+</RelativeLayout>

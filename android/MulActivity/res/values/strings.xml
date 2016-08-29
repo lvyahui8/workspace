@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MulActivity</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="new_page">新的页面</string>
+	<string name="old_page">旧的页面</string>
+	<string name="return_data">返回数据</string>
+</resources>

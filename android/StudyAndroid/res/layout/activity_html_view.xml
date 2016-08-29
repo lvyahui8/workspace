@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf" >
+	    <EditText
+	        android:layout_weight="3"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/htmlapp_edit"
+	        android:inputType="textUri"
+	        android:text="@string/htmlapp_defs"
+	        android:hint="@string/htmlapp_editinfo" />
+	
+	    <Button
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="loadHtml"
+	        android:text="@string/htmlapp_btn" />
+    </LinearLayout>
+
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/htmlapp_text"
+            />
+    </ScrollView>
+
+</LinearLayout>

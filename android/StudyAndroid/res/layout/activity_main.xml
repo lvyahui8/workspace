@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${packageName}.${activityClass}" >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onImageViewAppBtnClick"
+        android:text="@string/imageviewapp"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onHtmlViewAppBtnClick"
+        android:text="@string/htmlapp"
+        tools:ignore="ButtonStyle" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onLoginAppBtnClick"
+        android:text="@string/loginapp"
+        tools:ignore="ButtonStyle" />
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSmartImgViewBtnClick"
+        android:text="@string/smartimgapp"
+        tools:ignore="ButtonStyle" />
+
+</LinearLayout>

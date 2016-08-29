@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" 
+    >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    tools:ignore="UselessLeaf" >
+		
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onQueryBtnClick"
+        android:text="@string/query"
+        android:layout_weight="1"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		 tools:ignore="ButtonStyle" 
+        android:onClick="onInsertBtnClick"
+        android:layout_weight="1"
+        android:text="@string/insert" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		 tools:ignore="ButtonStyle" 
+        android:onClick="onUpdateBtnClick"
+        android:layout_weight="1"
+        android:text="@string/update" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		 tools:ignore="ButtonStyle" 
+        android:onClick="onDeleteBtnClick"
+        android:layout_weight="1"
+        android:text="@string/delete" />
+    </LinearLayout>
+	<TextView 
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:padding="10dp"
+        android:id="@+id/text"
+	    />
+</FrameLayout>

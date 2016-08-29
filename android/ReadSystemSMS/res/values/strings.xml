@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ReadSystemSMS</string>
+    <string name="backup">备份所有短信</string>
+    <string name="insert">插入记录</string>
+    <string name="inputnumber">电话号码</string>
+    <string name="inputtext">输入短信内容</string>
+	
+</resources>

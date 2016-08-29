@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" 
+    android:orientation="vertical">
+
+    <ViewFlipper
+        android:id="@+id/home_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/home_flippy_height"
+        tools:ignore="UselessParent" >
+
+	    <ImageView
+	        android:id="@+id/flappy01"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:contentDescription="@null"
+	        android:src="@drawable/flappy01" />
+	    <ImageView
+	        android:id="@+id/flappy02"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:contentDescription="@null"
+	        android:src="@drawable/flappy02" />
+	    <ImageView
+	        android:id="@+id/flappy03"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:contentDescription="@null"
+	        android:src="@drawable/flappy03" />
+    </ViewFlipper>
+    <Button 
+        android:id="@+id/btn_pres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pres"/>
+    <Button 
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="next"/>
+</LinearLayout>

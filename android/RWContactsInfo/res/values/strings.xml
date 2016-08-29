@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RWContactsInfo</string>
+    <string name="query">查询所有联系人</string>
+    <string name="insert">插入一个联系人</string>
+    <string name="inputname">输入姓名</string>
+    <string name="inputnumber">输入电话</string>
+	 
+</resources>

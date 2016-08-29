@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.loopj.android.image.SmartImageView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1000"
+        android:id="@+id/smartimgview_imageview"
+        android:contentDescription="@string/alt" />
+	<EditText 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/smartimgview_edit"
+	    android:inputType="textUri"
+	    android:hint="@string/imageapp_info"
+	    android:text="@string/imageapp_defurl"
+	    />
+	<Button 
+	    android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/smartimgview_btn"
+		android:text="@string/imageapp_btn_text"
+		android:onClick="loadImage"
+	    />
+
+</LinearLayout>

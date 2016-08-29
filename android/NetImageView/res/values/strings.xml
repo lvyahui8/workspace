@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NetImageView</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="image_url">网络图片URL</string>
+    <string name="btn_text">获取</string>
+</resources>
