@@ -1,0 +1,10 @@
+//======================
+// simplest program
+//======================
+#include<stdio.h>
+#include<math.h>
+//----------------------
+int main(){
+    printf("My World!\n");
+    return 0;
+}//---------------------
