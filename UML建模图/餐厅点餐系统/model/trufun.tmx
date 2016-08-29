@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:trufun="http://trufun" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Model xmi:id="_4Q1mYEkrEeOmgrJFg1aDvQ" name="UML2 Model">
+    <eAnnotations xmi:id="_4agfwEkrEeOmgrJFg1aDvQ" source="TaggedValues">
+      <details xmi:id="_4agfwUkrEeOmgrJFg1aDvQ" key="ProjectType" value="UML2Project"/>
+      <details xmi:id="_kcs4EEksEeOmgrJFg1aDvQ" key="Diagrams" value="_4q33AEkrEeOmgrJFg1aDvQ,_-81F0ElCEeOnrLeKpZTmtQ,_3QuLMElBEeOnrLeKpZTmtQ,"/>
+    </eAnnotations>
+    <eAnnotations xmi:id="_4rBoAEkrEeOmgrJFg1aDvQ" source="Diagrams">
+      <contents xmi:type="trufun:TClassDiagram" xmi:id="_4rBoAUkrEeOmgrJFg1aDvQ" id="_4q33AEkrEeOmgrJFg1aDvQ" owner="_4Q1mYEkrEeOmgrJFg1aDvQ" name="main" zoom="1.0" gridSpacing="22,22">
+        <nodes xmi:type="trufun:TClassNode" xmi:id="_FgGdAEksEeOmgrJFg1aDvQ" owner="_Ff9TEEksEeOmgrJFg1aDvQ" name="餐桌" location="538,25" size="151,486" autoResize="true">
+          <fillColor xmi:id="_FgGdAUksEeOmgrJFg1aDvQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_FgGdAkksEeOmgrJFg1aDvQ"/>
+          <fontColor xmi:id="_FgGdA0ksEeOmgrJFg1aDvQ"/>
+          <stereotypeNodes xmi:id="_FgGdBEksEeOmgrJFg1aDvQ" id="_Ff9TEEksEeOmgrJFg1aDvQ"/>
+          <operationCompartmentNode xmi:id="_FgGdBUksEeOmgrJFg1aDvQ">
+            <operations xmi:id="_DQBgsUlAEeOnrLeKpZTmtQ" owner="_DP3vsElAEeOnrLeKpZTmtQ" name="创建餐桌" stereotype="&lt;&lt;Create>>"/>
+            <operations xmi:id="_ZVzZ8EuOEeOAeeS5cV5--g" owner="_ZVyy4EuOEeOAeeS5cV5--g" name="析构餐桌"/>
+            <operations xmi:id="_p4ILMFHNEeOhWbcpSGtUvw" owner="_p4Fu8FHNEeOhWbcpSGtUvw" name="初始就餐时间"/>
+            <operations xmi:id="_vR2o8FHNEeOhWbcpSGtUvw" owner="_vR1a0FHNEeOhWbcpSGtUvw" name="更改消费额"/>
+            <operations xmi:id="_5Q1akFHNEeOhWbcpSGtUvw" owner="_5Q0McFHNEeOhWbcpSGtUvw" name="初始化人数"/>
+            <operations xmi:id="_8UGXQFHNEeOhWbcpSGtUvw" owner="_8UD7AFHNEeOhWbcpSGtUvw" name="返回消费额"/>
+            <operations xmi:id="_B9MtwFHOEeOhWbcpSGtUvw" owner="_B9KRgFHOEeOhWbcpSGtUvw" name="返回起始时间"/>
+            <operations xmi:id="_F1E-QFHOEeOhWbcpSGtUvw" owner="_F1DJEFHOEeOhWbcpSGtUvw" name="返回编号"/>
+            <operations xmi:id="_Hb-qoFHOEeOhWbcpSGtUvw" owner="_Hb9cgFHOEeOhWbcpSGtUvw" name="返回人数"/>
+            <operations xmi:id="_JiqDQFHOEeOhWbcpSGtUvw" owner="_JinnAFHOEeOhWbcpSGtUvw" name="清理餐桌使用痕迹"/>
+            <operations xmi:id="_QAtEwFHOEeOhWbcpSGtUvw" owner="_QArPkFHOEeOhWbcpSGtUvw" name="删除整个菜单"/>
+            <operations xmi:id="_YqrLQFHOEeOhWbcpSGtUvw" owner="_YqovAFHOEeOhWbcpSGtUvw" name="返回日营业额"/>
+            <operations xmi:id="_jfDT0FHOEeOhWbcpSGtUvw" owner="_jfA3kFHOEeOhWbcpSGtUvw" name="返回日饮料消费"/>
+            <operations xmi:id="_sx1t0FHOEeOhWbcpSGtUvw" owner="_sxzRkFHOEeOhWbcpSGtUvw" name="返回日小吃消费"/>
+            <operations xmi:id="_2-d54FHOEeOhWbcpSGtUvw" owner="_2-a2kFHOEeOhWbcpSGtUvw" name="返回日主菜消费"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_FgGdBkksEeOmgrJFg1aDvQ">
+            <attributes xmi:id="_JI1joEk_EeOnrLeKpZTmtQ" owner="_JIryoEk_EeOnrLeKpZTmtQ" name="就餐人数"/>
+            <attributes xmi:id="_sFf60Uk_EeOnrLeKpZTmtQ" owner="_sFf60Ek_EeOnrLeKpZTmtQ" name="本桌消费金额"/>
+            <attributes xmi:id="_TIhVQEoCEeO2ea-fHel4VQ" owner="_TIYyYEoCEeO2ea-fHel4VQ" name="餐桌菜单"/>
+            <attributes xmi:id="_g76PsEuOEeOAeeS5cV5--g" owner="_g71XMEuOEeOAeeS5cV5--g" name="下一个餐桌"/>
+            <attributes xmi:id="_k45GgFHMEeOhWbcpSGtUvw" owner="_k4tgUFHMEeOhWbcpSGtUvw" name="是否使用"/>
+            <attributes xmi:id="_s1JycFHMEeOhWbcpSGtUvw" owner="_s1IkUFHMEeOhWbcpSGtUvw" name="编号"/>
+            <attributes xmi:id="_94f-sFHMEeOhWbcpSGtUvw" owner="_94eJgFHMEeOhWbcpSGtUvw" name="起始就餐时间"/>
+            <attributes xmi:id="_1pFGMFHMEeOhWbcpSGtUvw" owner="_1pD4EFHMEeOhWbcpSGtUvw" name="现有餐桌数"/>
+            <attributes xmi:id="_ATrnsFHNEeOhWbcpSGtUvw" owner="_ATpygFHNEeOhWbcpSGtUvw" name="日饮料消费"/>
+            <attributes xmi:id="_HAmLoFHNEeOhWbcpSGtUvw" owner="_HAk9gFHNEeOhWbcpSGtUvw" name="日小吃消费"/>
+            <attributes xmi:id="_JUMl8FHNEeOhWbcpSGtUvw" owner="_JULX0FHNEeOhWbcpSGtUvw" name="日主菜消费"/>
+            <attributes xmi:id="_v_lKwEk_EeOnrLeKpZTmtQ" owner="_v_cA0Ek_EeOnrLeKpZTmtQ" name="日营业额"/>
+          </attributeCompartmentNode>
+          <nestedClassifierCompartmentNode xmi:id="_FgGdB0ksEeOmgrJFg1aDvQ"/>
+          <templateParameterCompartmentNode xmi:id="_FgGdCEksEeOmgrJFg1aDvQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TClassNode" xmi:id="_CAkOgElBEeOnrLeKpZTmtQ" owner="_CAfWAElBEeOnrLeKpZTmtQ" name="人" location="347,26" size="139,150" autoResize="true">
+          <fillColor xmi:id="_CAkOgUlBEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_CAkOgklBEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_CAkOg0lBEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_CAkOhElBEeOnrLeKpZTmtQ" id="_CAfWAElBEeOnrLeKpZTmtQ"/>
+          <operationCompartmentNode xmi:id="_CAkOhUlBEeOnrLeKpZTmtQ">
+            <operations xmi:id="_baWhQElBEeOnrLeKpZTmtQ" owner="_baRBsElBEeOnrLeKpZTmtQ" name="创建人" stereotype="&lt;&lt;Create>>"/>
+            <operations xmi:id="_hVAosFHPEeOhWbcpSGtUvw" owner="_hU_akFHPEeOhWbcpSGtUvw" name="返回姓名"/>
+            <operations xmi:id="_jFrVEFHPEeOhWbcpSGtUvw" owner="_jFqG8FHPEeOhWbcpSGtUvw" name="返回性别"/>
+            <operations xmi:id="_lhyyMFHPEeOhWbcpSGtUvw" owner="_lhyLIFHPEeOhWbcpSGtUvw" name="设置名字和性别"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_CAkOhklBEeOnrLeKpZTmtQ">
+            <attributes xmi:id="_F8RPEElBEeOnrLeKpZTmtQ" owner="_F8OLwElBEeOnrLeKpZTmtQ" name="姓名"/>
+            <attributes xmi:id="_OKZuIElBEeOnrLeKpZTmtQ" owner="_OKWDwElBEeOnrLeKpZTmtQ" name="性别"/>
+          </attributeCompartmentNode>
+          <nestedClassifierCompartmentNode xmi:id="_CAkOh0lBEeOnrLeKpZTmtQ"/>
+          <templateParameterCompartmentNode xmi:id="_CAkOiElBEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TClassNode" xmi:id="_ktoDcElBEeOnrLeKpZTmtQ" owner="_ktlAIElBEeOnrLeKpZTmtQ" name="服务员" location="151,26" size="139,294" autoResize="true">
+          <fillColor xmi:id="_ktoDcUlBEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_ktoDcklBEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_ktoDc0lBEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_ktoDdElBEeOnrLeKpZTmtQ" id="_ktlAIElBEeOnrLeKpZTmtQ"/>
+          <operationCompartmentNode xmi:id="_ktoDdUlBEeOnrLeKpZTmtQ">
+            <operations xmi:id="_rvJsUFHPEeOhWbcpSGtUvw" owner="_rvH3IFHPEeOhWbcpSGtUvw" name="构造函数"/>
+            <operations xmi:id="_szF1kFHPEeOhWbcpSGtUvw" owner="_szEAYFHPEeOhWbcpSGtUvw" name="析构函数"/>
+            <operations xmi:id="_FqJ1wFHQEeOhWbcpSGtUvw" owner="_FqIAkFHQEeOhWbcpSGtUvw" name="删除餐桌菜单项"/>
+            <operations xmi:id="_xZKXMEuMEeOAeeS5cV5--g" owner="_xY_YEEuMEeOAeeS5cV5--g" name="增加餐桌菜单项"/>
+            <operations xmi:id="_pjbUkEuNEeOAeeS5cV5--g" owner="_pjRjkEuNEeOAeeS5cV5--g" name="获取编号" stereotype="&lt;&lt;const>>"/>
+            <operations xmi:id="_N4u5QEwIEeOJdN53UxSObg" owner="_N4bXQEwIEeOJdN53UxSObg" name="获取业绩" stereotype="&lt;&lt;const>>"/>
+            <operations xmi:id="_IqXmEExMEeOnnb0o72uwPA" owner="_IqVw4ExMEeOnnb0o72uwPA" name="（友）设置工资" stereotype="&lt;&lt;friend>>"/>
+            <operations xmi:id="_W4O9gExNEeOnnb0o72uwPA" owner="_W4NIUExNEeOnnb0o72uwPA" name="（友）设置工资" stereotype="&lt;&lt;friend>>"/>
+            <operations xmi:id="_uocNoFHPEeOhWbcpSGtUvw" owner="_uoa_gFHPEeOhWbcpSGtUvw" name="启用餐桌"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_ktoDdklBEeOnrLeKpZTmtQ">
+            <attributes xmi:id="_18PZkEoHEeO2ea-fHel4VQ" owner="_178eoEoHEeO2ea-fHel4VQ" name="业绩"/>
+            <attributes xmi:id="_aaA64EuMEeOAeeS5cV5--g" owner="_aZ4YAEuMEeOAeeS5cV5--g" name="编号"/>
+            <attributes xmi:id="_fi_m4EuMEeOAeeS5cV5--g" owner="_fi3EAEuMEeOAeeS5cV5--g" name="工资"/>
+            <attributes xmi:id="_5gtXsFHPEeOhWbcpSGtUvw" owner="_5grigFHPEeOhWbcpSGtUvw" name="下一个服务员"/>
+            <attributes xmi:id="_dLqQwUwIEeOJdN53UxSObg" owner="_dLqQwEwIEeOJdN53UxSObg" name="所有服务员工资"/>
+            <attributes xmi:id="_xw3-MFHPEeOhWbcpSGtUvw" owner="_xw2wEFHPEeOhWbcpSGtUvw" name="服务员人数"/>
+          </attributeCompartmentNode>
+          <nestedClassifierCompartmentNode xmi:id="_ktoDd0lBEeOnrLeKpZTmtQ"/>
+          <templateParameterCompartmentNode xmi:id="_ktoDeElBEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TClassNode" xmi:id="_o2evMElBEeOnrLeKpZTmtQ" owner="_o2cS8ElBEeOnrLeKpZTmtQ" name="老板" location="153,336" size="139,294" autoResize="true">
+          <fillColor xmi:id="_o2evMUlBEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_o2fWQElBEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_o2fWQUlBEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_o2fWQklBEeOnrLeKpZTmtQ" id="_o2cS8ElBEeOnrLeKpZTmtQ"/>
+          <operationCompartmentNode xmi:id="_o2fWQ0lBEeOnrLeKpZTmtQ">
+            <operations xmi:id="_AKwqoEuKEeOAeeS5cV5--g" owner="_AKlrgEuKEeOAeeS5cV5--g" name="增加餐桌数" stereotype="&lt;&lt;const>>"/>
+            <operations xmi:id="_kyjG4EuKEeOAeeS5cV5--g" owner="_kyakAEuKEeOAeeS5cV5--g" name="雇佣服务员" stereotype="&lt;&lt;const>>"/>
+            <operations xmi:id="_2YitMEuKEeOAeeS5cV5--g" owner="_2YY8MEuKEeOAeeS5cV5--g" name="解雇服务员" stereotype="&lt;&lt;const>>"/>
+            <operations xmi:id="_Mbow8EuLEeOAeeS5cV5--g" owner="_MbfnAEuLEeOAeeS5cV5--g" name="删除主菜单菜肴" stereotype="&lt;&lt;const>>"/>
+            <operations xmi:id="_Wyak0EwKEeOJdN53UxSObg" owner="_WyRa4EwKEeOJdN53UxSObg" name="修改账号名"/>
+            <operations xmi:id="_pejT0UwKEeOJdN53UxSObg" owner="_pejT0EwKEeOJdN53UxSObg" name="修改密码"/>
+            <operations xmi:id="_z1WIgUwKEeOJdN53UxSObg" owner="_z1WIgEwKEeOJdN53UxSObg" name="设置服务员工资" stereotype="&lt;&lt;const>>"/>
+            <operations xmi:id="_hI74oExKEeOnnb0o72uwPA" owner="_hILqsExKEeOnnb0o72uwPA" name="设置服务员工资" stereotype="&lt;&lt;const>>"/>
+            <operations xmi:id="_HSrvQFHPEeOhWbcpSGtUvw" owner="_HSp6EFHPEeOhWbcpSGtUvw" name="减少餐桌数"/>
+            <operations xmi:id="_Mhc6MFHPEeOhWbcpSGtUvw" owner="_MhbsEFHPEeOhWbcpSGtUvw" name="增加主菜单菜肴"/>
+            <operations xmi:id="_U7egMFHPEeOhWbcpSGtUvw" owner="_U7dSEFHPEeOhWbcpSGtUvw" name="返回账号"/>
+            <operations xmi:id="_W5CZEFHPEeOhWbcpSGtUvw" owner="_W5BK8FHPEeOhWbcpSGtUvw" name="返回密码"/>
+            <operations xmi:id="_a5kPQFHPEeOhWbcpSGtUvw" owner="_a5hzAFHPEeOhWbcpSGtUvw" name="构造函数"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_o2fWRElBEeOnrLeKpZTmtQ">
+            <attributes xmi:id="_gRZFUEuJEeOAeeS5cV5--g" owner="_gRM4EEuJEeOAeeS5cV5--g" name="系统账户"/>
+            <attributes xmi:id="_mfyhQEuJEeOAeeS5cV5--g" owner="_mfmUAEuJEeOAeeS5cV5--g" name="系统密码"/>
+          </attributeCompartmentNode>
+          <nestedClassifierCompartmentNode xmi:id="_o2fWRUlBEeOnrLeKpZTmtQ"/>
+          <templateParameterCompartmentNode xmi:id="_o2fWRklBEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TClassNode" xmi:id="_yYHqAEnwEeO2ea-fHel4VQ" owner="_yYDYkEnwEeO2ea-fHel4VQ" name="主菜单" location="345,333" size="115,89" autoResize="true">
+          <fillColor xmi:id="_yYHqAUnwEeO2ea-fHel4VQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_yYHqAknwEeO2ea-fHel4VQ"/>
+          <fontColor xmi:id="_yYHqA0nwEeO2ea-fHel4VQ"/>
+          <stereotypeNodes xmi:id="_yYHqBEnwEeO2ea-fHel4VQ" id="_yYDYkEnwEeO2ea-fHel4VQ"/>
+          <operationCompartmentNode xmi:id="_yYHqBUnwEeO2ea-fHel4VQ"/>
+          <attributeCompartmentNode xmi:id="_yYHqBknwEeO2ea-fHel4VQ">
+            <attributes xmi:id="_0wFIUEuPEeOAeeS5cV5--g" owner="_0wBd8EuPEeOAeeS5cV5--g" name="菜肴"/>
+            <attributes xmi:id="_6p1xAEuPEeOAeeS5cV5--g" owner="_6pyGoEuPEeOAeeS5cV5--g" name="下一个菜肴"/>
+            <attributes xmi:id="_xHpToFHSEeOhWbcpSGtUvw" owner="_xHoskFHSEeOhWbcpSGtUvw" name="菜肴种数"/>
+          </attributeCompartmentNode>
+          <nestedClassifierCompartmentNode xmi:id="_yYHqB0nwEeO2ea-fHel4VQ"/>
+          <templateParameterCompartmentNode xmi:id="_yYHqCEnwEeO2ea-fHel4VQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TClassNode" xmi:id="_Ia3nAEuHEeOAeeS5cV5--g" owner="_IazVkEuHEeOAeeS5cV5--g" name="餐桌菜单" location="345,443" size="127,105" autoResize="true">
+          <fillColor xmi:id="_Ia3nAUuHEeOAeeS5cV5--g" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_Ia3nAkuHEeOAeeS5cV5--g"/>
+          <fontColor xmi:id="_Ia3nA0uHEeOAeeS5cV5--g"/>
+          <stereotypeNodes xmi:id="_Ia3nBEuHEeOAeeS5cV5--g" id="_IazVkEuHEeOAeeS5cV5--g"/>
+          <operationCompartmentNode xmi:id="_Ia3nBUuHEeOAeeS5cV5--g"/>
+          <attributeCompartmentNode xmi:id="_Ia3nBkuHEeOAeeS5cV5--g">
+            <attributes xmi:id="_aU2KMEuQEeOAeeS5cV5--g" owner="_aUyf0EuQEeOAeeS5cV5--g" name="菜肴份数"/>
+            <attributes xmi:id="_gDERQEuQEeOAeeS5cV5--g" owner="_gC-KoEuQEeOAeeS5cV5--g" name="菜肴消费额"/>
+            <attributes xmi:id="_dX0gAExhEeOnnb0o72uwPA" owner="_dXX0EExhEeOnnb0o72uwPA" name="点菜的服务员"/>
+            <attributes xmi:id="_t73UIFHSEeOhWbcpSGtUvw" owner="_t72GAFHSEeOhWbcpSGtUvw" name="下一个菜肴"/>
+          </attributeCompartmentNode>
+          <nestedClassifierCompartmentNode xmi:id="_Ia3nB0uHEeOAeeS5cV5--g"/>
+          <templateParameterCompartmentNode xmi:id="_Ia3nCEuHEeOAeeS5cV5--g"/>
+        </nodes>
+        <nodes xmi:type="trufun:TClassNode" xmi:id="_N-K94EuPEeOAeeS5cV5--g" owner="_N-H6kEuPEeOAeeS5cV5--g" name="菜肴" location="346,221" size="103,89" autoResize="true">
+          <fillColor xmi:id="_N-Lk8EuPEeOAeeS5cV5--g" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_N-Lk8UuPEeOAeeS5cV5--g"/>
+          <fontColor xmi:id="_N-Lk8kuPEeOAeeS5cV5--g"/>
+          <stereotypeNodes xmi:id="_N-Lk80uPEeOAeeS5cV5--g" id="_N-H6kEuPEeOAeeS5cV5--g"/>
+          <operationCompartmentNode xmi:id="_N-Lk9EuPEeOAeeS5cV5--g"/>
+          <attributeCompartmentNode xmi:id="_N-Lk9UuPEeOAeeS5cV5--g">
+            <attributes xmi:id="_TW-1oEuPEeOAeeS5cV5--g" owner="_TW5WEEuPEeOAeeS5cV5--g" name="菜肴类型"/>
+            <attributes xmi:id="_cDO0EEuPEeOAeeS5cV5--g" owner="_cDLJsEuPEeOAeeS5cV5--g" name="菜肴名称"/>
+            <attributes xmi:id="_pKe-MUuPEeOAeeS5cV5--g" owner="_pKbT0EuPEeOAeeS5cV5--g" name="单价"/>
+          </attributeCompartmentNode>
+          <nestedClassifierCompartmentNode xmi:id="_N-Lk9kuPEeOAeeS5cV5--g"/>
+          <templateParameterCompartmentNode xmi:id="_N-Lk90uPEeOAeeS5cV5--g"/>
+        </nodes>
+        <nodes xmi:type="trufun:TClassNode" xmi:id="_fZC10FHQEeOhWbcpSGtUvw" owner="_fY99UFHQEeOhWbcpSGtUvw" name="应用程序类" location="731,24" size="163,406" autoResize="true">
+          <fillColor xmi:id="_fZDc4FHQEeOhWbcpSGtUvw" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_fZDc4VHQEeOhWbcpSGtUvw"/>
+          <fontColor xmi:id="_fZDc4lHQEeOhWbcpSGtUvw"/>
+          <stereotypeNodes xmi:id="_fZDc41HQEeOhWbcpSGtUvw" id="_fY99UFHQEeOhWbcpSGtUvw"/>
+          <operationCompartmentNode xmi:id="_fZDc5FHQEeOhWbcpSGtUvw">
+            <operations xmi:id="_lReBwFHQEeOhWbcpSGtUvw" owner="_lRczoFHQEeOhWbcpSGtUvw" name="构造函数"/>
+            <operations xmi:id="_nRVAsFHQEeOhWbcpSGtUvw" owner="_nRTykFHQEeOhWbcpSGtUvw" name="析构函数"/>
+            <operations xmi:id="_r4pxIFHQEeOhWbcpSGtUvw" owner="_r4ojAFHQEeOhWbcpSGtUvw" name="运行"/>
+            <operations xmi:id="_0bc4oFHQEeOhWbcpSGtUvw" owner="_0bbqgFHQEeOhWbcpSGtUvw" name="点餐"/>
+            <operations xmi:id="_1UzigFHQEeOhWbcpSGtUvw" owner="_1Uy7cFHQEeOhWbcpSGtUvw" name="管理"/>
+            <operations xmi:id="_2KHZ4FHQEeOhWbcpSGtUvw" owner="_2KGLwFHQEeOhWbcpSGtUvw" name="画所有餐桌"/>
+            <operations xmi:id="_8j6NgFHQEeOhWbcpSGtUvw" owner="_8j4_YFHQEeOhWbcpSGtUvw" name="画点餐界面1"/>
+            <operations xmi:id="_CDPkAFHREeOhWbcpSGtUvw" owner="_CDOV4FHREeOhWbcpSGtUvw" name="画点餐界面2"/>
+            <operations xmi:id="_HhD3kFHREeOhWbcpSGtUvw" owner="_HhCpcFHREeOhWbcpSGtUvw" name="画启用餐桌界面"/>
+            <operations xmi:id="_neTQQFHREeOhWbcpSGtUvw" owner="_neRbEFHREeOhWbcpSGtUvw" name="画管理选项"/>
+            <operations xmi:id="_JiC34FHREeOhWbcpSGtUvw" owner="_JiBpwFHREeOhWbcpSGtUvw" name="打印餐桌信息"/>
+            <operations xmi:id="_NxU7wFHREeOhWbcpSGtUvw" owner="_NxTtoFHREeOhWbcpSGtUvw" name="打印主菜单"/>
+            <operations xmi:id="_0L49MFHREeOhWbcpSGtUvw" owner="_0L3vEFHREeOhWbcpSGtUvw" name="打印处理主菜单界面"/>
+            <operations xmi:id="_vPZOAFHREeOhWbcpSGtUvw" owner="_vPXY0FHREeOhWbcpSGtUvw" name="打印处理服务员界面"/>
+            <operations xmi:id="_9TUbwFHREeOhWbcpSGtUvw" owner="_9TSmkFHREeOhWbcpSGtUvw" name="打印所有服务员信息"/>
+            <operations xmi:id="_FMORsFHSEeOhWbcpSGtUvw" owner="_FMNDkFHSEeOhWbcpSGtUvw" name="获得餐桌指针"/>
+            <operations xmi:id="_I8BkQFHSEeOhWbcpSGtUvw" owner="_I7_vEFHSEeOhWbcpSGtUvw" name="获得服务员指针"/>
+            <operations xmi:id="_LhX14FHSEeOhWbcpSGtUvw" owner="_LhWAsFHSEeOhWbcpSGtUvw" name="获得菜肴指针"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_fZDc5VHQEeOhWbcpSGtUvw">
+            <attributes xmi:id="_iVFwMFHQEeOhWbcpSGtUvw" owner="_iVEiEFHQEeOhWbcpSGtUvw" name="老板"/>
+            <attributes xmi:id="_lvW3oFHQEeOhWbcpSGtUvw" owner="_lvVpgFHQEeOhWbcpSGtUvw" name="餐桌链表"/>
+            <attributes xmi:id="_ngL8EFHQEeOhWbcpSGtUvw" owner="_ngLVAFHQEeOhWbcpSGtUvw" name="服务员链表"/>
+            <attributes xmi:id="_oz5msFHQEeOhWbcpSGtUvw" owner="_oz4YkFHQEeOhWbcpSGtUvw" name="主菜单链表"/>
+          </attributeCompartmentNode>
+          <nestedClassifierCompartmentNode xmi:id="_fZDc5lHQEeOhWbcpSGtUvw"/>
+          <templateParameterCompartmentNode xmi:id="_fZDc51HQEeOhWbcpSGtUvw"/>
+        </nodes>
+        <leftRuler xmi:id="_4sXEwEkrEeOmgrJFg1aDvQ" unit="2"/>
+        <topRuler xmi:id="_4sXEwUkrEeOmgrJFg1aDvQ" horizontal="true" unit="2"/>
+      </contents>
+      <contents xmi:type="trufun:TUsecaseDiagram" xmi:id="_3QzDsElBEeOnrLeKpZTmtQ" id="_3QuLMElBEeOnrLeKpZTmtQ" owner="_4Q1mYEkrEeOmgrJFg1aDvQ" name="服务员用例图" zoom="1.0" gridSpacing="22,22">
+        <nodes xmi:type="trufun:TActorNode" xmi:id="__HLKEElBEeOnrLeKpZTmtQ" owner="__HIGwElBEeOnrLeKpZTmtQ" name="服务员" outgoingConnections="_KsGl0ElCEeOnrLeKpZTmtQ" location="140,150" size="42,60">
+          <fillColor xmi:id="__HLKEUlBEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="__HLKEklBEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="__HLKE0lBEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="__HLKFElBEeOnrLeKpZTmtQ" id="__HIGwElBEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_CcaAgElCEeOnrLeKpZTmtQ" owner="_CcWWIElCEeOnrLeKpZTmtQ" name="启用餐桌" incomingConnections="_KsGl0ElCEeOnrLeKpZTmtQ _e-zqAElCEeOnrLeKpZTmtQ" location="283,159" size="132,40" keepMaxSize="false">
+          <fillColor xmi:id="_CcaAgUlCEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_CcaAgklCEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_CcaAg0lCEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_CcaAhElCEeOnrLeKpZTmtQ" id="_CcWWIElCEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_CcaAhUlCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_L1U3sElCEeOnrLeKpZTmtQ" owner="_L1R0YElCEeOnrLeKpZTmtQ" name="点餐" incomingConnections="_hS4lcElCEeOnrLeKpZTmtQ _ixt68ElCEeOnrLeKpZTmtQ" outgoingConnections="_e-zqAElCEeOnrLeKpZTmtQ _VXXjQFHVEeOhWbcpSGtUvw _VySksFHVEeOhWbcpSGtUvw" location="478,155" size="132,40" keepMaxSize="false">
+          <fillColor xmi:id="_L1U3sUlCEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_L1U3sklCEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_L1U3s0lCEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_L1U3tElCEeOnrLeKpZTmtQ" id="_L1R0YElCEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_L1U3tUlCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_RSENMElCEeOnrLeKpZTmtQ" owner="_RSAi0ElCEeOnrLeKpZTmtQ" name="初次点餐" incomingConnections="_VXXjQFHVEeOhWbcpSGtUvw" location="689,97" size="132,40" keepMaxSize="false">
+          <fillColor xmi:id="_RSENMUlCEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_RSENMklCEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_RSENM0lCEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_RSENNElCEeOnrLeKpZTmtQ" id="_RSAi0ElCEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_RSENNUlCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_SDgRMElCEeOnrLeKpZTmtQ" owner="_SDcm0ElCEeOnrLeKpZTmtQ" name="临时加餐" incomingConnections="_VySksFHVEeOhWbcpSGtUvw" location="689,210" size="132,40" keepMaxSize="false">
+          <fillColor xmi:id="_SDgRMUlCEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_SDgRMklCEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_SDgRM0lCEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_SDgRNElCEeOnrLeKpZTmtQ" id="_SDcm0ElCEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_SDgRNUlCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_ZWqVwElCEeOnrLeKpZTmtQ" owner="_ZWmEUElCEeOnrLeKpZTmtQ" name="录入编号" outgoingConnections="_ixt68ElCEeOnrLeKpZTmtQ" location="401,36" size="132,40" keepMaxSize="false">
+          <fillColor xmi:id="_ZWqVwUlCEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_ZWqVwklCEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_ZWqVw0lCEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_ZWqVxElCEeOnrLeKpZTmtQ" id="_ZWmEUElCEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_ZWqVxUlCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_aLbakElCEeOnrLeKpZTmtQ" owner="_aLUs4ElCEeOnrLeKpZTmtQ" name="结账" outgoingConnections="_hS4lcElCEeOnrLeKpZTmtQ" location="404,283" size="132,40" keepMaxSize="false">
+          <fillColor xmi:id="_aLcBoElCEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_aLcBoUlCEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_aLcBoklCEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_aLcBo0lCEeOnrLeKpZTmtQ" id="_aLUs4ElCEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_aLcBpElCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_e_e_cElCEeOnrLeKpZTmtQ" name="&lt;&lt;extend>>" location="425,186" size="64,16" parent="_e-zqAElCEeOnrLeKpZTmtQ" alias="None" direction="13" offset="-23,8">
+          <fontColor xmi:id="_e_e_cUlCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_hTMugElCEeOnrLeKpZTmtQ" name="&lt;&lt;extend>>" location="440,220" size="64,16" parent="_hS4lcElCEeOnrLeKpZTmtQ" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_hTMugUlCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_iyBc8ElCEeOnrLeKpZTmtQ" name="&lt;&lt;extend>>" location="507,97" size="64,16" parent="_ixt68ElCEeOnrLeKpZTmtQ" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_iyBc8UlCEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_VXp3IFHVEeOhWbcpSGtUvw" name="&lt;&lt;include>>" location="577,127" size="70,16" parent="_VXXjQFHVEeOhWbcpSGtUvw" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_VXp3IVHVEeOhWbcpSGtUvw"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_VyqYIFHVEeOhWbcpSGtUvw" name="&lt;&lt;include>>" location="651,184" size="70,16" parent="_VySksFHVEeOhWbcpSGtUvw" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_VyqYIVHVEeOhWbcpSGtUvw"/>
+        </nodes>
+        <connections xmi:type="trufun:TNavigableAssociationConnection" xmi:id="_KsGl0ElCEeOnrLeKpZTmtQ" owner="_KsC7cElCEeOnrLeKpZTmtQ" name="" target="_CcaAgElCEeOnrLeKpZTmtQ" source="__HLKEElBEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_KsGl0UlCEeOnrLeKpZTmtQ"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_e-zqAElCEeOnrLeKpZTmtQ" owner="_e-yb4ElCEeOnrLeKpZTmtQ" name="" subLabels="_e_e_cElCEeOnrLeKpZTmtQ" target="_CcaAgElCEeOnrLeKpZTmtQ" source="_L1U3sElCEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_e-zqAUlCEeOnrLeKpZTmtQ"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_hS4lcElCEeOnrLeKpZTmtQ" owner="_hS3-YElCEeOnrLeKpZTmtQ" name="" subLabels="_hTMugElCEeOnrLeKpZTmtQ" target="_L1U3sElCEeOnrLeKpZTmtQ" source="_aLbakElCEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_hS4lcUlCEeOnrLeKpZTmtQ"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_ixt68ElCEeOnrLeKpZTmtQ" owner="_ixtT4ElCEeOnrLeKpZTmtQ" name="" subLabels="_iyBc8ElCEeOnrLeKpZTmtQ" target="_L1U3sElCEeOnrLeKpZTmtQ" source="_ZWqVwElCEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_ixt68UlCEeOnrLeKpZTmtQ"/>
+        </connections>
+        <connections xmi:type="trufun:TIncludeConnection" xmi:id="_VXXjQFHVEeOhWbcpSGtUvw" owner="_VXW8MFHVEeOhWbcpSGtUvw" name="" subLabels="_VXp3IFHVEeOhWbcpSGtUvw" target="_RSENMElCEeOnrLeKpZTmtQ" source="_L1U3sElCEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_VXYKUFHVEeOhWbcpSGtUvw"/>
+        </connections>
+        <connections xmi:type="trufun:TIncludeConnection" xmi:id="_VySksFHVEeOhWbcpSGtUvw" owner="_VyRWkFHVEeOhWbcpSGtUvw" name="" subLabels="_VyqYIFHVEeOhWbcpSGtUvw" target="_SDgRMElCEeOnrLeKpZTmtQ" source="_L1U3sElCEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_VySksVHVEeOhWbcpSGtUvw"/>
+        </connections>
+        <leftRuler xmi:id="_3QzDsUlBEeOnrLeKpZTmtQ" unit="2"/>
+        <topRuler xmi:id="_3QzDsklBEeOnrLeKpZTmtQ" horizontal="true" unit="2"/>
+      </contents>
+      <contents xmi:type="trufun:TUsecaseDiagram" xmi:id="_-84wMElCEeOnrLeKpZTmtQ" id="_-81F0ElCEeOnrLeKpZTmtQ" owner="_4Q1mYEkrEeOmgrJFg1aDvQ" name="老板用例图" zoom="1.0" gridSpacing="22,22">
+        <nodes xmi:type="trufun:TActorNode" xmi:id="_Du0OIElDEeOnrLeKpZTmtQ" owner="_DuxK0ElDEeOnrLeKpZTmtQ" name="老板" outgoingConnections="_8vpKoElEEeOnrLeKpZTmtQ" location="196,151" size="36,60">
+          <fillColor xmi:id="_Du0OIUlDEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_Du0OIklDEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_Du0OI0lDEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_Du0OJElDEeOnrLeKpZTmtQ" id="_DuxK0ElDEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_Ec5cIElDEeOnrLeKpZTmtQ" owner="_EcxgUElDEeOnrLeKpZTmtQ" name="登录系统" incomingConnections="_8vpKoElEEeOnrLeKpZTmtQ _2LXaQFHUEeOhWbcpSGtUvw _2w-BsFHUEeOhWbcpSGtUvw _3kZCsFHUEeOhWbcpSGtUvw _4FRiMFHUEeOhWbcpSGtUvw _4rlUQFHUEeOhWbcpSGtUvw _5J8rQFHUEeOhWbcpSGtUvw" location="368,161" size="132,40" keepMaxSize="false">
+          <fillColor xmi:id="_Ec5cIUlDEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_Ec5cIklDEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_Ec5cI0lDEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_Ec5cJElDEeOnrLeKpZTmtQ" id="_EcxgUElDEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_Ec5cJUlDEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_HFxi4ElDEeOnrLeKpZTmtQ" owner="_HFsDUElDEeOnrLeKpZTmtQ" name="修改账户信息" outgoingConnections="_2LXaQFHUEeOhWbcpSGtUvw" location="275,46" size="164,47" keepMaxSize="false">
+          <fillColor xmi:id="_HFyJ8ElDEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_HFyJ8UlDEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_HFyJ8klDEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_HFyJ80lDEeOnrLeKpZTmtQ" id="_HFsDUElDEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_HFyJ9ElDEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_IrotcElDEeOnrLeKpZTmtQ" owner="_Irim0ElDEeOnrLeKpZTmtQ" name="增减菜肴" outgoingConnections="_2w-BsFHUEeOhWbcpSGtUvw" location="479,23" size="130,43" keepMaxSize="false">
+          <fillColor xmi:id="_IrotcUlDEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_IrotcklDEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_Irotc0lDEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_IrotdElDEeOnrLeKpZTmtQ" id="_Irim0ElDEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_IrotdUlDEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_Jbs4cElDEeOnrLeKpZTmtQ" owner="_Jbmx0ElDEeOnrLeKpZTmtQ" name="查看营业情况" outgoingConnections="_3kZCsFHUEeOhWbcpSGtUvw" location="603,109" size="132,44" keepMaxSize="false">
+          <fillColor xmi:id="_Jbs4cUlDEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_Jbs4cklDEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_Jbs4c0lDEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_Jbs4dElDEeOnrLeKpZTmtQ" id="_Jbmx0ElDEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_Jbs4dUlDEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_J_81AElDEeOnrLeKpZTmtQ" owner="_J_2HUElDEeOnrLeKpZTmtQ" name="增减餐桌" outgoingConnections="_4FRiMFHUEeOhWbcpSGtUvw" location="608,225" size="132,43" keepMaxSize="false">
+          <fillColor xmi:id="_J_81AUlDEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_J_81AklDEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_J_81A0lDEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_J_81BElDEeOnrLeKpZTmtQ" id="_J_2HUElDEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_J_81BUlDEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_LpoIkElDEeOnrLeKpZTmtQ" owner="_Lpgz0ElDEeOnrLeKpZTmtQ" name="设置服务员工资" outgoingConnections="_5J8rQFHUEeOhWbcpSGtUvw" location="470,311" size="143,46" keepMaxSize="false">
+          <fillColor xmi:id="_LpoIkUlDEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_LpoIkklDEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_LpoIk0lDEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_LpoIlElDEeOnrLeKpZTmtQ" id="_Lpgz0ElDEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_LpoIlUlDEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:TUseCaseNode" xmi:id="_MPjgIElDEeOnrLeKpZTmtQ" owner="_MPbkUElDEeOnrLeKpZTmtQ" name="增减服务员" outgoingConnections="_4rlUQFHUEeOhWbcpSGtUvw" location="284,287" size="144,47" keepMaxSize="false">
+          <fillColor xmi:id="_MPjgIUlDEeOnrLeKpZTmtQ" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_MPjgIklDEeOnrLeKpZTmtQ"/>
+          <fontColor xmi:id="_MPjgI0lDEeOnrLeKpZTmtQ"/>
+          <stereotypeNodes xmi:id="_MPjgJElDEeOnrLeKpZTmtQ" id="_MPbkUElDEeOnrLeKpZTmtQ"/>
+          <extensionPointCompartmentNode xmi:id="_MPjgJUlDEeOnrLeKpZTmtQ"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_2LpHEFHUEeOhWbcpSGtUvw" name="&lt;&lt;extend>>" location="398,108" size="64,16" parent="_2LXaQFHUEeOhWbcpSGtUvw" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_2LpHEVHUEeOhWbcpSGtUvw"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_2xV1IFHUEeOhWbcpSGtUvw" name="&lt;&lt;extend>>" location="490,115" size="64,16" parent="_2w-BsFHUEeOhWbcpSGtUvw" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_2xV1IVHUEeOhWbcpSGtUvw"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_3k0ggFHUEeOhWbcpSGtUvw" name="&lt;&lt;extend>>" location="553,158" size="64,16" parent="_3kZCsFHUEeOhWbcpSGtUvw" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_3k0ggVHUEeOhWbcpSGtUvw"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_4FtnEFHUEeOhWbcpSGtUvw" name="&lt;&lt;extend>>" location="487,215" size="64,16" parent="_4FRiMFHUEeOhWbcpSGtUvw" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_4FtnEVHUEeOhWbcpSGtUvw"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_4r-V0FHUEeOhWbcpSGtUvw" name="&lt;&lt;extend>>" location="329,225" size="64,16" parent="_4rlUQFHUEeOhWbcpSGtUvw" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_4r-V0VHUEeOhWbcpSGtUvw"/>
+        </nodes>
+        <nodes xmi:type="trufun:SubLabel" xmi:id="_5KcagFHUEeOhWbcpSGtUvw" name="&lt;&lt;extend>>" location="420,257" size="64,16" parent="_5J8rQFHUEeOhWbcpSGtUvw" alias="None" direction="13" offset="0,0">
+          <fontColor xmi:id="_5KcagVHUEeOhWbcpSGtUvw"/>
+        </nodes>
+        <connections xmi:type="trufun:TNavigableAssociationConnection" xmi:id="_8vpKoElEEeOnrLeKpZTmtQ" owner="_8vmuYElEEeOnrLeKpZTmtQ" name="" target="_Ec5cIElDEeOnrLeKpZTmtQ" source="_Du0OIElDEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_8vpKoUlEEeOnrLeKpZTmtQ"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_2LXaQFHUEeOhWbcpSGtUvw" owner="_2LWzMFHUEeOhWbcpSGtUvw" name="" subLabels="_2LpHEFHUEeOhWbcpSGtUvw" target="_Ec5cIElDEeOnrLeKpZTmtQ" source="_HFxi4ElDEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_2LXaQVHUEeOhWbcpSGtUvw"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_2w-BsFHUEeOhWbcpSGtUvw" owner="_2w9aoFHUEeOhWbcpSGtUvw" name="" subLabels="_2xV1IFHUEeOhWbcpSGtUvw" target="_Ec5cIElDEeOnrLeKpZTmtQ" source="_IrotcElDEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_2w-owFHUEeOhWbcpSGtUvw"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_3kZCsFHUEeOhWbcpSGtUvw" owner="_3kYboFHUEeOhWbcpSGtUvw" name="" subLabels="_3k0ggFHUEeOhWbcpSGtUvw" target="_Ec5cIElDEeOnrLeKpZTmtQ" source="_Jbs4cElDEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_3kZCsVHUEeOhWbcpSGtUvw"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_4FRiMFHUEeOhWbcpSGtUvw" owner="_4FQ7IFHUEeOhWbcpSGtUvw" name="" subLabels="_4FtnEFHUEeOhWbcpSGtUvw" target="_Ec5cIElDEeOnrLeKpZTmtQ" source="_J_81AElDEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_4FRiMVHUEeOhWbcpSGtUvw"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_4rlUQFHUEeOhWbcpSGtUvw" owner="_4rkGIFHUEeOhWbcpSGtUvw" name="" subLabels="_4r-V0FHUEeOhWbcpSGtUvw" target="_Ec5cIElDEeOnrLeKpZTmtQ" source="_MPjgIElDEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_4rlUQVHUEeOhWbcpSGtUvw"/>
+        </connections>
+        <connections xmi:type="trufun:TExtendConnection" xmi:id="_5J8rQFHUEeOhWbcpSGtUvw" owner="_5J7dIFHUEeOhWbcpSGtUvw" name="" subLabels="_5KcagFHUEeOhWbcpSGtUvw" target="_Ec5cIElDEeOnrLeKpZTmtQ" source="_LpoIkElDEeOnrLeKpZTmtQ">
+          <fillColor xmi:id="_5J8rQVHUEeOhWbcpSGtUvw"/>
+        </connections>
+        <leftRuler xmi:id="_-84wMUlCEeOnrLeKpZTmtQ" unit="2"/>
+        <topRuler xmi:id="_-84wMklCEeOnrLeKpZTmtQ" horizontal="true" unit="2"/>
+      </contents>
+    </eAnnotations>
+    <packageImport xmi:id="_4Q1mYUkrEeOmgrJFg1aDvQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h8kgEkrEeOmgrJFg1aDvQ" name="Byte">
+      <eAnnotations xmi:id="_4isLYEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4isLYUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4isLYkkrEeOmgrJFg1aDvQ" name="Character">
+      <eAnnotations xmi:id="_4i18YEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4i18YUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4i18YkkrEeOmgrJFg1aDvQ" name="Date">
+      <eAnnotations xmi:id="_4i18Y0krEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4i18ZEkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4i18ZUkrEeOmgrJFg1aDvQ" name="Double">
+      <eAnnotations xmi:id="_4i_GUEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4i_GUUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4i_GUkkrEeOmgrJFg1aDvQ" name="Float">
+      <eAnnotations xmi:id="_4i_GU0krEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4i_GVEkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4i_GVUkrEeOmgrJFg1aDvQ" name="Long">
+      <eAnnotations xmi:id="_4jI3UEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jI3UUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jI3UkkrEeOmgrJFg1aDvQ" name="Real">
+      <eAnnotations xmi:id="_4jI3U0krEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jI3VEkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jI3VUkrEeOmgrJFg1aDvQ" name="Short">
+      <eAnnotations xmi:id="_4jSoUEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jSoUUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jSoUkkrEeOmgrJFg1aDvQ" name="Int">
+      <eAnnotations xmi:id="_4jSoU0krEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jSoVEkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jSoVUkrEeOmgrJFg1aDvQ" name="String">
+      <eAnnotations xmi:id="_4jbyQEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jbyQUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jbyQkkrEeOmgrJFg1aDvQ" name="Integer">
+      <eAnnotations xmi:id="_4jbyQ0krEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jbyREkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jbyRUkrEeOmgrJFg1aDvQ" name="byte">
+      <eAnnotations xmi:id="_4jljQEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jljQUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jljQkkrEeOmgrJFg1aDvQ" name="character">
+      <eAnnotations xmi:id="_4jljQ0krEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jljREkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jljRUkrEeOmgrJFg1aDvQ" name="date">
+      <eAnnotations xmi:id="_4jljRkkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jljR0krEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jutMEkrEeOmgrJFg1aDvQ" name="double">
+      <eAnnotations xmi:id="_4jutMUkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jutMkkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4jutM0krEeOmgrJFg1aDvQ" name="float">
+      <eAnnotations xmi:id="_4jutNEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4jutNUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4j4eMEkrEeOmgrJFg1aDvQ" name="long">
+      <eAnnotations xmi:id="_4j4eMUkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4j4eMkkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4j4eM0krEeOmgrJFg1aDvQ" name="real">
+      <eAnnotations xmi:id="_4j4eNEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4j4eNUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4j4eNkkrEeOmgrJFg1aDvQ" name="short">
+      <eAnnotations xmi:id="_4kCPMEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4kCPMUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4kCPMkkrEeOmgrJFg1aDvQ" name="int">
+      <eAnnotations xmi:id="_4kCPM0krEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4kCPNEkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4kCPNUkrEeOmgrJFg1aDvQ" name="string">
+      <eAnnotations xmi:id="_4kLZIEkrEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4kLZIUkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4kLZIkkrEeOmgrJFg1aDvQ" name="integer">
+      <eAnnotations xmi:id="_4kLZI0krEeOmgrJFg1aDvQ" source="Internel_TaggedValues">
+        <details xmi:id="_4kLZJEkrEeOmgrJFg1aDvQ" key="WRITE_PROTECTED" value="true"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ff9TEEksEeOmgrJFg1aDvQ" name="CBoard">
+      <eAnnotations xmi:id="_ntlAoEn1EeO2ea-fHel4VQ" source="TaggedValues">
+        <details xmi:id="_ntlAoUn1EeO2ea-fHel4VQ" key="Alias.S" value="餐桌"/>
+        <details xmi:id="_qiLZwEn2EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_JIryoEk_EeOnrLeKpZTmtQ" name="m_uManCount" visibility="private" type="_qXGfUEk_EeOnrLeKpZTmtQ">
+        <eAnnotations xmi:id="_oweoEEn1EeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_oweoEUn1EeO2ea-fHel4VQ" key="Alias.S" value="就餐人数"/>
+          <details xmi:id="_Ap0J0En4EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_q_t-gEk_EeOnrLeKpZTmtQ" value="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_sFf60Ek_EeOnrLeKpZTmtQ" name="m_uMoney" visibility="private" type="_4jutMEkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_suD38En1EeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_suD38Un1EeO2ea-fHel4VQ" key="Alias.S" value="本桌消费金额"/>
+          <details xmi:id="_BVHwoEn4EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vdz6cEk_EeOnrLeKpZTmtQ" value="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TIYyYEoCEeO2ea-fHel4VQ" name="pBoardMenu" visibility="public" type="_CXqfsEuNEeOAeeS5cV5--g">
+        <eAnnotations xmi:id="_WaT2IEoCEeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_WaT2IUoCEeO2ea-fHel4VQ" key="Pointers.I" value="1"/>
+          <details xmi:id="_azZrYEoEEeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+          <details xmi:id="_dzHk0EoEEeO2ea-fHel4VQ" key="Alias.S" value="餐桌菜单"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_oxPxMEoCEeO2ea-fHel4VQ" value="NULL"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_g71XMEuOEeOAeeS5cV5--g" name="m_pBoard" visibility="public" type="_Ff9TEEksEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_pgLW0EuOEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_pgLW0UuOEeOAeeS5cV5--g" key="Pointers.I" value="1"/>
+          <details xmi:id="_sUuiEEuOEeOAeeS5cV5--g" key="Alias.S" value="下一个餐桌"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_qvaKEEuOEeOAeeS5cV5--g" value="NULL"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_k4tgUFHMEeOhWbcpSGtUvw" name="m_bFlags" visibility="public" type="_Dyr68EuHEeOAeeS5cV5--g">
+        <eAnnotations xmi:id="_pH1MIFHMEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_pH1zMFHMEeOhWbcpSGtUvw" key="Alias.S" value="是否使用"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_s1IkUFHMEeOhWbcpSGtUvw" name="m_unNumber" visibility="private">
+        <eAnnotations xmi:id="_xC0FsFHMEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_xC0FsVHMEeOhWbcpSGtUvw" key="Alias.S" value="编号"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_94eJgFHMEeOhWbcpSGtUvw" name="field1" visibility="private">
+        <eAnnotations xmi:id="__x8MkFHMEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="__x8MkVHMEeOhWbcpSGtUvw" key="Alias.S" value="起始就餐时间"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_1pD4EFHMEeOhWbcpSGtUvw" name="m_unBoardCount" visibility="private" isStatic="true">
+        <eAnnotations xmi:id="_4zNf4FHMEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_4zNf4VHMEeOhWbcpSGtUvw" key="Alias.S" value="现有餐桌数"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ATpygFHNEeOhWbcpSGtUvw" name="日饮料消费" visibility="private" isStatic="true"/>
+      <ownedAttribute xmi:id="_HAk9gFHNEeOhWbcpSGtUvw" name="field2" visibility="private" isStatic="true">
+        <eAnnotations xmi:id="_IzQcEFHNEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_IzQcEVHNEeOhWbcpSGtUvw" key="Alias.S" value="日小吃消费"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_JULX0FHNEeOhWbcpSGtUvw" name="field3" visibility="private" isStatic="true">
+        <eAnnotations xmi:id="_K41ogFHNEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_K41ogVHNEeOhWbcpSGtUvw" key="Alias.S" value="日主菜消费"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_v_cA0Ek_EeOnrLeKpZTmtQ" name="m_dDailySales" visibility="private" isStatic="true" type="_4jutMEkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_vysGkEn1EeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_ZDizsFHNEeOhWbcpSGtUvw" key="IsShowAlias.B" value="true"/>
+          <details xmi:id="_ZDizsVHNEeOhWbcpSGtUvw" key="Alias.S" value="日营业额"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_DP3vsElAEeOnrLeKpZTmtQ" name="CBoard" visibility="public">
+        <eAnnotations xmi:id="_26TpgEn1EeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_26TpgUn1EeO2ea-fHel4VQ" key="Alias.S" value="创建餐桌"/>
+          <details xmi:id="_ERGZkEn4EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_DuhakElAEeOnrLeKpZTmtQ" name="unNumber" type="_GsQzUEuLEeOAeeS5cV5--g" direction="inout">
+          <eAnnotations xmi:id="_Nbf2MElAEeOnrLeKpZTmtQ" source="TaggedValues">
+            <details xmi:id="_Nbf2MUlAEeOnrLeKpZTmtQ" key="IsConst.B" value="true"/>
+            <details xmi:id="_WjIeAEuOEeOAeeS5cV5--g" key="Refs.I" value="1"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVyy4EuOEeOAeeS5cV5--g" name="~CBoard" visibility="public">
+        <eAnnotations xmi:id="_fs9wUEuOEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_fs9wUUuOEeOAeeS5cV5--g" key="Alias.S" value="析构餐桌"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_p4Fu8FHNEeOhWbcpSGtUvw" name="Operation1" visibility="public">
+        <eAnnotations xmi:id="_un9-cFHNEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_un9-cVHNEeOhWbcpSGtUvw" key="Alias.S" value="初始就餐时间"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vR1a0FHNEeOhWbcpSGtUvw" name="Operation2" visibility="public">
+        <eAnnotations xmi:id="_1-e5AFHNEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_1-fgEFHNEeOhWbcpSGtUvw" key="Alias.S" value="更改消费额"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5Q0McFHNEeOhWbcpSGtUvw" name="Operation3" visibility="public">
+        <eAnnotations xmi:id="_65jr4FHNEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_65jr4VHNEeOhWbcpSGtUvw" key="Alias.S" value="初始化人数"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_8UD7AFHNEeOhWbcpSGtUvw" name="返回消费额" visibility="public">
+        <eAnnotations xmi:id="_BH4PUFHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_BH4PUVHOEeOhWbcpSGtUvw" key="Alias.S" value="返回消费额"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_B9KRgFHOEeOhWbcpSGtUvw" name="Operation4" visibility="public">
+        <eAnnotations xmi:id="_E54hUFHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_E55IYFHOEeOhWbcpSGtUvw" key="Alias.S" value="返回起始时间"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_F1DJEFHOEeOhWbcpSGtUvw" name="Operation5" visibility="public">
+        <eAnnotations xmi:id="_GqzFUFHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_GqzFUVHOEeOhWbcpSGtUvw" key="Alias.S" value="返回编号"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Hb9cgFHOEeOhWbcpSGtUvw" name="Operation6" visibility="public">
+        <eAnnotations xmi:id="_I9gu0FHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_I9gu0VHOEeOhWbcpSGtUvw" key="Alias.S" value="返回人数"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_JinnAFHOEeOhWbcpSGtUvw" name="Operation7" visibility="public">
+        <eAnnotations xmi:id="_PDEX0FHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_PDEX0VHOEeOhWbcpSGtUvw" key="Alias.S" value="清理餐桌使用痕迹"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_QArPkFHOEeOhWbcpSGtUvw" name="" visibility="public">
+        <eAnnotations xmi:id="_Xaze0FHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_Xaze0VHOEeOhWbcpSGtUvw" key="Alias.S" value="删除整个菜单"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_YqovAFHOEeOhWbcpSGtUvw" name="Operation8" visibility="public" isStatic="true">
+        <eAnnotations xmi:id="_iqBwUFHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_iqBwUVHOEeOhWbcpSGtUvw" key="Alias.S" value="返回日营业额"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_jfA3kFHOEeOhWbcpSGtUvw" name="" visibility="public" isStatic="true">
+        <eAnnotations xmi:id="_pJmb0FHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_pJmb0VHOEeOhWbcpSGtUvw" key="Alias.S" value="返回日饮料消费"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_sxzRkFHOEeOhWbcpSGtUvw" name="Operation9" visibility="public" isStatic="true">
+        <eAnnotations xmi:id="_1R4cQFHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_1R4cQVHOEeOhWbcpSGtUvw" key="Alias.S" value="返回日小吃消费"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_2-a2kFHOEeOhWbcpSGtUvw" name="Operation10" visibility="public" isStatic="true">
+        <eAnnotations xmi:id="_4-G2YFHOEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_4-G2YVHOEeOhWbcpSGtUvw" key="Alias.S" value="返回日主菜消费"/>
+        </eAnnotations>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qXGfUEk_EeOnrLeKpZTmtQ" name="unsigned"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_8vnHsEk_EeOnrLeKpZTmtQ" name="void"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CAfWAElBEeOnrLeKpZTmtQ" name="CPerson" isAbstract="true">
+      <eAnnotations xmi:id="_eL0WgEn1EeO2ea-fHel4VQ" source="TaggedValues">
+        <details xmi:id="_eL09kEn1EeO2ea-fHel4VQ" key="Alias.S" value="人"/>
+        <details xmi:id="_xfRSQEn3EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_F8OLwElBEeOnrLeKpZTmtQ" name="m_strName" visibility="private" type="_4kCPNUkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_fprboEn1EeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_fpsCsEn1EeO2ea-fHel4VQ" key="Alias.S" value="姓名"/>
+          <details xmi:id="_927ygEn3EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_OKWDwElBEeOnrLeKpZTmtQ" name="m_cSex" visibility="private" type="_Sb_fIElBEeOnrLeKpZTmtQ">
+        <eAnnotations xmi:id="_g0b-kEn1EeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_g0cloEn1EeO2ea-fHel4VQ" key="Alias.S" value="性别"/>
+          <details xmi:id="_-pfQ0En3EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_baRBsElBEeOnrLeKpZTmtQ" name="CPerson" visibility="public">
+        <eAnnotations xmi:id="_jfLGgEn1EeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_jfLGgUn1EeO2ea-fHel4VQ" key="Alias.S" value="创建人"/>
+          <details xmi:id="__bptkEn3EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_BxIgwEoEEeO2ea-fHel4VQ" name="strName" type="_4kCPNUkrEeOmgrJFg1aDvQ" isOrdered="true" isUnique="false" direction="inout">
+          <eAnnotations xmi:id="_ErIMsEoEEeO2ea-fHel4VQ" source="TaggedValues">
+            <details xmi:id="_ErIMsUoEEeO2ea-fHel4VQ" key="IsConst.B" value="true"/>
+          </eAnnotations>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BxIgwUoEEeO2ea-fHel4VQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BxIgwkoEEeO2ea-fHel4VQ" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_BxIgw0oEEeO2ea-fHel4VQ" value=""/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_BxJH0EoEEeO2ea-fHel4VQ" name="cSex" type="_Sb_fIElBEeOnrLeKpZTmtQ" isOrdered="true" isUnique="false" direction="inout">
+          <eAnnotations xmi:id="_F61hEEoEEeO2ea-fHel4VQ" source="TaggedValues">
+            <details xmi:id="_F61hEUoEEeO2ea-fHel4VQ" key="IsConst.B" value="true"/>
+          </eAnnotations>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BxJH0UoEEeO2ea-fHel4VQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BxJH0koEEeO2ea-fHel4VQ" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_BxJH00oEEeO2ea-fHel4VQ" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_hU_akFHPEeOhWbcpSGtUvw" name="Operation1" visibility="public">
+        <eAnnotations xmi:id="_ivqBwFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_ivqBwVHPEeOhWbcpSGtUvw" key="Alias.S" value="返回姓名"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_jFqG8FHPEeOhWbcpSGtUvw" name="Operation2" visibility="public">
+        <eAnnotations xmi:id="_kikJ0FHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_kikJ0VHPEeOhWbcpSGtUvw" key="Alias.S" value="返回性别"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lhyLIFHPEeOhWbcpSGtUvw" name="Operation3" visibility="public">
+        <eAnnotations xmi:id="_m-MewFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_m-MewVHPEeOhWbcpSGtUvw" key="Alias.S" value="设置名字和性别"/>
+        </eAnnotations>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JRdCMElBEeOnrLeKpZTmtQ" name="CString"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Sb_fIElBEeOnrLeKpZTmtQ" name="char"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ktlAIElBEeOnrLeKpZTmtQ" name="CWaiter">
+      <eAnnotations xmi:id="_mPn04En1EeO2ea-fHel4VQ" source="TaggedValues">
+        <details xmi:id="_mPn04Un1EeO2ea-fHel4VQ" key="Alias.S" value="服务员"/>
+        <details xmi:id="_xfZOEEn3EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_178eoEoHEeO2ea-fHel4VQ" name="m_dAchievement" visibility="private" type="_4jutMEkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_l09-kEoIEeO2ea-fHel4VQ" source="TaggedValues">
+          <details xmi:id="_l09-kUoIEeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+          <details xmi:id="_ntCTcEoIEeO2ea-fHel4VQ" key="Alias.S" value="业绩"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3R8BMEoHEeO2ea-fHel4VQ" value="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aZ4YAEuMEeOAeeS5cV5--g" name="m_unNumber" visibility="private" type="_GsQzUEuLEeOAeeS5cV5--g">
+        <eAnnotations xmi:id="_waqHkEuMEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_waquoEuMEeOAeeS5cV5--g" key="Alias.S" value="编号"/>
+          <details xmi:id="_wvrVUEuMEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_es9WwEuMEeOAeeS5cV5--g" value="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_fi3EAEuMEeOAeeS5cV5--g" name="m_dSalary" visibility="private" type="_4jutMEkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_tYD5QEuMEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_tYD5QUuMEeOAeeS5cV5--g" key="Alias.S" value="工资"/>
+          <details xmi:id="_vnLcMEuMEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_j3wAoEuMEeOAeeS5cV5--g" value="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5grigFHPEeOhWbcpSGtUvw" name="field2" visibility="public">
+        <eAnnotations xmi:id="_6rAAkFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_6rAAkVHPEeOhWbcpSGtUvw" key="Alias.S" value="下一个服务员"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_dLqQwEwIEeOJdN53UxSObg" name="m_dAllSalary" visibility="private" isStatic="true" type="_4jutMEkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_lCzzMEwIEeOJdN53UxSObg" source="TaggedValues">
+          <details xmi:id="_lCzzMUwIEeOJdN53UxSObg" key="Alias.S" value="所有服务员工资"/>
+          <details xmi:id="_no_LQEwIEeOJdN53UxSObg" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_xw2wEFHPEeOhWbcpSGtUvw" name="field1" visibility="private" isStatic="true">
+        <eAnnotations xmi:id="_zCmr0FHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_zCmr0VHPEeOhWbcpSGtUvw" key="Alias.S" value="服务员人数"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_rvH3IFHPEeOhWbcpSGtUvw" name="Operation4" visibility="public">
+        <eAnnotations xmi:id="_sjQCwFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_sjQCwVHPEeOhWbcpSGtUvw" key="Alias.S" value="构造函数"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_szEAYFHPEeOhWbcpSGtUvw" name="Operation5" visibility="public">
+        <eAnnotations xmi:id="_te8O8FHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_te8O8VHPEeOhWbcpSGtUvw" key="Alias.S" value="析构函数"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_FqIAkFHQEeOhWbcpSGtUvw" name="Operation7" visibility="public">
+        <eAnnotations xmi:id="_HUgewFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_HUgewVHQEeOhWbcpSGtUvw" key="Alias.S" value="删除餐桌菜单项"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_xY_YEEuMEeOAeeS5cV5--g" name="AddBoardMenuItem" visibility="public">
+        <eAnnotations xmi:id="_mOfZEEuNEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_mOfZEUuNEeOAeeS5cV5--g" key="Alias.S" value="增加餐桌菜单项"/>
+          <details xmi:id="_9WQA8ExgEeOnnb0o72uwPA" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5530AEuMEeOAeeS5cV5--g" name="pBoard" type="_Ff9TEEksEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_CXs78EuNEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_CXs78UuNEeOAeeS5cV5--g" key="Pointers.I" value="1"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_CvSVgEuNEeOAeeS5cV5--g" name="uFoodType" type="_qXGfUEk_EeOnrLeKpZTmtQ" direction="inout">
+          <eAnnotations xmi:id="_Tj_BwEuNEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_Tj_BwUuNEeOAeeS5cV5--g" key="Refs.I" value="1"/>
+            <details xmi:id="_Tj_BwkuNEeOAeeS5cV5--g" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_UlzEEEuNEeOAeeS5cV5--g" name="strFoodName" type="_4kCPNUkrEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_X03BEEuNEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_X03BEUuNEeOAeeS5cV5--g" key="Refs.I" value="1"/>
+            <details xmi:id="_X03BEkuNEeOAeeS5cV5--g" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_YSAQEEuNEeOAeeS5cV5--g" name="dParice" type="_4jutMEkrEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_cY_TkEuNEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_cY_TkUuNEeOAeeS5cV5--g" key="Refs.I" value="1"/>
+            <details xmi:id="_cY_TkkuNEeOAeeS5cV5--g" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ezPvgEuNEeOAeeS5cV5--g" name="uShare" type="_qXGfUEk_EeOnrLeKpZTmtQ" direction="inout">
+          <eAnnotations xmi:id="_ip_XkEuNEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_ip_XkUuNEeOAeeS5cV5--g" key="Refs.I" value="1"/>
+            <details xmi:id="_ip_XkkuNEeOAeeS5cV5--g" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_pAoJgEuNEeOAeeS5cV5--g" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_pjRjkEuNEeOAeeS5cV5--g" name="GetNumber" visibility="public">
+        <eAnnotations xmi:id="_2Jby0EuNEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_2Jby0UuNEeOAeeS5cV5--g" key="Alias.S" value="获取编号"/>
+          <details xmi:id="_4S5kQEuOEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_APUoQEuPEeOAeeS5cV5--g" source="Stereotypes">
+          <details xmi:id="_APUoQUuPEeOAeeS5cV5--g" key="Stereotypes" value="const"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_pjaGcEuNEeOAeeS5cV5--g" name="Parameter1" type="_v5RcUEuNEeOAeeS5cV5--g" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_N4bXQEwIEeOJdN53UxSObg" name="GetAchievement" visibility="public">
+        <eAnnotations xmi:id="_UEnMsEwIEeOJdN53UxSObg" source="Stereotypes">
+          <details xmi:id="_UEnMsUwIEeOJdN53UxSObg" key="Stereotypes" value="const"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_V9RXcEwIEeOJdN53UxSObg" source="TaggedValues">
+          <details xmi:id="_V9RXcUwIEeOJdN53UxSObg" key="Alias.S" value="获取业绩"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_IqVw4ExMEeOnnb0o72uwPA" name="CBoss::SetWaiterSalary" visibility="public">
+        <eAnnotations xmi:id="_Kq8WsExMEeOnnb0o72uwPA" source="Stereotypes">
+          <details xmi:id="_Kq89wExMEeOnnb0o72uwPA" key="Stereotypes" value="friend"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_m0A6MExMEeOnnb0o72uwPA" source="TaggedValues">
+          <details xmi:id="_m0A6MUxMEeOnnb0o72uwPA" key="Alias.S" value="（友）设置工资"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_XRvfIExMEeOnnb0o72uwPA" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+        <ownedParameter xmi:id="_Zm5_sExMEeOnnb0o72uwPA" name="ppWaiter" type="_ktlAIElBEeOnrLeKpZTmtQ" direction="inout">
+          <eAnnotations xmi:id="_cOUG0ExMEeOnnb0o72uwPA" source="TaggedValues">
+            <details xmi:id="_cOUG0UxMEeOnnb0o72uwPA" key="Pointers.I" value="2"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_d_ZC4ExMEeOnnb0o72uwPA" name="unNumber" type="_GsQzUEuLEeOAeeS5cV5--g" direction="inout">
+          <eAnnotations xmi:id="_hrrucExMEeOnnb0o72uwPA" source="TaggedValues">
+            <details xmi:id="_hrrucUxMEeOnnb0o72uwPA" key="Refs.I" value="1"/>
+            <details xmi:id="_hrsVgExMEeOnnb0o72uwPA" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_i0IHwExNEeOnnb0o72uwPA" name="dSalary" type="_4jutMEkrEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_kB6wkExNEeOnnb0o72uwPA" source="TaggedValues">
+            <details xmi:id="_kB6wkUxNEeOnnb0o72uwPA" key="Refs.I" value="1"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_W4NIUExNEeOnnb0o72uwPA" name="SetWaiterSalary" visibility="public">
+        <eAnnotations xmi:id="_eQ7CUExNEeOnnb0o72uwPA" source="Stereotypes">
+          <details xmi:id="_eQ7CUUxNEeOnnb0o72uwPA" key="Stereotypes" value="friend"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_s_mdQExNEeOnnb0o72uwPA" source="TaggedValues">
+          <details xmi:id="_s_nEUExNEeOnnb0o72uwPA" key="Alias.S" value="（友）设置工资"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_fv9MIExNEeOnnb0o72uwPA" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+        <ownedParameter xmi:id="_lxR1YExNEeOnnb0o72uwPA" name="pWaiter" type="_ktlAIElBEeOnrLeKpZTmtQ" direction="inout">
+          <eAnnotations xmi:id="_opJaYExNEeOnnb0o72uwPA" source="TaggedValues">
+            <details xmi:id="_opJaYUxNEeOnnb0o72uwPA" key="Pointers.I" value="1"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_pL6wQExNEeOnnb0o72uwPA" name="dSalary" type="_4jutMEkrEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_rDt_YExNEeOnnb0o72uwPA" source="TaggedValues">
+            <details xmi:id="_rDt_YUxNEeOnnb0o72uwPA" key="Refs.I" value="1"/>
+            <details xmi:id="_rDt_YkxNEeOnnb0o72uwPA" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uoa_gFHPEeOhWbcpSGtUvw" name="Operation6" visibility="public">
+        <eAnnotations xmi:id="_vyxSwFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_vyxSwVHPEeOhWbcpSGtUvw" key="Alias.S" value="启用餐桌"/>
+        </eAnnotations>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_o2cS8ElBEeOnrLeKpZTmtQ" name="CBoss">
+      <eAnnotations xmi:id="_lYCFkEn1EeO2ea-fHel4VQ" source="TaggedValues">
+        <details xmi:id="_lYCFkUn1EeO2ea-fHel4VQ" key="Alias.S" value="老板"/>
+        <details xmi:id="_xffUsEn3EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_gRM4EEuJEeOAeeS5cV5--g" name="m_ulAccountNumber" visibility="private" type="_kdaZ0EuJEeOAeeS5cV5--g">
+        <eAnnotations xmi:id="_6yYl0EuLEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_6yYl0UuLEeOAeeS5cV5--g" key="Alias.S" value="系统账户"/>
+          <details xmi:id="_7H8mIEuLEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_mfmUAEuJEeOAeeS5cV5--g" name="m_strPassword" visibility="private" type="_4kCPNUkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_8Z6kUEuLEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_8Z7LYEuLEeOAeeS5cV5--g" key="Alias.S" value="系统密码"/>
+          <details xmi:id="_8qJYsEuLEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_AKlrgEuKEeOAeeS5cV5--g" name="AddBoard" visibility="public">
+        <eAnnotations xmi:id="_NhuEsEuKEeOAeeS5cV5--g" source="Internel_TaggedValues">
+          <details xmi:id="_NhuEsUuKEeOAeeS5cV5--g" key="WRITE_PROTECTED" value="false"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_iDQ2IEuKEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_iDQ2IUuKEeOAeeS5cV5--g" key="Alias.S" value="增加餐桌数"/>
+          <details xmi:id="_iEZekEuKEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_C4g4EEuPEeOAeeS5cV5--g" source="Stereotypes">
+          <details xmi:id="_C4g4EUuPEeOAeeS5cV5--g" key="Stereotypes" value="const"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_ELofEEuKEeOAeeS5cV5--g" name="ppBoard" type="_Ff9TEEksEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_HW0osEuKEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_HW0osUuKEeOAeeS5cV5--g" key="Pointers.I" value="2"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_l1DFsEuKEeOAeeS5cV5--g" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_kyakAEuKEeOAeeS5cV5--g" name="AddWaiter" visibility="public">
+        <eAnnotations xmi:id="_4R6NIEuLEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_4R6NIUuLEeOAeeS5cV5--g" key="Alias.S" value="雇佣服务员"/>
+          <details xmi:id="_4g8usEuLEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_DlqR8EuPEeOAeeS5cV5--g" source="Stereotypes">
+          <details xmi:id="_Dlq5AEuPEeOAeeS5cV5--g" key="Stereotypes" value="const"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_pWQioEuKEeOAeeS5cV5--g" name="ppWaiter" type="_ktlAIElBEeOnrLeKpZTmtQ" direction="inout">
+          <eAnnotations xmi:id="_sWag8EuKEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_sWbIAEuKEeOAeeS5cV5--g" key="Pointers.I" value="2"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_uhZx0EuKEeOAeeS5cV5--g" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_2YY8MEuKEeOAeeS5cV5--g" name="DelWaiter" visibility="public">
+        <eAnnotations xmi:id="_2x0TYEuLEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_2x0TYUuLEeOAeeS5cV5--g" key="Alias.S" value="解雇服务员"/>
+          <details xmi:id="_3H_XsEuLEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_ENV9AEuPEeOAeeS5cV5--g" source="Stereotypes">
+          <details xmi:id="_ENV9AUuPEeOAeeS5cV5--g" key="Stereotypes" value="const"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_7itsAEuKEeOAeeS5cV5--g" name="ppWaiter" type="_ktlAIElBEeOnrLeKpZTmtQ" direction="inout">
+          <eAnnotations xmi:id="_-ymIYEuKEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_-ymvcEuKEeOAeeS5cV5--g" key="Pointers.I" value="2"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="__Ei0AEuKEeOAeeS5cV5--g" name="unNumber" type="_GsQzUEuLEeOAeeS5cV5--g" direction="inout">
+          <eAnnotations xmi:id="_GsVr0EuLEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_GsWS4EuLEeOAeeS5cV5--g" key="Refs.I" value="1"/>
+            <details xmi:id="_GsWS4UuLEeOAeeS5cV5--g" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Ng03YEuLEeOAeeS5cV5--g" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_MbfnAEuLEeOAeeS5cV5--g" name="DelFoodMenuItem" visibility="public">
+        <eAnnotations xmi:id="_xrpDwEuLEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_xrpDwUuLEeOAeeS5cV5--g" key="Alias.S" value="删除主菜单菜肴"/>
+          <details xmi:id="_1M7ZMEuLEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_E0s38EuPEeOAeeS5cV5--g" source="Stereotypes">
+          <details xmi:id="_E0tfAEuPEeOAeeS5cV5--g" key="Stereotypes" value="const"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bbzkgEuLEeOAeeS5cV5--g" name="ppFoodMenu" type="_IazVkEuHEeOAeeS5cV5--g" direction="inout">
+          <eAnnotations xmi:id="_kiwh8EuLEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_kiwh8UuLEeOAeeS5cV5--g" key="Pointers.I" value="2"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_k-xIgEuLEeOAeeS5cV5--g" name="strFoodName" type="_4kCPNUkrEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_pHeqUEuLEeOAeeS5cV5--g" source="TaggedValues">
+            <details xmi:id="_pHeqUUuLEeOAeeS5cV5--g" key="Refs.I" value="1"/>
+            <details xmi:id="_pHfRYEuLEeOAeeS5cV5--g" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_rJbT8EuLEeOAeeS5cV5--g" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WyRa4EwKEeOJdN53UxSObg" name="ChangeAccountNumber" visibility="public">
+        <eAnnotations xmi:id="_Z28s0EwKEeOJdN53UxSObg" source="TaggedValues">
+          <details xmi:id="_Z28s0UwKEeOJdN53UxSObg" key="Alias.S" value="修改账号名"/>
+          <details xmi:id="_kGJEsEwKEeOJdN53UxSObg" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_cyG2YEwKEeOJdN53UxSObg" name="ulAccountNumber" type="_kdaZ0EuJEeOAeeS5cV5--g" direction="inout">
+          <eAnnotations xmi:id="_iQnGcEwKEeOJdN53UxSObg" source="TaggedValues">
+            <details xmi:id="_iQnGcUwKEeOJdN53UxSObg" key="Refs.I" value="1"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_jyXNEEwKEeOJdN53UxSObg" name="Parameter1" type="_8vnHsEk_EeOnrLeKpZTmtQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_pejT0EwKEeOJdN53UxSObg" name="ChangePassword" visibility="public">
+        <eAnnotations xmi:id="_s7LywEwKEeOJdN53UxSObg" source="TaggedValues">
+          <details xmi:id="_s7LywUwKEeOJdN53UxSObg" key="Alias.S" value="修改密码"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_uLFUYEwKEeOJdN53UxSObg" name="Parameter1" type="_8vnHsEk_EeOnrLeKpZTmtQ" direction="return"/>
+        <ownedParameter xmi:id="_uv1AMEwKEeOJdN53UxSObg" name="strPassword" type="_4kCPNUkrEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_x0qDIEwKEeOJdN53UxSObg" source="TaggedValues">
+            <details xmi:id="_x0qDIUwKEeOJdN53UxSObg" key="Refs.I" value="1"/>
+            <details xmi:id="_x0qDIkwKEeOJdN53UxSObg" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_z1WIgEwKEeOJdN53UxSObg" name="SetWaiterSalary" visibility="public">
+        <eAnnotations xmi:id="_-B2_0EwKEeOJdN53UxSObg" source="TaggedValues">
+          <details xmi:id="_-B2_0UwKEeOJdN53UxSObg" key="Alias.S" value="设置服务员工资"/>
+          <details xmi:id="_PANXUEwLEeOJdN53UxSObg" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_QM07cEwLEeOJdN53UxSObg" source="Stereotypes">
+          <details xmi:id="_QM07cUwLEeOJdN53UxSObg" key="Stereotypes" value="const"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="__udrkEwKEeOJdN53UxSObg" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+        <ownedParameter xmi:id="_LzmUkEwPEeOUtrE1y6Zn6g" name="ppWaiter" type="_ktlAIElBEeOnrLeKpZTmtQ" direction="inout">
+          <eAnnotations xmi:id="_O7i88EwPEeOUtrE1y6Zn6g" source="TaggedValues">
+            <details xmi:id="_O7i88UwPEeOUtrE1y6Zn6g" key="Pointers.I" value="2"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_F2Ct0EwLEeOJdN53UxSObg" name="unNumber" type="_GsQzUEuLEeOAeeS5cV5--g" direction="inout">
+          <eAnnotations xmi:id="_JNnGkEwLEeOJdN53UxSObg" source="TaggedValues">
+            <details xmi:id="_JNnGkUwLEeOJdN53UxSObg" key="Refs.I" value="1"/>
+            <details xmi:id="_JNnGkkwLEeOJdN53UxSObg" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Jv1C0EwLEeOJdN53UxSObg" name="dSalary" type="_4jutMEkrEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_NMA10EwLEeOJdN53UxSObg" source="TaggedValues">
+            <details xmi:id="_NMA10UwLEeOJdN53UxSObg" key="Refs.I" value="1"/>
+            <details xmi:id="_NMA10kwLEeOJdN53UxSObg" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_hILqsExKEeOnnb0o72uwPA" name="SetWaiterSalary" visibility="public">
+        <eAnnotations xmi:id="_j50r4ExKEeOnnb0o72uwPA" source="Stereotypes">
+          <details xmi:id="_j51S8ExKEeOnnb0o72uwPA" key="Stereotypes" value="const"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_4na8UExKEeOnnb0o72uwPA" source="TaggedValues">
+          <details xmi:id="_4nbjYExKEeOnnb0o72uwPA" key="Alias.S" value="设置服务员工资"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_lhnJEExKEeOnnb0o72uwPA" name="Parameter1" type="_Dyr68EuHEeOAeeS5cV5--g" direction="return"/>
+        <ownedParameter xmi:id="_mDIhwExKEeOnnb0o72uwPA" name="pWaiter" type="_ktlAIElBEeOnrLeKpZTmtQ" direction="inout">
+          <eAnnotations xmi:id="_paamoExKEeOnnb0o72uwPA" source="TaggedValues">
+            <details xmi:id="_paamoUxKEeOnnb0o72uwPA" key="Pointers.I" value="1"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_qcFfAExKEeOnnb0o72uwPA" name="dSalary" type="_4jutMEkrEeOmgrJFg1aDvQ" direction="inout">
+          <eAnnotations xmi:id="_w4048ExKEeOnnb0o72uwPA" source="TaggedValues">
+            <details xmi:id="_w4048UxKEeOnnb0o72uwPA" key="Refs.I" value="1"/>
+            <details xmi:id="_w4048kxKEeOnnb0o72uwPA" key="IsConst.B" value="true"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_HSp6EFHPEeOhWbcpSGtUvw" name="Operation1" visibility="public">
+        <eAnnotations xmi:id="_Izk6QFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_IzlhUFHPEeOhWbcpSGtUvw" key="Alias.S" value="减少餐桌数"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_MhbsEFHPEeOhWbcpSGtUvw" name="Operation2" visibility="public">
+        <eAnnotations xmi:id="_OcwwUFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_OcwwUVHPEeOhWbcpSGtUvw" key="Alias.S" value="增加主菜单菜肴"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_U7dSEFHPEeOhWbcpSGtUvw" name="Operation3" visibility="public">
+        <eAnnotations xmi:id="_WrByQFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_WrByQVHPEeOhWbcpSGtUvw" key="Alias.S" value="返回账号"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_W5BK8FHPEeOhWbcpSGtUvw" name="Operation4" visibility="public">
+        <eAnnotations xmi:id="_XyNcwFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_XyNcwVHPEeOhWbcpSGtUvw" key="Alias.S" value="返回密码"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_a5hzAFHPEeOhWbcpSGtUvw" name="" visibility="public">
+        <eAnnotations xmi:id="_cWNMYFHPEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_cWNzcFHPEeOhWbcpSGtUvw" key="Alias.S" value="构造函数"/>
+        </eAnnotations>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="__HIGwElBEeOnrLeKpZTmtQ" name="Actor1">
+      <eAnnotations xmi:id="_A4ZQEElCEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_A4ZQEUlCEeOnrLeKpZTmtQ" key="Alias.S" value="服务员"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_CcWWIElCEeOnrLeKpZTmtQ" name="UseCase1">
+      <eAnnotations xmi:id="_Evk9AElCEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_Evk9AUlCEeOnrLeKpZTmtQ" key="Alias.S" value="启用餐桌"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KsC7cElCEeOnrLeKpZTmtQ" memberEnd="_KsDigElCEeOnrLeKpZTmtQ _KsEwoElCEeOnrLeKpZTmtQ" navigableOwnedEnd="_KsDigElCEeOnrLeKpZTmtQ">
+      <ownedEnd xmi:id="_KsDigElCEeOnrLeKpZTmtQ" name="" visibility="private" type="_CcWWIElCEeOnrLeKpZTmtQ" isUnique="false" association="_KsC7cElCEeOnrLeKpZTmtQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KsEJkUlCEeOnrLeKpZTmtQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KsEJkElCEeOnrLeKpZTmtQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_KsEwoElCEeOnrLeKpZTmtQ" name="" visibility="private" type="__HIGwElBEeOnrLeKpZTmtQ" isUnique="false" association="_KsC7cElCEeOnrLeKpZTmtQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KsFXsElCEeOnrLeKpZTmtQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KsEwoUlCEeOnrLeKpZTmtQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_L1R0YElCEeOnrLeKpZTmtQ" name="UseCase2">
+      <eAnnotations xmi:id="_QOcNAElCEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_QOcNAUlCEeOnrLeKpZTmtQ" key="Alias.S" value="点餐"/>
+      </eAnnotations>
+      <include xmi:id="_VXW8MFHVEeOhWbcpSGtUvw" addition="_RSAi0ElCEeOnrLeKpZTmtQ"/>
+      <include xmi:id="_VyRWkFHVEeOhWbcpSGtUvw" addition="_SDcm0ElCEeOnrLeKpZTmtQ"/>
+      <extend xmi:id="_e-yb4ElCEeOnrLeKpZTmtQ" extendedCase="_CcWWIElCEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_RSAi0ElCEeOnrLeKpZTmtQ" name="UseCase3">
+      <eAnnotations xmi:id="_TyzroElCEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_TyzroUlCEeOnrLeKpZTmtQ" key="Alias.S" value="初次点餐"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_SDcm0ElCEeOnrLeKpZTmtQ" name="UseCase4">
+      <eAnnotations xmi:id="_UzXJsElCEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_UzXJsUlCEeOnrLeKpZTmtQ" key="Alias.S" value="临时加餐"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ZWmEUElCEeOnrLeKpZTmtQ" name="UseCase5">
+      <eAnnotations xmi:id="_bkHEwElCEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_bkHEwUlCEeOnrLeKpZTmtQ" key="Alias.S" value="录入编号"/>
+      </eAnnotations>
+      <extend xmi:id="_ixtT4ElCEeOnrLeKpZTmtQ" extendedCase="_L1R0YElCEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_aLUs4ElCEeOnrLeKpZTmtQ" name="UseCase6">
+      <eAnnotations xmi:id="_cZcKQElCEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_cZcKQUlCEeOnrLeKpZTmtQ" key="Alias.S" value="结账"/>
+      </eAnnotations>
+      <extend xmi:id="_hS3-YElCEeOnrLeKpZTmtQ" extendedCase="_L1R0YElCEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_DuxK0ElDEeOnrLeKpZTmtQ" name="Actor2">
+      <eAnnotations xmi:id="_BQO7gEn2EeO2ea-fHel4VQ" source="TaggedValues">
+        <details xmi:id="_BQPikEn2EeO2ea-fHel4VQ" key="Alias.S" value="老板"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_EcxgUElDEeOnrLeKpZTmtQ" name="UseCase7">
+      <eAnnotations xmi:id="_RnlUwElDEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_RnlUwUlDEeOnrLeKpZTmtQ" key="Alias.S" value="登录系统"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_HFsDUElDEeOnrLeKpZTmtQ" name="UseCase8">
+      <eAnnotations xmi:id="_ToPk8ElDEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_ToQMAElDEeOnrLeKpZTmtQ" key="Alias.S" value="修改账户信息"/>
+      </eAnnotations>
+      <extend xmi:id="_2LWzMFHUEeOhWbcpSGtUvw" extendedCase="_EcxgUElDEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Irim0ElDEeOnrLeKpZTmtQ" name="UseCase9" isLeaf="true">
+      <eAnnotations xmi:id="_VCxpQElDEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_VCxpQUlDEeOnrLeKpZTmtQ" key="Alias.S" value="增减菜肴"/>
+      </eAnnotations>
+      <extend xmi:id="_2w9aoFHUEeOhWbcpSGtUvw" extendedCase="_EcxgUElDEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Jbmx0ElDEeOnrLeKpZTmtQ" name="UseCase10">
+      <eAnnotations xmi:id="_psseIElEEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_psseIUlEEeOnrLeKpZTmtQ" key="Alias.S" value="查看营业情况"/>
+      </eAnnotations>
+      <extend xmi:id="_3kYboFHUEeOhWbcpSGtUvw" extendedCase="_EcxgUElDEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_J_2HUElDEeOnrLeKpZTmtQ" name="UseCase11">
+      <eAnnotations xmi:id="_t64V0ElEEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_t64V0UlEEeOnrLeKpZTmtQ" key="Alias.S" value="增减餐桌"/>
+      </eAnnotations>
+      <extend xmi:id="_4FQ7IFHUEeOhWbcpSGtUvw" extendedCase="_EcxgUElDEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Lpgz0ElDEeOnrLeKpZTmtQ" name="UseCase12">
+      <eAnnotations xmi:id="_yOb1sElEEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_yOb1sUlEEeOnrLeKpZTmtQ" key="Alias.S" value="设置服务员工资"/>
+      </eAnnotations>
+      <extend xmi:id="_5J7dIFHUEeOhWbcpSGtUvw" extendedCase="_EcxgUElDEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_MPbkUElDEeOnrLeKpZTmtQ" name="UseCase13">
+      <eAnnotations xmi:id="_3Jtc4ElEEeOnrLeKpZTmtQ" source="TaggedValues">
+        <details xmi:id="_3Jtc4UlEEeOnrLeKpZTmtQ" key="Alias.S" value="增减服务员"/>
+      </eAnnotations>
+      <extend xmi:id="_4rkGIFHUEeOhWbcpSGtUvw" extendedCase="_EcxgUElDEeOnrLeKpZTmtQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_8vmuYElEEeOnrLeKpZTmtQ" memberEnd="_8vnVcElEEeOnrLeKpZTmtQ _8vn8gklEEeOnrLeKpZTmtQ" navigableOwnedEnd="_8vnVcElEEeOnrLeKpZTmtQ">
+      <ownedEnd xmi:id="_8vnVcElEEeOnrLeKpZTmtQ" name="" visibility="private" type="_EcxgUElDEeOnrLeKpZTmtQ" isUnique="false" association="_8vmuYElEEeOnrLeKpZTmtQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8vn8gUlEEeOnrLeKpZTmtQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8vn8gElEEeOnrLeKpZTmtQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_8vn8gklEEeOnrLeKpZTmtQ" name="" visibility="private" type="_DuxK0ElDEeOnrLeKpZTmtQ" isUnique="false" association="_8vmuYElEEeOnrLeKpZTmtQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8vojkElEEeOnrLeKpZTmtQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8vn8g0lEEeOnrLeKpZTmtQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yYDYkEnwEeO2ea-fHel4VQ" name="CFoodMenu">
+      <eAnnotations xmi:id="_3kfEYEn0EeO2ea-fHel4VQ" source="TaggedValues">
+        <details xmi:id="_3kfEYUn0EeO2ea-fHel4VQ" key="Alias.S" value="主菜单"/>
+        <details xmi:id="_xfzdwEn3EeO2ea-fHel4VQ" key="IsShowAlias.B" value="true"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_0wBd8EuPEeOAeeS5cV5--g" name="m_Food" visibility="public" type="_N-H6kEuPEeOAeeS5cV5--g">
+        <eAnnotations xmi:id="_1i990EuPEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_1i990UuPEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+          <details xmi:id="_4Scb0EuPEeOAeeS5cV5--g" key="Alias.S" value="菜肴"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_6pyGoEuPEeOAeeS5cV5--g" name="m_pNextFood" visibility="public" type="_yYDYkEnwEeO2ea-fHel4VQ">
+        <eAnnotations xmi:id="__h_LsEuPEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="__h_LsUuPEeOAeeS5cV5--g" key="Alias.S" value="下一个菜肴"/>
+          <details xmi:id="_BoNRUEuQEeOAeeS5cV5--g" key="Pointers.I" value="1"/>
+          <details xmi:id="_CEC4wEuQEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_xHoskFHSEeOhWbcpSGtUvw" name="field1" visibility="private" isStatic="true">
+        <eAnnotations xmi:id="_0zaawFHSEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_0zaawVHSEeOhWbcpSGtUvw" key="Alias.S" value="菜肴种数"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5q6fwFHTEeOhWbcpSGtUvw" name="" visibility="private" type="_N-H6kEuPEeOAeeS5cV5--g" isUnique="false" association="_5q54sFHTEeOhWbcpSGtUvw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5q7G0FHTEeOhWbcpSGtUvw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5q6fwVHTEeOhWbcpSGtUvw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SDJJ8En0EeO2ea-fHel4VQ" name="Boolean"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Dyr68EuHEeOAeeS5cV5--g" name="bool"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IazVkEuHEeOAeeS5cV5--g" name="CBoardMenu">
+      <eAnnotations xmi:id="_qCcEcEuQEeOAeeS5cV5--g" source="TaggedValues">
+        <details xmi:id="_qCcEcUuQEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        <details xmi:id="_sZI2EEuQEeOAeeS5cV5--g" key="Alias.S" value="餐桌菜单"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_aUyf0EuQEeOAeeS5cV5--g" name="m_uShare" visibility="public" type="_qXGfUEk_EeOnrLeKpZTmtQ">
+        <eAnnotations xmi:id="_drhyIEuQEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_drhyIUuQEeOAeeS5cV5--g" key="Alias.S" value="菜肴份数"/>
+          <details xmi:id="_dsdmQEuQEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_gC-KoEuQEeOAeeS5cV5--g" name="m_dMoney" visibility="public">
+        <eAnnotations xmi:id="_nJ7mQEuQEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_nJ7mQUuQEeOAeeS5cV5--g" key="Alias.S" value="菜肴消费额"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_dXX0EExhEeOnnb0o72uwPA" name="m_unWaiterNumber" visibility="public" type="_GsQzUEuLEeOAeeS5cV5--g">
+        <eAnnotations xmi:id="_m7RzQExhEeOnnb0o72uwPA" source="TaggedValues">
+          <details xmi:id="_m7RzQUxhEeOnnb0o72uwPA" key="Alias.S" value="点菜的服务员"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t72GAFHSEeOhWbcpSGtUvw" name="下一个菜肴" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YV9KsEuHEeOAeeS5cV5--g" name="CFoodMenu**"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jnSfkEuIEeOAeeS5cV5--g" name="cosnt string"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kdaZ0EuJEeOAeeS5cV5--g" name="unsigned long"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5E2X4EuJEeOAeeS5cV5--g" name="boll"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GsQzUEuLEeOAeeS5cV5--g" name="unsigned short"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CXqfsEuNEeOAeeS5cV5--g" name="CBoardMenu"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_v5RcUEuNEeOAeeS5cV5--g" name="unsigned short&amp;"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_HmNLsEuOEeOAeeS5cV5--g" name="CFood不v型成本"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_N-H6kEuPEeOAeeS5cV5--g" name="Food">
+      <eAnnotations xmi:id="_P13C0EuQEeOAeeS5cV5--g" source="TaggedValues">
+        <details xmi:id="_P13C0UuQEeOAeeS5cV5--g" key="Alias.S" value="菜肴"/>
+        <details xmi:id="_Sxo1IE0JEeOruaivu4DQfg" key="IsShowAlias.B" value="true"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_TW5WEEuPEeOAeeS5cV5--g" name="m_uFoodType" visibility="public" type="_qXGfUEk_EeOnrLeKpZTmtQ">
+        <eAnnotations xmi:id="_Y7dK0EuPEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_Y7dK0UuPEeOAeeS5cV5--g" key="Alias.S" value="菜肴类型"/>
+          <details xmi:id="_ZLE7MEuPEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDLJsEuPEeOAeeS5cV5--g" name="m_strFoodName" visibility="public" type="_4kCPNUkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_jbEkUEuPEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_jbEkUUuPEeOAeeS5cV5--g" key="Alias.S" value="菜肴名称"/>
+          <details xmi:id="_jvWyQEuPEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pKbT0EuPEeOAeeS5cV5--g" name="m_dPrice" visibility="public" type="_4jutMEkrEeOmgrJFg1aDvQ">
+        <eAnnotations xmi:id="_psNLMEuPEeOAeeS5cV5--g" source="TaggedValues">
+          <details xmi:id="_psNLMUuPEeOAeeS5cV5--g" key="IsShowAlias.B" value="true"/>
+          <details xmi:id="_ubb6cEuPEeOAeeS5cV5--g" key="Alias.S" value="单价"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5q7G0VHTEeOhWbcpSGtUvw" name="" visibility="private" type="_yYDYkEnwEeO2ea-fHel4VQ" isUnique="false" aggregation="composite" association="_5q54sFHTEeOhWbcpSGtUvw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5q7t4FHTEeOhWbcpSGtUvw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5q7G0lHTEeOhWbcpSGtUvw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fY99UFHQEeOhWbcpSGtUvw" name="应用程序类">
+      <ownedAttribute xmi:id="_iVEiEFHQEeOhWbcpSGtUvw" name="field1" visibility="private">
+        <eAnnotations xmi:id="_k5e_kFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_k5e_kVHQEeOhWbcpSGtUvw" key="Alias.S" value="老板"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_lvVpgFHQEeOhWbcpSGtUvw" name="field2" visibility="private">
+        <eAnnotations xmi:id="_m1UaIFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_m1UaIVHQEeOhWbcpSGtUvw" key="Alias.S" value="餐桌链表"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ngLVAFHQEeOhWbcpSGtUvw" name="field3" visibility="private">
+        <eAnnotations xmi:id="_oYVsEFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_oYVsEVHQEeOhWbcpSGtUvw" key="Alias.S" value="服务员链表"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_oz4YkFHQEeOhWbcpSGtUvw" name="field4" visibility="private">
+        <eAnnotations xmi:id="_qKQVoFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_qKQVoVHQEeOhWbcpSGtUvw" key="Alias.S" value="主菜单链表"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_lRczoFHQEeOhWbcpSGtUvw" name="Operation1" visibility="public">
+        <eAnnotations xmi:id="_u5cooFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_u5cooVHQEeOhWbcpSGtUvw" key="Alias.S" value="构造函数"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_nRTykFHQEeOhWbcpSGtUvw" name="Operation2" visibility="public">
+        <eAnnotations xmi:id="_vyCdgFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_vyDEkFHQEeOhWbcpSGtUvw" key="Alias.S" value="析构函数"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_r4ojAFHQEeOhWbcpSGtUvw" name="Operation3" visibility="public">
+        <eAnnotations xmi:id="_zznckFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_zznckVHQEeOhWbcpSGtUvw" key="Alias.S" value="运行"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0bbqgFHQEeOhWbcpSGtUvw" name="Operation4" visibility="public">
+        <eAnnotations xmi:id="_1EJQUFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_1EJQUVHQEeOhWbcpSGtUvw" key="Alias.S" value="点餐"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1Uy7cFHQEeOhWbcpSGtUvw" name="Operation5" visibility="public">
+        <eAnnotations xmi:id="_1z6gYFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_1z7HcFHQEeOhWbcpSGtUvw" key="Alias.S" value="管理"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_2KGLwFHQEeOhWbcpSGtUvw" name="画所有餐桌" visibility="public">
+        <eAnnotations xmi:id="_7Nd_AFHQEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_7Nd_AVHQEeOhWbcpSGtUvw" key="Alias.S" value="画所有餐桌"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_8j4_YFHQEeOhWbcpSGtUvw" name="Operation6" visibility="public">
+        <eAnnotations xmi:id="_BzZKIFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_BzZKIVHREeOhWbcpSGtUvw" key="Alias.S" value="画点餐界面1"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_CDOV4FHREeOhWbcpSGtUvw" name="Operation7" visibility="public">
+        <eAnnotations xmi:id="_Dek5kFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_Dek5kVHREeOhWbcpSGtUvw" key="Alias.S" value="画点餐界面2"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_HhCpcFHREeOhWbcpSGtUvw" name="Operation8" visibility="public">
+        <eAnnotations xmi:id="_JMPnAFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_JMQOEFHREeOhWbcpSGtUvw" key="Alias.S" value="画启用餐桌界面"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_neRbEFHREeOhWbcpSGtUvw" name="画管理选项" visibility="public">
+        <eAnnotations xmi:id="_rKLsIFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_rKLsIVHREeOhWbcpSGtUvw" key="Alias.S" value="画管理选项"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_JiBpwFHREeOhWbcpSGtUvw" name="Operation9" visibility="public">
+        <eAnnotations xmi:id="_Nb7TgFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_Nb7TgVHREeOhWbcpSGtUvw" key="Alias.S" value="打印餐桌信息"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_NxTtoFHREeOhWbcpSGtUvw" name="Operation10" visibility="public">
+        <eAnnotations xmi:id="_OtMHEFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_OtMHEVHREeOhWbcpSGtUvw" key="Alias.S" value="打印主菜单"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0L3vEFHREeOhWbcpSGtUvw" name="Operation11" visibility="public">
+        <eAnnotations xmi:id="_1nXcsFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_1nXcsVHREeOhWbcpSGtUvw" key="Alias.S" value="打印处理主菜单界面"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vPXY0FHREeOhWbcpSGtUvw" name="" visibility="public">
+        <eAnnotations xmi:id="_zYi0sFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_zYi0sVHREeOhWbcpSGtUvw" key="Alias.S" value="打印处理服务员界面"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_9TSmkFHREeOhWbcpSGtUvw" name="Operation12" visibility="public">
+        <eAnnotations xmi:id="_-usNkFHREeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_-usNkVHREeOhWbcpSGtUvw" key="Alias.S" value="打印所有服务员信息"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_FMNDkFHSEeOhWbcpSGtUvw" name="Operation13" visibility="public">
+        <eAnnotations xmi:id="_F6RqgFHSEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_F6SRkFHSEeOhWbcpSGtUvw" key="Alias.S" value="获得餐桌指针"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_I7_vEFHSEeOhWbcpSGtUvw" name="Operation14" visibility="public">
+        <eAnnotations xmi:id="_LOtYkFHSEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_LOtYkVHSEeOhWbcpSGtUvw" key="Alias.S" value="获得服务员指针"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_LhWAsFHSEeOhWbcpSGtUvw" name="Operation15" visibility="public">
+        <eAnnotations xmi:id="_OcY1gFHSEeOhWbcpSGtUvw" source="TaggedValues">
+          <details xmi:id="_OcY1gVHSEeOhWbcpSGtUvw" key="Alias.S" value="获得菜肴指针"/>
+        </eAnnotations>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_5q54sFHTEeOhWbcpSGtUvw" memberEnd="_5q6fwFHTEeOhWbcpSGtUvw _5q7G0VHTEeOhWbcpSGtUvw"/>
+    <profileApplication xmi:id="_4aqQwEkrEeOmgrJFg1aDvQ">
+      <eAnnotations xmi:id="_4aqQwUkrEeOmgrJFg1aDvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_4hzakEkrEeOmgrJFg1aDvQ">
+      <eAnnotations xmi:id="_4hzakUkrEeOmgrJFg1aDvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.trufun.uml2.kernel/UML2Default.profile.uml#_kRqOsopdEduhQbAH2yN0Zw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.trufun.uml2.kernel/UML2Default.profile.uml#_kRqOsIpdEduhQbAH2yN0Zw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_4hzalEkrEeOmgrJFg1aDvQ">
+      <eAnnotations xmi:id="_4hzalUkrEeOmgrJFg1aDvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.trufun.uml2.kernel/UML2Ext.profile.uml#_WyVnIwPrEd-5Zf6Hw9sz1g"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.trufun.uml2.kernel/UML2Ext.profile.uml#_WyVnIQPrEd-5Zf6Hw9sz1g"/>
+    </profileApplication>
+  </uml:Model>
+  <Standard:Create xmi:id="_DQBgsElAEeOnrLeKpZTmtQ" base_BehavioralFeature="_DP3vsElAEeOnrLeKpZTmtQ"/>
+  <Standard:Create xmi:id="_baV6MElBEeOnrLeKpZTmtQ" base_BehavioralFeature="_baRBsElBEeOnrLeKpZTmtQ"/>
+</xmi:XMI>

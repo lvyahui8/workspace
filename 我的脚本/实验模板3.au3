@@ -1,0 +1,8 @@
+Run("∆∆Ω‚√‹¬Î.exe")
+WinActivate("ATM")
+Sleep(1000)
+Local $v=GUICtrlCreateButton("»∑∂®",-1,-1)
+;Local $var =WinGetHandle("ATM")
+Run("NOTEPAD.EXE")
+Sleep(3000)
+Send($v)

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trufun:TClassDiagram xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:trufun="http://trufun" zoom="1.0" gridSpacing="22,22">
+  <nodes xsi:type="trufun:TClassNode" owner="=Test/src&lt;{Singleton.java[Singleton" name="Singleton" incomingConnections="//@connections.0" outgoingConnections="//@connections.0" location="124,46" size="189,73" autoResize="true">
+    <fillColor r="255" g="255" b="255"/>
+    <lineColor/>
+    <fontColor/>
+    <stereotypeNodes/>
+    <operationCompartmentNode>
+      <operations owner="=Test/src&lt;{Singleton.java[Singleton~Singleton" name="Singleton()"/>
+      <operations owner="=Test/src&lt;{Singleton.java[Singleton~getInstance" name="getInstance() : Singleton"/>
+    </operationCompartmentNode>
+    <attributeCompartmentNode/>
+    <nestedClassifierCompartmentNode/>
+    <templateParameterCompartmentNode/>
+  </nodes>
+  <nodes xsi:type="trufun:SubLabel" name="1" location="293,115" size="22,28" parent="//@connections.0" alias="Client.Multiplicity" direction="12" offset="0,0">
+    <fontColor/>
+  </nodes>
+  <nodes xsi:type="trufun:SubLabel" name="-s" location="265,115" size="28,28" parent="//@connections.0" alias="Client.Role" direction="15" offset="0,0">
+    <fontColor/>
+  </nodes>
+  <connections xsi:type="trufun:TNavigableAssociationConnection" owner="=Test/src&lt;{Singleton.java[Singleton^s" subLabels="//@nodes.1 //@nodes.2" target="//@nodes.0" source="//@nodes.0">
+    <fillColor/>
+    <points>343,99</points>
+    <points>343,149</points>
+    <points>293,149</points>
+  </connections>
+  <leftRuler unit="2"/>
+  <topRuler horizontal="true" unit="2"/>
+</trufun:TClassDiagram>

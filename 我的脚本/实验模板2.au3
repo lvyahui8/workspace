@@ -1,0 +1,5 @@
+Run("∆∆Ω‚√‹¬Î.exe")
+WinActivate("ATM")
+Sleep(1000)
+Local $var = GUICtrlGetHandle()
+MsgBox(0,0,$var)

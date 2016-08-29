@@ -1,0 +1,6 @@
+Run("notepad")
+Sleep(1000)
+Send("ÄãÊÇ´óÉµ±Æ")
+Sleep(1000)
+Send("!{F4}")
+Send("n")
